@@ -6,11 +6,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ABC-->
+        <!--バリエーションを選択-->
         <scene sceneID="kj0-Fd-vKj">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kvz-wv-wJc" customClass="EnvelopePageViewController" customModule="Exercise" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="ABC" id="560-hc-adI"/>
+                    <navigationItem key="navigationItem" title="バリエーションを選択" id="560-hc-adI">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="End-qh-Ngb">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="previousBarButtonItemPressed:" destination="kvz-wv-wJc" id="gE0-yq-MhS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCZ-Vs-DuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
