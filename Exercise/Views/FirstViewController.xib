@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController" customModule="Exercise" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5o-3W-dMl">
+                    <rect key="frame" x="40" y="114" width="334" height="582"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template" translatesAutoresizingMaskIntoConstraints="NO" id="SiQ-dV-9PT">
+                            <rect key="frame" x="20" y="15" width="294" height="552"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="SiQ-dV-9PT" secondAttribute="bottom" constant="15" id="JsV-xb-57u"/>
+                        <constraint firstItem="SiQ-dV-9PT" firstAttribute="leading" secondItem="o5o-3W-dMl" secondAttribute="leading" constant="20" id="Rix-7E-IXb"/>
+                        <constraint firstAttribute="trailing" secondItem="SiQ-dV-9PT" secondAttribute="trailing" constant="20" id="WOQ-Be-rGe"/>
+                        <constraint firstItem="SiQ-dV-9PT" firstAttribute="top" secondItem="o5o-3W-dMl" secondAttribute="top" constant="15" id="sgT-Vv-FZF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev5-it-Vuu">
+                    <rect key="frame" x="0.0" y="776" width="414" height="86"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-yd-DIn">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gMJ-5u-uCf">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="86"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="20" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="20"/>
+                                    <state key="normal" title="カラーを選" image="color_wh_s"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-4a-IjM">
+                                    <rect key="frame" x="138" y="0.0" width="138" height="86"/>
+                                    <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="20" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="20"/>
+                                    <state key="normal" title="写真枚数を選ぶ" image="candidate_photo_btn"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUU-qZ-6z1">
+                                    <rect key="frame" x="276" y="0.0" width="138" height="86"/>
+                                    <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="30" maxX="20" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="20"/>
+                                    <state key="normal" title="賀詞を選ぶ" image="icon_gashi_white"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="yjz-yd-DIn" firstAttribute="top" secondItem="ev5-it-Vuu" secondAttribute="top" id="FNi-1f-leW"/>
+                        <constraint firstAttribute="bottom" secondItem="yjz-yd-DIn" secondAttribute="bottom" id="GTo-33-RlD"/>
+                        <constraint firstAttribute="trailing" secondItem="yjz-yd-DIn" secondAttribute="trailing" id="JxM-KN-2sj"/>
+                        <constraint firstItem="yjz-yd-DIn" firstAttribute="leading" secondItem="ev5-it-Vuu" secondAttribute="leading" id="Yhg-JM-Tjv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ev5-it-Vuu" secondAttribute="bottom" id="4K0-Wa-sJa"/>
+                <constraint firstItem="ev5-it-Vuu" firstAttribute="top" secondItem="o5o-3W-dMl" secondAttribute="bottom" constant="80" id="ES2-OG-SVs"/>
+                <constraint firstItem="o5o-3W-dMl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="JV4-dd-SGf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ev5-it-Vuu" secondAttribute="trailing" id="WXI-y6-bj8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o5o-3W-dMl" secondAttribute="trailing" constant="40" id="iHg-yw-L2i"/>
+                <constraint firstItem="o5o-3W-dMl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="rQm-JW-auR"/>
+                <constraint firstItem="ev5-it-Vuu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vgR-Vk-YjL"/>
+            </constraints>
+            <point key="canvasLocation" x="-88.405797101449281" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="candidate_photo_btn" width="26.5" height="24"/>
+        <image name="color_wh_s" width="20" height="20"/>
+        <image name="icon_gashi_white" width="18.5" height="18"/>
+        <image name="template" width="1228" height="1748"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
