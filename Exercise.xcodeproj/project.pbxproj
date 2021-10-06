@@ -15,6 +15,8 @@
 		83AC4805270D44DC001EDFE1 /* EnvelopePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4804270D44DC001EDFE1 /* EnvelopePageViewController.swift */; };
 		83AC480F270D5C59001EDFE1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC480D270D5C59001EDFE1 /* FirstViewController.swift */; };
 		83AC4810270D5C59001EDFE1 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC480E270D5C59001EDFE1 /* FirstViewController.xib */; };
+		83AC4858270D8E64001EDFE1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4856270D8E64001EDFE1 /* SecondViewController.swift */; };
+		83AC4859270D8E64001EDFE1 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4857270D8E64001EDFE1 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		83AC4804270D44DC001EDFE1 /* EnvelopePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopePageViewController.swift; sourceTree = "<group>"; };
 		83AC480D270D5C59001EDFE1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		83AC480E270D5C59001EDFE1 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		83AC4856270D8E64001EDFE1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		83AC4857270D8E64001EDFE1 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				83AC47E7270D2FE8001EDFE1 /* Main.storyboard */,
 				83AC480D270D5C59001EDFE1 /* FirstViewController.swift */,
 				83AC480E270D5C59001EDFE1 /* FirstViewController.xib */,
+				83AC4856270D8E64001EDFE1 /* SecondViewController.swift */,
+				83AC4857270D8E64001EDFE1 /* SecondViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 				83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */,
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
 				83AC4810270D5C59001EDFE1 /* FirstViewController.xib in Resources */,
+				83AC4859270D8E64001EDFE1 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +170,7 @@
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
 				83AC4805270D44DC001EDFE1 /* EnvelopePageViewController.swift in Sources */,
+				83AC4858270D8E64001EDFE1 /* SecondViewController.swift in Sources */,
 				83AC480F270D5C59001EDFE1 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
