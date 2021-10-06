@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController" customModule="Exercise" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOR-2l-mXI">
+                    <rect key="frame" x="40" y="124" width="334" height="551"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template" translatesAutoresizingMaskIntoConstraints="NO" id="QoU-aN-aUl">
+                            <rect key="frame" x="20" y="15" width="294" height="523"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="QoU-aN-aUl" firstAttribute="leading" secondItem="qOR-2l-mXI" secondAttribute="leading" constant="20" id="35Y-hK-h1w"/>
+                        <constraint firstAttribute="trailing" secondItem="QoU-aN-aUl" secondAttribute="trailing" constant="20" id="Nc1-LG-4BR"/>
+                        <constraint firstItem="QoU-aN-aUl" firstAttribute="top" secondItem="qOR-2l-mXI" secondAttribute="top" constant="15" id="SGj-GV-D5O"/>
+                        <constraint firstAttribute="bottom" secondItem="QoU-aN-aUl" secondAttribute="bottom" constant="13" id="e9E-JU-iz2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWH-L2-sUZ">
+                    <rect key="frame" x="0.0" y="777" width="414" height="85"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnE-1D-63D">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                            <state key="normal" title="  使いたい写真の候補を追加・編集・確認" image="candidate_photo_btn"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.42711997029999998" green="0.77332204579999997" blue="0.70195639129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="bnE-1D-63D" firstAttribute="leading" secondItem="VWH-L2-sUZ" secondAttribute="leading" id="2tj-fd-qn0"/>
+                        <constraint firstItem="bnE-1D-63D" firstAttribute="top" secondItem="VWH-L2-sUZ" secondAttribute="top" id="66a-xu-idX"/>
+                        <constraint firstAttribute="bottom" secondItem="bnE-1D-63D" secondAttribute="bottom" id="Yaz-ey-bWe"/>
+                        <constraint firstAttribute="trailing" secondItem="bnE-1D-63D" secondAttribute="trailing" id="bZF-ML-2Sm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="qOR-2l-mXI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="4MY-hd-QNj"/>
+                <constraint firstItem="VWH-L2-sUZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gt1-eH-h0s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qOR-2l-mXI" secondAttribute="bottom" constant="187" id="JCX-pI-K0Q"/>
+                <constraint firstItem="qOR-2l-mXI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="gx6-Ib-6Oe"/>
+                <constraint firstItem="VWH-L2-sUZ" firstAttribute="top" secondItem="qOR-2l-mXI" secondAttribute="bottom" constant="102" id="h82-OF-3PL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qOR-2l-mXI" secondAttribute="trailing" constant="40" id="qc8-m7-sEA"/>
+                <constraint firstItem="VWH-L2-sUZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="st4-e8-Dlz"/>
+                <constraint firstItem="VWH-L2-sUZ" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="tqp-ch-aKm"/>
+            </constraints>
+            <point key="canvasLocation" x="-214.49275362318843" y="103.79464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="candidate_photo_btn" width="26.5" height="24"/>
+        <image name="template" width="1228" height="1748"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
