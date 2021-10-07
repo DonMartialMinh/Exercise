@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-YA-Lzf">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-YA-Lzf" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
                     <rect key="frame" x="40" y="124" width="334" height="551"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template" translatesAutoresizingMaskIntoConstraints="NO" id="uua-6Y-VVO">
@@ -32,6 +32,26 @@
                         <constraint firstAttribute="bottom" secondItem="uua-6Y-VVO" secondAttribute="bottom" constant="20" id="ic3-NV-7xd"/>
                         <constraint firstAttribute="trailing" secondItem="uua-6Y-VVO" secondAttribute="trailing" constant="15" id="mrH-s2-FJ9"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hta-Xj-w17">
                     <rect key="frame" x="0.0" y="777" width="414" height="85"/>
@@ -42,69 +62,69 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEr-4B-Tjc">
                                     <rect key="frame" x="0.0" y="0.0" width="138" height="85"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_wh_s" translatesAutoresizingMaskIntoConstraints="NO" id="NBl-3v-bXe">
-                                            <rect key="frame" x="49" y="8" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="Zpu-D9-PId"/>
-                                                <constraint firstAttribute="height" constant="40" id="hH4-i2-QA4"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カラーを選ぶ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12P-Nf-38d">
                                             <rect key="frame" x="29" y="56" width="80" height="16"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_wh_s" translatesAutoresizingMaskIntoConstraints="NO" id="NBl-3v-bXe">
+                                            <rect key="frame" x="49" y="13" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Zpu-D9-PId"/>
+                                                <constraint firstAttribute="height" constant="40" id="hH4-i2-QA4"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="12P-Nf-38d" firstAttribute="bottom" secondItem="gEr-4B-Tjc" secondAttribute="bottomMargin" constant="-5" id="60k-9Q-lSS"/>
                                         <constraint firstItem="12P-Nf-38d" firstAttribute="centerX" secondItem="gEr-4B-Tjc" secondAttribute="centerX" id="CeD-0W-9Ld"/>
-                                        <constraint firstItem="12P-Nf-38d" firstAttribute="top" secondItem="NBl-3v-bXe" secondAttribute="bottom" constant="8" id="f6R-6R-gZe"/>
+                                        <constraint firstItem="12P-Nf-38d" firstAttribute="top" secondItem="NBl-3v-bXe" secondAttribute="bottom" constant="3" id="f6R-6R-gZe"/>
                                         <constraint firstItem="NBl-3v-bXe" firstAttribute="centerX" secondItem="gEr-4B-Tjc" secondAttribute="centerX" id="swO-5f-5vd"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTN-Q6-JPO">
                                     <rect key="frame" x="138" y="0.0" width="138" height="85"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candidate_photo_btn" translatesAutoresizingMaskIntoConstraints="NO" id="bO8-yv-6av">
-                                            <rect key="frame" x="49" y="8" width="40" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="40" id="SCz-ja-qA4"/>
-                                                <constraint firstAttribute="height" constant="40" id="hv2-sP-hPH"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真枚数を選ぶ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJw-Ep-dLJ">
                                             <rect key="frame" x="22.5" y="56" width="93" height="16"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candidate_photo_btn" translatesAutoresizingMaskIntoConstraints="NO" id="bO8-yv-6av">
+                                            <rect key="frame" x="51.5" y="14" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="SCz-ja-qA4"/>
+                                                <constraint firstAttribute="height" constant="35" id="hv2-sP-hPH"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="UJw-Ep-dLJ" firstAttribute="bottom" secondItem="QTN-Q6-JPO" secondAttribute="bottomMargin" constant="-5" id="JaR-zE-aWi"/>
                                         <constraint firstItem="UJw-Ep-dLJ" firstAttribute="centerX" secondItem="QTN-Q6-JPO" secondAttribute="centerX" id="NKm-4q-EB0"/>
                                         <constraint firstItem="bO8-yv-6av" firstAttribute="centerX" secondItem="QTN-Q6-JPO" secondAttribute="centerX" id="aqH-R0-Mlu"/>
-                                        <constraint firstItem="UJw-Ep-dLJ" firstAttribute="top" secondItem="bO8-yv-6av" secondAttribute="bottom" constant="8" id="nsR-4q-wF8"/>
+                                        <constraint firstItem="UJw-Ep-dLJ" firstAttribute="top" secondItem="bO8-yv-6av" secondAttribute="bottom" constant="7" id="nsR-4q-wF8"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJv-yN-fAu">
                                     <rect key="frame" x="276" y="0.0" width="138" height="85"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gashi_white" translatesAutoresizingMaskIntoConstraints="NO" id="yKd-uo-39k">
-                                            <rect key="frame" x="54" y="18" width="30" height="30"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="30" id="IHU-dw-Vc6"/>
-                                                <constraint firstAttribute="height" constant="30" id="dT8-zr-INH"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="賀詞を選ぶ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0c-sf-DAn">
                                             <rect key="frame" x="36" y="56" width="66.5" height="16"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gashi_white" translatesAutoresizingMaskIntoConstraints="NO" id="yKd-uo-39k">
+                                            <rect key="frame" x="55" y="20" width="28" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="28" id="IHU-dw-Vc6"/>
+                                                <constraint firstAttribute="height" constant="28" id="dT8-zr-INH"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
