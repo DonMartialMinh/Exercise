@@ -32,6 +32,13 @@ class EnvelopePageViewController: UIPageViewController{
         return button
     }()
     
+    private var helpFloatingButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        button.setBackgroundImage(UIImage(named: "help"), for: .normal)
+        button.layer.cornerRadius = 10
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -42,7 +49,10 @@ class EnvelopePageViewController: UIPageViewController{
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         leftFloatingButton.frame = CGRect(x: 20, y: view.frame.size.height - 200, width: 70, height: 70)
+        
         rightFloatingButton.frame = CGRect(x: view.frame.size.width - 20 - 70, y: view.frame.size.height - 200, width: 70, height: 70)
+        
+        helpFloatingButton.frame = CGRect(x: view.frame.size.width - 20 - 30, y: 120, width: 30, height: 30)
     }
     
     
@@ -51,6 +61,7 @@ class EnvelopePageViewController: UIPageViewController{
         dataSource = self
         view.addSubview(leftFloatingButton)
         view.addSubview(rightFloatingButton)
+        view.addSubview(helpFloatingButton)
         initializeRightBarButton()
         navigationItem.rightBarButtonItem = rightBarButton
         let firstView = FirstViewController(nibName: "FirstViewController", bundle: nil)
@@ -132,7 +143,7 @@ extension EnvelopePageViewController: UIPageViewControllerDelegate {
         if isLastPage {
             rightBarButton.title = "注文へ 進む"
         } else {
-             = "次へ"
+            rightBarButton.title = "次へ"
         }
     }
     
