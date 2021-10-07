@@ -10,6 +10,7 @@ import UIKit
 class EnvelopePageViewController: UIPageViewController{
     
     var pages = [UIViewController]()
+    let navigationTitle = ["バリエーションを選択", "配置したい写真を選択", "デザイン・差出人の編集", "デザインを最終確認"]
     let initialView = 0
     var rightBarButton = UIBarButtonItem()
     
@@ -113,6 +114,7 @@ extension EnvelopePageViewController: UIPageViewControllerDelegate {
         guard let viewControllers = pageViewController.viewControllers else { return }
         guard let currentIndex = pages.firstIndex(of: viewControllers[0]) else { return }
         hideButtonsIfNeeded(with: currentIndex)
+        changeNavigationItem(with: currentIndex)
     }
     
     private func hideButtonsIfNeeded(with index: Int)  {
@@ -121,6 +123,16 @@ extension EnvelopePageViewController: UIPageViewControllerDelegate {
             hideButtons()
         } else {
             showButtons()
+        }
+    }
+    
+    private func changeNavigationItem(with index: Int)  {
+        let isLastPage = index == pages.count - 1
+        navigationItem.title = navigationTitle[index]
+        if isLastPage {
+            rightBarButton.title = "注文へ 進む"
+        } else {
+             = "次へ"
         }
     }
     
