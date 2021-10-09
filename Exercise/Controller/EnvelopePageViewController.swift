@@ -14,30 +14,30 @@ class EnvelopePageViewController: UIPageViewController{
     let initialView = 0
     var rightBarButton = UIBarButtonItem()
     
-    private var leftFloatingButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        button.setBackgroundImage(UIImage(named: "sample_btn"), for: .normal)
-        button.layer.cornerRadius = 10
-        button.layer.shadowOpacity = 0.3
-        button.layer.shadowRadius = 7
-        return button
-    }()
-    
-    private var rightFloatingButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        button.setBackgroundImage(UIImage(named: "enlargement_btn"), for: .normal)
-        button.layer.cornerRadius = 10
-        button.layer.shadowOpacity = 0.2
-        button.layer.shadowRadius = 7
-        return button
-    }()
-    
-    private var helpFloatingButton: UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        button.setBackgroundImage(UIImage(named: "help"), for: .normal)
-        button.layer.cornerRadius = 10
-        return button
-    }()
+//    private var leftFloatingButton: UIButton = {
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
+//        button.setBackgroundImage(UIImage(named: "sample_btn"), for: .normal)
+//        button.layer.cornerRadius = 10
+//        button.layer.shadowOpacity = 0.3
+//        button.layer.shadowRadius = 7
+//        return button
+//    }()
+//
+//    private var rightFloatingButton: UIButton = {
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
+//        button.setBackgroundImage(UIImage(named: "enlargement_btn"), for: .normal)
+//        button.layer.cornerRadius = 10
+//        button.layer.shadowOpacity = 0.2
+//        button.layer.shadowRadius = 7
+//        return button
+//    }()
+//
+//    private var helpFloatingButton: UIButton = {
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+//        button.setBackgroundImage(UIImage(named: "help"), for: .normal)
+//        button.layer.cornerRadius = 10
+//        return button
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,22 +46,22 @@ class EnvelopePageViewController: UIPageViewController{
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        leftFloatingButton.frame = CGRect(x: 20, y: view.frame.size.height - 200, width: 70, height: 70)
-        
-        rightFloatingButton.frame = CGRect(x: view.frame.size.width - 20 - 70, y: view.frame.size.height - 200, width: 70, height: 70)
-        
-        helpFloatingButton.frame = CGRect(x: view.frame.size.width - 20 - 30, y: 120, width: 30, height: 30)
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        leftFloatingButton.frame = CGRect(x: 20, y: view.frame.size.height - 200, width: 70, height: 70)
+//
+//        rightFloatingButton.frame = CGRect(x: view.frame.size.width - 20 - 70, y: view.frame.size.height - 200, width: 70, height: 70)
+//
+//        helpFloatingButton.frame = CGRect(x: view.frame.size.width - 20 - 30, y: 120, width: 30, height: 30)
+//    }
     
     
     func setup() {
         delegate = self
         dataSource = self
-        view.addSubview(leftFloatingButton)
-        view.addSubview(rightFloatingButton)
-        view.addSubview(helpFloatingButton)
+//        view.addSubview(leftFloatingButton)
+//        view.addSubview(rightFloatingButton)
+//        view.addSubview(helpFloatingButton)
         initializeRightBarButton()
         navigationItem.rightBarButtonItem = rightBarButton
         let firstView = FirstViewController(nibName: "FirstViewController", bundle: nil)
@@ -124,18 +124,18 @@ extension EnvelopePageViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard let viewControllers = pageViewController.viewControllers else { return }
         guard let currentIndex = pages.firstIndex(of: viewControllers[0]) else { return }
-        hideButtonsIfNeeded(with: currentIndex)
+        //hideButtonsIfNeeded(with: currentIndex)
         changeNavigationItem(with: currentIndex)
     }
     
-    private func hideButtonsIfNeeded(with index: Int)  {
-        let isLastPage = index == pages.count - 1
-        if isLastPage {
-            hideButtons()
-        } else {
-            showButtons()
-        }
-    }
+//    private func hideButtonsIfNeeded(with index: Int)  {
+//        let isLastPage = index == pages.count - 1
+//        if isLastPage {
+//            hideButtons()
+//        } else {
+//            showButtons()
+//        }
+//    }
     
     private func changeNavigationItem(with index: Int)  {
         let isLastPage = index == pages.count - 1
@@ -147,15 +147,15 @@ extension EnvelopePageViewController: UIPageViewControllerDelegate {
         }
     }
     
-    private func hideButtons() {
-        leftFloatingButton.isHidden = true
-        rightFloatingButton.isHidden = true
-    }
-    
-    private func showButtons() {
-        leftFloatingButton.isHidden = false
-        rightFloatingButton.isHidden = false
-    }
+//    private func hideButtons() {
+//        leftFloatingButton.isHidden = true
+//        rightFloatingButton.isHidden = true
+//    }
+//
+//    private func showButtons() {
+//        leftFloatingButton.isHidden = false
+//        rightFloatingButton.isHidden = false
+//    }
 }
 
 extension UIPageViewController {
