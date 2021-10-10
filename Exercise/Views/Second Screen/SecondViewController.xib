@@ -270,13 +270,13 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="qOR-2l-mXI" firstAttribute="centerX" secondItem="lsw-wW-Zgd" secondAttribute="centerX" id="3nd-Kj-Xoa"/>
                         <constraint firstAttribute="bottom" secondItem="zxc-Xa-eOX" secondAttribute="bottom" constant="6" id="4oi-Gn-tI4"/>
                         <constraint firstItem="qOR-2l-mXI" firstAttribute="top" secondItem="lsw-wW-Zgd" secondAttribute="top" id="98V-L7-why"/>
                         <constraint firstAttribute="trailing" secondItem="zxc-Xa-eOX" secondAttribute="trailing" constant="8" id="EhK-lE-6ME"/>
                         <constraint firstItem="qOR-2l-mXI" firstAttribute="height" secondItem="lsw-wW-Zgd" secondAttribute="height" multiplier="0.86" id="L3h-Md-8fY"/>
                         <constraint firstAttribute="bottom" secondItem="Hzh-Ih-oTC" secondAttribute="bottom" constant="6" id="R7m-cf-laP"/>
-                        <constraint firstItem="qOR-2l-mXI" firstAttribute="leading" secondItem="lsw-wW-Zgd" secondAttribute="leading" constant="40" id="piB-Rc-CTv"/>
-                        <constraint firstAttribute="trailing" secondItem="qOR-2l-mXI" secondAttribute="trailing" constant="40" id="yn9-tf-vf8"/>
+                        <constraint firstItem="qOR-2l-mXI" firstAttribute="width" secondItem="lsw-wW-Zgd" secondAttribute="width" multiplier="0.75" id="b0r-I4-b0k"/>
                         <constraint firstItem="Hzh-Ih-oTC" firstAttribute="leading" secondItem="lsw-wW-Zgd" secondAttribute="leading" constant="8" id="ytm-ax-cQ0"/>
                     </constraints>
                 </view>

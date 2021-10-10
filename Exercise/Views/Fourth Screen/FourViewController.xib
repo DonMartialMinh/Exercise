@@ -62,9 +62,9 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="6eC-TJ-znm" secondAttribute="trailing" constant="40" id="4pl-UW-wgF"/>
+                        <constraint firstItem="6eC-TJ-znm" firstAttribute="centerX" secondItem="ca0-ee-Icf" secondAttribute="centerX" id="8p4-un-RYH"/>
                         <constraint firstItem="6eC-TJ-znm" firstAttribute="top" secondItem="ca0-ee-Icf" secondAttribute="top" id="GHC-5W-c64"/>
-                        <constraint firstItem="6eC-TJ-znm" firstAttribute="leading" secondItem="ca0-ee-Icf" secondAttribute="leading" constant="40" id="izZ-wg-WkQ"/>
+                        <constraint firstItem="6eC-TJ-znm" firstAttribute="width" secondItem="ca0-ee-Icf" secondAttribute="width" multiplier="0.75" id="xEg-Jy-0Rs"/>
                         <constraint firstItem="6eC-TJ-znm" firstAttribute="height" secondItem="ca0-ee-Icf" secondAttribute="height" multiplier="0.86" id="xFn-gf-V4q"/>
                     </constraints>
                 </view>

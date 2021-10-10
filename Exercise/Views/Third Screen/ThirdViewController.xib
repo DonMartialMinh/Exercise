@@ -279,14 +279,14 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="LLx-8W-tQ8" firstAttribute="centerX" secondItem="bxh-DT-OsD" secondAttribute="centerX" id="6sa-YA-tyd"/>
                         <constraint firstAttribute="bottom" secondItem="MWc-bS-bwq" secondAttribute="bottom" constant="6" id="BFi-DT-Brw"/>
-                        <constraint firstAttribute="trailing" secondItem="LLx-8W-tQ8" secondAttribute="trailing" constant="40" id="LaT-n9-lcg"/>
                         <constraint firstAttribute="trailing" secondItem="MWc-bS-bwq" secondAttribute="trailing" constant="8" id="TF3-Vi-Y68"/>
                         <constraint firstItem="1px-Wz-E5L" firstAttribute="leading" secondItem="bxh-DT-OsD" secondAttribute="leading" constant="8" id="XLf-nJ-Dae"/>
+                        <constraint firstItem="LLx-8W-tQ8" firstAttribute="width" secondItem="bxh-DT-OsD" secondAttribute="width" multiplier="0.75" id="akC-Bx-yHB"/>
                         <constraint firstItem="LLx-8W-tQ8" firstAttribute="height" secondItem="bxh-DT-OsD" secondAttribute="height" multiplier="0.86" id="bY9-Vg-Abn"/>
                         <constraint firstItem="LLx-8W-tQ8" firstAttribute="top" secondItem="bxh-DT-OsD" secondAttribute="top" id="eU5-uO-jPc"/>
                         <constraint firstAttribute="bottom" secondItem="1px-Wz-E5L" secondAttribute="bottom" constant="6" id="f6U-p9-utH"/>
-                        <constraint firstItem="LLx-8W-tQ8" firstAttribute="leading" secondItem="bxh-DT-OsD" secondAttribute="leading" constant="40" id="onk-eF-m52"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ok8-wF-FLH">
