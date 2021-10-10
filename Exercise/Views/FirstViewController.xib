@@ -365,6 +365,7 @@
                     <constraints>
                         <constraint firstItem="t9s-50-Kmh" firstAttribute="leading" secondItem="hta-Xj-w17" secondAttribute="leading" id="3da-H8-Ngw"/>
                         <constraint firstAttribute="trailing" secondItem="t9s-50-Kmh" secondAttribute="trailing" id="Bcv-Wj-7Xu"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53.5" id="Dw1-MT-lBi"/>
                         <constraint firstItem="t9s-50-Kmh" firstAttribute="top" secondItem="hta-Xj-w17" secondAttribute="top" id="Yzf-BH-x0W"/>
                         <constraint firstAttribute="bottom" secondItem="t9s-50-Kmh" secondAttribute="bottom" id="lKw-Je-ZAx"/>
                     </constraints>

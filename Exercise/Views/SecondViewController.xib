@@ -293,6 +293,7 @@
                     <constraints>
                         <constraint firstItem="bnE-1D-63D" firstAttribute="leading" secondItem="VWH-L2-sUZ" secondAttribute="leading" id="2tj-fd-qn0"/>
                         <constraint firstItem="bnE-1D-63D" firstAttribute="top" secondItem="VWH-L2-sUZ" secondAttribute="top" id="66a-xu-idX"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53.5" id="6tn-hl-kND"/>
                         <constraint firstAttribute="bottom" secondItem="bnE-1D-63D" secondAttribute="bottom" id="Yaz-ey-bWe"/>
                         <constraint firstAttribute="trailing" secondItem="bnE-1D-63D" secondAttribute="trailing" id="bZF-ML-2Sm"/>
                     </constraints>
