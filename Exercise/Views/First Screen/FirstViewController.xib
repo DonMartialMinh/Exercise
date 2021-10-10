@@ -152,25 +152,25 @@
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バリエーションを選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dY-qD-VBV">
                             <rect key="frame" x="23" y="22" width="82" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puH-uG-evs">
                             <rect key="frame" x="111.5" y="22" width="33" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デザイン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8h-2U-Huc">
                             <rect key="frame" x="175.5" y="22" width="33" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最終確認" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mop-Lu-SkV">
                             <rect key="frame" x="239.5" y="22" width="33" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -265,13 +265,13 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="AtQ-ju-doq" secondAttribute="bottom" constant="6" id="7V7-Uv-vew"/>
-                        <constraint firstItem="pTH-7B-8ib" firstAttribute="leading" secondItem="Cds-CH-kHV" secondAttribute="leading" constant="40" id="Dcd-Al-cml"/>
                         <constraint firstItem="AtQ-ju-doq" firstAttribute="leading" secondItem="Cds-CH-kHV" secondAttribute="leading" constant="8" id="Ezn-yO-qAn"/>
                         <constraint firstItem="pTH-7B-8ib" firstAttribute="top" secondItem="Cds-CH-kHV" secondAttribute="top" id="LY6-dy-V8v"/>
                         <constraint firstAttribute="bottom" secondItem="m9v-A8-wxI" secondAttribute="bottom" constant="6" id="edH-JA-faX"/>
+                        <constraint firstItem="pTH-7B-8ib" firstAttribute="centerX" secondItem="Cds-CH-kHV" secondAttribute="centerX" id="ghy-hE-41Z"/>
                         <constraint firstAttribute="trailing" secondItem="m9v-A8-wxI" secondAttribute="trailing" constant="8" id="qFt-3Q-hCY"/>
                         <constraint firstItem="pTH-7B-8ib" firstAttribute="height" relation="lessThanOrEqual" secondItem="Cds-CH-kHV" secondAttribute="height" multiplier="0.86" id="sl2-VS-iFY"/>
-                        <constraint firstAttribute="trailing" secondItem="pTH-7B-8ib" secondAttribute="trailing" constant="40" id="yY0-gw-sIr"/>
+                        <constraint firstItem="pTH-7B-8ib" firstAttribute="width" secondItem="Cds-CH-kHV" secondAttribute="width" multiplier="0.75" id="vbT-IX-dLI"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hta-Xj-w17">

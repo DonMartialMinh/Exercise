@@ -62,9 +62,9 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="6eC-TJ-znm" secondAttribute="trailing" constant="40" id="4pl-UW-wgF"/>
+                        <constraint firstItem="6eC-TJ-znm" firstAttribute="centerX" secondItem="ca0-ee-Icf" secondAttribute="centerX" id="8p4-un-RYH"/>
                         <constraint firstItem="6eC-TJ-znm" firstAttribute="top" secondItem="ca0-ee-Icf" secondAttribute="top" id="GHC-5W-c64"/>
-                        <constraint firstItem="6eC-TJ-znm" firstAttribute="leading" secondItem="ca0-ee-Icf" secondAttribute="leading" constant="40" id="izZ-wg-WkQ"/>
+                        <constraint firstItem="6eC-TJ-znm" firstAttribute="width" secondItem="ca0-ee-Icf" secondAttribute="width" multiplier="0.75" id="xEg-Jy-0Rs"/>
                         <constraint firstItem="6eC-TJ-znm" firstAttribute="height" secondItem="ca0-ee-Icf" secondAttribute="height" multiplier="0.86" id="xFn-gf-V4q"/>
                     </constraints>
                 </view>
@@ -220,25 +220,25 @@
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バリエーションを選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0w-5d-1o3">
                             <rect key="frame" x="23" y="22" width="82" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真選択" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F9-dE-TmV">
                             <rect key="frame" x="111.5" y="22" width="33" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="デザイン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRK-mA-CXs">
                             <rect key="frame" x="175.5" y="22" width="33" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最終確認" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWn-Il-RCU">
                             <rect key="frame" x="239.5" y="22" width="33" height="10"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
