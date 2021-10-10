@@ -12,7 +12,8 @@ class EnvelopePageViewController: UIPageViewController{
     var pages = [UIViewController]()
     let navigationTitle = ["バリエーションを選択", "配置したい写真を選択", "デザイン・差出人の編集", "デザインを最終確認"]
     let initialView = 0
-    var rightBarButton = UIBarButtonItem()
+    //var rightBarButton = UIBarButtonItem()
+    @IBOutlet weak var rightBarButton: UIBarButtonItem!
     
 //    private var leftFloatingButton: UIButton = {
 //        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
@@ -63,7 +64,7 @@ class EnvelopePageViewController: UIPageViewController{
 //        view.addSubview(rightFloatingButton)
 //        view.addSubview(helpFloatingButton)
         initializeRightBarButton()
-        navigationItem.rightBarButtonItem = rightBarButton
+        //navigationItem.rightBarButtonItem = rightBarButton
         let firstView = FirstViewController(nibName: "FirstViewController", bundle: nil)
         let secondView = FirstViewController(nibName: "SecondViewController", bundle: nil)
         let thirdView = FirstViewController(nibName: "ThirdViewController", bundle: nil)
@@ -77,13 +78,15 @@ class EnvelopePageViewController: UIPageViewController{
     }
     
     func initializeRightBarButton() {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 35))
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 52, height: 35))
         button.setTitle("次へ", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 14)
+        button.titleLabel?.font = .systemFont(ofSize: 11, weight: .bold)
+        button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        button.titleLabel?.textAlignment = .center
         button.backgroundColor = UIColor(named: "orange")
         button.layer.cornerRadius = 5.0
         button.addTarget(self, action: #selector(didTapRightBarButton), for: .touchUpInside)
-        rightBarButton = UIBarButtonItem(customView: button)
+        rightBarButton.customView = button
     }
     
     @IBAction func previousBarButtonItemPressed(_ sender: UIBarButtonItem) {
@@ -140,10 +143,11 @@ extension EnvelopePageViewController: UIPageViewControllerDelegate {
     private func changeNavigationItem(with index: Int)  {
         let isLastPage = index == pages.count - 1
         navigationItem.title = navigationTitle[index]
+        let button = rightBarButton.customView as! UIButton
         if isLastPage {
-            rightBarButton.title = "注文へ 進む"
+            button.setTitle("注文へ\n進む", for: .normal)
         } else {
-            rightBarButton.title = "次へ"
+            button.setTitle("次へ", for: .normal)
         }
     }
     

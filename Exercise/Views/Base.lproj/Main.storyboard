@@ -17,7 +17,13 @@
                                 <action selector="previousBarButtonItemPressed:" destination="kvz-wv-wJc" id="gE0-yq-MhS"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="次へ" id="fcC-yo-NAS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="rightBarButton" destination="fcC-yo-NAS" id="for-TW-sxn"/>
+                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCZ-Vs-DuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
