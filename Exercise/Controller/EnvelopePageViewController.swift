@@ -10,7 +10,6 @@ import UIKit
 class EnvelopePageViewController: UIPageViewController{
     
     var pages = [UIViewController]()
-    let initialView = 0
     let navigationTitle = Constants.navigationTitle
     @IBOutlet weak var rightBarButton: UIBarButtonItem!
     
@@ -26,15 +25,24 @@ class EnvelopePageViewController: UIPageViewController{
         delegate = self
         dataSource = self
         initializeRightBarButton()
+        shadowNavigationBar()
         let firstView = FirstViewController(nibName: Constants.firstScreenIdentifier, bundle: nil)
-        let secondView = FirstViewController(nibName: Constants.secondScreenIdentifier, bundle: nil)
-        let thirdView = FirstViewController(nibName: Constants.thirdScreenIdentifier, bundle: nil)
-        let fourView = FirstViewController(nibName: Constants.fourScreenIdentifier, bundle: nil)
+        let secondView = SecondViewController(nibName: Constants.secondScreenIdentifier, bundle: nil)
+        let thirdView = ThirdViewController(nibName: Constants.thirdScreenIdentifier, bundle: nil)
+        let fourView = FourViewController(nibName: Constants.fourScreenIdentifier, bundle: nil)
         pages.append(firstView)
         pages.append(secondView)
         pages.append(thirdView)
         pages.append(fourView)
-        setViewControllers([pages[initialView]], direction: .forward, animated: true, completion: nil)
+        setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
+    }
+    
+    func shadowNavigationBar(){
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.5
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 2
     }
     
     func initializeRightBarButton() {
