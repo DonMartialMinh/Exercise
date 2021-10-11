@@ -26,14 +26,14 @@ class EnvelopePageViewController: UIPageViewController{
         dataSource = self
         initializeRightBarButton()
         shadowNavigationBar()
-        let firstView = UIViewController.appViewController(.FirstViewController)
-        let secondView = UIViewController.appViewController(.SecondViewController)
-        let thirdView = UIViewController.appViewController(.ThirdViewController)
-        let fourView = UIViewController.appViewController(.FourViewController)
-        pages.append(firstView)
-        pages.append(secondView)
-        pages.append(thirdView)
-        pages.append(fourView)
+        let variationView = UIViewController.appViewController(.variationViewController)
+        let photoSelectedView = UIViewController.appViewController(.photoSelectViewController)
+        let designView = UIViewController.appViewController(.designViewController)
+        let confirmView = UIViewController.appViewController(.confirmViewController)
+        pages.append(variationView)
+        pages.append(photoSelectedView)
+        pages.append(designView)
+        pages.append(confirmView)
         setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
     }
     

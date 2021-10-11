@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  FourViewController.swift
 //  Exercise
 //
 //  Created by Vo Minh Don on 10/6/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ConfirmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

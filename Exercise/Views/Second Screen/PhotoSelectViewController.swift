@@ -1,5 +1,5 @@
 //
-//  FourViewController.swift
+//  SecondViewController.swift
 //  Exercise
 //
 //  Created by Vo Minh Don on 10/6/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FourViewController: UIViewController {
+class PhotoSelectViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

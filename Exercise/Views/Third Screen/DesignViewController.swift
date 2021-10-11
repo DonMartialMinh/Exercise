@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class DesignViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

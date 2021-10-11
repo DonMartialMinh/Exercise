@@ -14,14 +14,14 @@
 		83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */; };
 		83AC47EE270D2FE9001EDFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83AC47EC270D2FE9001EDFE1 /* LaunchScreen.storyboard */; };
 		83AC4805270D44DC001EDFE1 /* EnvelopePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4804270D44DC001EDFE1 /* EnvelopePageViewController.swift */; };
-		83AC480F270D5C59001EDFE1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC480D270D5C59001EDFE1 /* FirstViewController.swift */; };
-		83AC4810270D5C59001EDFE1 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC480E270D5C59001EDFE1 /* FirstViewController.xib */; };
-		83AC4858270D8E64001EDFE1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4856270D8E64001EDFE1 /* SecondViewController.swift */; };
-		83AC4859270D8E64001EDFE1 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4857270D8E64001EDFE1 /* SecondViewController.xib */; };
-		83AC485E270D95FD001EDFE1 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC485C270D95FD001EDFE1 /* ThirdViewController.swift */; };
-		83AC485F270D95FD001EDFE1 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC485D270D95FD001EDFE1 /* ThirdViewController.xib */; };
-		83AC4866270D9BA7001EDFE1 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4864270D9BA7001EDFE1 /* FourViewController.swift */; };
-		83AC4867270D9BA7001EDFE1 /* FourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4865270D9BA7001EDFE1 /* FourViewController.xib */; };
+		83AC480F270D5C59001EDFE1 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC480D270D5C59001EDFE1 /* VariationViewController.swift */; };
+		83AC4810270D5C59001EDFE1 /* VariationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC480E270D5C59001EDFE1 /* VariationViewController.xib */; };
+		83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */; };
+		83AC4859270D8E64001EDFE1 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */; };
+		83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC485C270D95FD001EDFE1 /* DesignViewController.swift */; };
+		83AC485F270D95FD001EDFE1 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC485D270D95FD001EDFE1 /* DesignViewController.xib */; };
+		83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */; };
+		83AC4867270D9BA7001EDFE1 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */; };
 		83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC486B270EA5EA001EDFE1 /* CustomView.swift */; };
 		83EE9BCF27147E3600394729 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9BCE27147E3600394729 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -36,14 +36,14 @@
 		83AC47ED270D2FE9001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83AC47EF270D2FE9001EDFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83AC4804270D44DC001EDFE1 /* EnvelopePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopePageViewController.swift; sourceTree = "<group>"; };
-		83AC480D270D5C59001EDFE1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		83AC480E270D5C59001EDFE1 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
-		83AC4856270D8E64001EDFE1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		83AC4857270D8E64001EDFE1 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
-		83AC485C270D95FD001EDFE1 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		83AC485D270D95FD001EDFE1 /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
-		83AC4864270D9BA7001EDFE1 /* FourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
-		83AC4865270D9BA7001EDFE1 /* FourViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourViewController.xib; sourceTree = "<group>"; };
+		83AC480D270D5C59001EDFE1 /* VariationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationViewController.swift; sourceTree = "<group>"; };
+		83AC480E270D5C59001EDFE1 /* VariationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VariationViewController.xib; sourceTree = "<group>"; };
+		83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
+		83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSelectViewController.xib; sourceTree = "<group>"; };
+		83AC485C270D95FD001EDFE1 /* DesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		83AC485D270D95FD001EDFE1 /* DesignViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignViewController.xib; sourceTree = "<group>"; };
+		83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
 		83AC486B270EA5EA001EDFE1 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		83EE9BCE27147E3600394729 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,8 +62,8 @@
 		830B8A802712DB830053B419 /* First Screen */ = {
 			isa = PBXGroup;
 			children = (
-				83AC480D270D5C59001EDFE1 /* FirstViewController.swift */,
-				83AC480E270D5C59001EDFE1 /* FirstViewController.xib */,
+				83AC480D270D5C59001EDFE1 /* VariationViewController.swift */,
+				83AC480E270D5C59001EDFE1 /* VariationViewController.xib */,
 			);
 			path = "First Screen";
 			sourceTree = "<group>";
@@ -71,8 +71,8 @@
 		830B8A812712DB980053B419 /* Second Screen */ = {
 			isa = PBXGroup;
 			children = (
-				83AC4856270D8E64001EDFE1 /* SecondViewController.swift */,
-				83AC4857270D8E64001EDFE1 /* SecondViewController.xib */,
+				83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */,
+				83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */,
 			);
 			path = "Second Screen";
 			sourceTree = "<group>";
@@ -80,8 +80,8 @@
 		830B8A822712DBA80053B419 /* Third Screen */ = {
 			isa = PBXGroup;
 			children = (
-				83AC485C270D95FD001EDFE1 /* ThirdViewController.swift */,
-				83AC485D270D95FD001EDFE1 /* ThirdViewController.xib */,
+				83AC485C270D95FD001EDFE1 /* DesignViewController.swift */,
+				83AC485D270D95FD001EDFE1 /* DesignViewController.xib */,
 			);
 			path = "Third Screen";
 			sourceTree = "<group>";
@@ -89,8 +89,8 @@
 		830B8A832712DBC10053B419 /* Fourth Screen */ = {
 			isa = PBXGroup;
 			children = (
-				83AC4864270D9BA7001EDFE1 /* FourViewController.swift */,
-				83AC4865270D9BA7001EDFE1 /* FourViewController.xib */,
+				83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */,
+				83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */,
 			);
 			path = "Fourth Screen";
 			sourceTree = "<group>";
@@ -206,12 +206,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				83AC47EE270D2FE9001EDFE1 /* LaunchScreen.storyboard in Resources */,
-				83AC4867270D9BA7001EDFE1 /* FourViewController.xib in Resources */,
+				83AC4867270D9BA7001EDFE1 /* ConfirmViewController.xib in Resources */,
 				83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */,
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
-				83AC485F270D95FD001EDFE1 /* ThirdViewController.xib in Resources */,
-				83AC4810270D5C59001EDFE1 /* FirstViewController.xib in Resources */,
-				83AC4859270D8E64001EDFE1 /* SecondViewController.xib in Resources */,
+				83AC485F270D95FD001EDFE1 /* DesignViewController.xib in Resources */,
+				83AC4810270D5C59001EDFE1 /* VariationViewController.xib in Resources */,
+				83AC4859270D8E64001EDFE1 /* PhotoSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,12 +225,12 @@
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
 				83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */,
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
-				83AC4866270D9BA7001EDFE1 /* FourViewController.swift in Sources */,
-				83AC485E270D95FD001EDFE1 /* ThirdViewController.swift in Sources */,
+				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
+				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,
 				83EE9BCF27147E3600394729 /* Extensions.swift in Sources */,
 				83AC4805270D44DC001EDFE1 /* EnvelopePageViewController.swift in Sources */,
-				83AC4858270D8E64001EDFE1 /* SecondViewController.swift in Sources */,
-				83AC480F270D5C59001EDFE1 /* FirstViewController.swift in Sources */,
+				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
+				83AC480F270D5C59001EDFE1 /* VariationViewController.swift in Sources */,
 				830B8A872712DC0F0053B419 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

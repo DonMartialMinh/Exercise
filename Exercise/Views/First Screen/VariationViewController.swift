@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  Exercise
 //
 //  Created by Vo Minh Don on 10/6/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class VariationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

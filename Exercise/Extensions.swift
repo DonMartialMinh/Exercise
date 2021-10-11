@@ -13,10 +13,10 @@ enum AssetsColor {
 }
 
 enum AppViewController {
-    case FirstViewController
-    case SecondViewController
-    case ThirdViewController
-    case FourViewController
+    case variationViewController
+    case photoSelectViewController
+    case designViewController
+    case confirmViewController
 }
 
 extension UIColor {
@@ -32,14 +32,14 @@ extension UIColor {
 extension UIViewController {
     static func appViewController(_ name: AppViewController) -> UIViewController {
         switch name {
-        case .FirstViewController:
-            return FirstViewController(nibName: "FirstViewController", bundle: nil)
-        case .SecondViewController:
-            return SecondViewController(nibName: "SecondViewController", bundle: nil)
-        case .ThirdViewController:
-            return ThirdViewController(nibName: "ThirdViewController", bundle: nil)
-        case .FourViewController:
-            return FourViewController(nibName: "FourViewController", bundle: nil)
+        case .variationViewController:
+            return VariationViewController(nibName: "VariationViewController", bundle: nil)
+        case .photoSelectViewController:
+            return PhotoSelectViewController(nibName: "PhotoSelectViewController", bundle: nil)
+        case .designViewController:
+            return DesignViewController(nibName: "DesignViewController", bundle: nil)
+        case .confirmViewController:
+            return ConfirmViewController(nibName: "ConfirmViewController", bundle: nil)
         }
     }
 }
