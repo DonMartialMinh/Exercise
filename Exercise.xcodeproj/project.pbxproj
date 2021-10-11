@@ -59,40 +59,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		830B8A802712DB830053B419 /* First Screen */ = {
+		830B8A802712DB830053B419 /* VariationScreen */ = {
 			isa = PBXGroup;
 			children = (
 				83AC480D270D5C59001EDFE1 /* VariationViewController.swift */,
 				83AC480E270D5C59001EDFE1 /* VariationViewController.xib */,
 			);
-			path = "First Screen";
+			path = VariationScreen;
 			sourceTree = "<group>";
 		};
-		830B8A812712DB980053B419 /* Second Screen */ = {
+		830B8A812712DB980053B419 /* PhotoSelectScreen */ = {
 			isa = PBXGroup;
 			children = (
 				83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */,
 				83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */,
 			);
-			path = "Second Screen";
+			path = PhotoSelectScreen;
 			sourceTree = "<group>";
 		};
-		830B8A822712DBA80053B419 /* Third Screen */ = {
+		830B8A822712DBA80053B419 /* DesignScreen */ = {
 			isa = PBXGroup;
 			children = (
 				83AC485C270D95FD001EDFE1 /* DesignViewController.swift */,
 				83AC485D270D95FD001EDFE1 /* DesignViewController.xib */,
 			);
-			path = "Third Screen";
+			path = DesignScreen;
 			sourceTree = "<group>";
 		};
-		830B8A832712DBC10053B419 /* Fourth Screen */ = {
+		830B8A832712DBC10053B419 /* ConfirmScreen */ = {
 			isa = PBXGroup;
 			children = (
 				83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */,
 				83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */,
 			);
-			path = "Fourth Screen";
+			path = ConfirmScreen;
 			sourceTree = "<group>";
 		};
 		83AC47D5270D2FE8001EDFE1 = {
@@ -131,10 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				83AC47E7270D2FE8001EDFE1 /* Main.storyboard */,
-				830B8A802712DB830053B419 /* First Screen */,
-				830B8A812712DB980053B419 /* Second Screen */,
-				830B8A822712DBA80053B419 /* Third Screen */,
-				830B8A832712DBC10053B419 /* Fourth Screen */,
+				830B8A802712DB830053B419 /* VariationScreen */,
+				830B8A812712DB980053B419 /* PhotoSelectScreen */,
+				830B8A822712DBA80053B419 /* DesignScreen */,
+				830B8A832712DBC10053B419 /* ConfirmScreen */,
 				83AC486B270EA5EA001EDFE1 /* CustomView.swift */,
 			);
 			path = Views;
