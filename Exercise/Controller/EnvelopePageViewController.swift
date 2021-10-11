@@ -26,10 +26,10 @@ class EnvelopePageViewController: UIPageViewController{
         dataSource = self
         initializeRightBarButton()
         shadowNavigationBar()
-        let firstView = FirstViewController(nibName: Constants.firstScreenIdentifier, bundle: nil)
-        let secondView = SecondViewController(nibName: Constants.secondScreenIdentifier, bundle: nil)
-        let thirdView = ThirdViewController(nibName: Constants.thirdScreenIdentifier, bundle: nil)
-        let fourView = FourViewController(nibName: Constants.fourScreenIdentifier, bundle: nil)
+        let firstView = UIViewController.appViewController(.FirstViewController)
+        let secondView = UIViewController.appViewController(.SecondViewController)
+        let thirdView = UIViewController.appViewController(.ThirdViewController)
+        let fourView = UIViewController.appViewController(.FourViewController)
         pages.append(firstView)
         pages.append(secondView)
         pages.append(thirdView)
@@ -51,7 +51,7 @@ class EnvelopePageViewController: UIPageViewController{
         button.titleLabel?.font = .systemFont(ofSize: 11, weight: .bold)
         button.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         button.titleLabel?.textAlignment = .center
-        button.backgroundColor = UIColor(named: Constants.Color.orange)
+        button.backgroundColor = UIColor.appColor(.orange)
         button.layer.cornerRadius = 5.0
         button.addTarget(self, action: #selector(didTapRightBarButton), for: .touchUpInside)
         rightBarButton.customView = button
