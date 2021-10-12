@@ -242,22 +242,10 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-nC-oDA">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-hz-pJP">
                             <rect key="frame" x="281" y="15" width="24" height="24"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb5-hz-pJP">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                    <state key="normal" image="help"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="eb5-hz-pJP" firstAttribute="top" secondItem="HbH-nC-oDA" secondAttribute="top" id="33m-wn-JZX"/>
-                                <constraint firstAttribute="trailing" secondItem="eb5-hz-pJP" secondAttribute="trailing" id="5fr-aD-yzE"/>
-                                <constraint firstItem="eb5-hz-pJP" firstAttribute="leading" secondItem="HbH-nC-oDA" secondAttribute="leading" id="DJe-SL-0ZT"/>
-                                <constraint firstAttribute="bottom" secondItem="eb5-hz-pJP" secondAttribute="bottom" id="oRS-jl-hj7"/>
-                            </constraints>
-                        </view>
+                            <state key="normal" image="help"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -267,14 +255,14 @@
                         <constraint firstItem="w0w-5d-1o3" firstAttribute="top" secondItem="gt0-gh-sxP" secondAttribute="bottom" constant="2" id="CP9-cJ-PIV"/>
                         <constraint firstItem="XWn-Il-RCU" firstAttribute="top" secondItem="gt0-gh-sxP" secondAttribute="bottom" constant="2" id="CeI-0s-Iaz"/>
                         <constraint firstAttribute="bottom" secondItem="6F9-dE-TmV" secondAttribute="bottom" constant="19" id="FLN-R7-Lkh"/>
-                        <constraint firstItem="HbH-nC-oDA" firstAttribute="top" secondItem="aOT-Pr-SAh" secondAttribute="top" constant="15" id="M8f-Md-dl2"/>
                         <constraint firstItem="XWn-Il-RCU" firstAttribute="centerX" secondItem="iiI-a7-9en" secondAttribute="centerX" id="SgQ-hs-k1C"/>
-                        <constraint firstAttribute="trailing" secondItem="HbH-nC-oDA" secondAttribute="trailing" constant="15" id="UMd-QP-PWg"/>
                         <constraint firstItem="6F9-dE-TmV" firstAttribute="top" secondItem="gt0-gh-sxP" secondAttribute="bottom" constant="2" id="fYo-Xr-Gt9"/>
+                        <constraint firstAttribute="trailing" secondItem="eb5-hz-pJP" secondAttribute="trailing" constant="15" id="mQS-98-VRS"/>
                         <constraint firstItem="6F9-dE-TmV" firstAttribute="centerX" secondItem="Z1e-Vk-Rgq" secondAttribute="centerX" id="pje-1V-l2e"/>
                         <constraint firstItem="RRK-mA-CXs" firstAttribute="centerX" secondItem="BEE-Ay-ifS" secondAttribute="centerX" id="qY2-vm-ezC"/>
                         <constraint firstItem="gt0-gh-sxP" firstAttribute="top" secondItem="aOT-Pr-SAh" secondAttribute="top" constant="10" id="rCe-Sy-3bn"/>
                         <constraint firstItem="gt0-gh-sxP" firstAttribute="width" secondItem="aOT-Pr-SAh" secondAttribute="width" multiplier="0.63" id="rWF-sw-baS"/>
+                        <constraint firstItem="eb5-hz-pJP" firstAttribute="top" secondItem="aOT-Pr-SAh" secondAttribute="top" constant="15" id="tz8-w0-G8s"/>
                         <constraint firstAttribute="bottom" secondItem="XWn-Il-RCU" secondAttribute="bottom" constant="19" id="w4a-Lz-xMD"/>
                         <constraint firstAttribute="bottom" secondItem="w0w-5d-1o3" secondAttribute="bottom" constant="19" id="wpY-no-DAe"/>
                         <constraint firstItem="w0w-5d-1o3" firstAttribute="centerX" secondItem="hSI-01-bcK" secondAttribute="centerX" id="ypb-wI-vhf"/>

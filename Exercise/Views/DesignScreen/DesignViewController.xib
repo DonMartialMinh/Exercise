@@ -189,22 +189,10 @@
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQ0-3l-F2b">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQj-2l-tuy">
                             <rect key="frame" x="281" y="15" width="24" height="24"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQj-2l-tuy">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                    <state key="normal" image="help"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="bQj-2l-tuy" firstAttribute="leading" secondItem="aQ0-3l-F2b" secondAttribute="leading" id="6U3-dM-93k"/>
-                                <constraint firstItem="bQj-2l-tuy" firstAttribute="top" secondItem="aQ0-3l-F2b" secondAttribute="top" id="7Dk-rR-dNy"/>
-                                <constraint firstAttribute="bottom" secondItem="bQj-2l-tuy" secondAttribute="bottom" id="q8c-PY-BJv"/>
-                                <constraint firstAttribute="trailing" secondItem="bQj-2l-tuy" secondAttribute="trailing" id="v8h-6I-0CH"/>
-                            </constraints>
-                        </view>
+                            <state key="normal" image="help"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -212,11 +200,11 @@
                         <constraint firstItem="Kez-MB-Ysz" firstAttribute="top" secondItem="ckx-O6-cCH" secondAttribute="bottom" constant="2" id="5wZ-JZ-ebw"/>
                         <constraint firstItem="ckx-O6-cCH" firstAttribute="width" secondItem="Rfd-7g-teU" secondAttribute="width" multiplier="0.63" id="BZC-11-Zkw"/>
                         <constraint firstAttribute="bottom" secondItem="VEr-J8-O5f" secondAttribute="bottom" constant="19" id="Fc1-OT-NFG"/>
-                        <constraint firstAttribute="trailing" secondItem="aQ0-3l-F2b" secondAttribute="trailing" constant="15" id="Fu8-Ws-kjJ"/>
                         <constraint firstItem="ckx-O6-cCH" firstAttribute="centerX" secondItem="Rfd-7g-teU" secondAttribute="centerX" id="JfO-Yh-axd"/>
                         <constraint firstItem="3FN-Lu-0kD" firstAttribute="centerX" secondItem="qd4-QA-haM" secondAttribute="centerX" id="K5x-p5-1fm"/>
+                        <constraint firstAttribute="trailing" secondItem="bQj-2l-tuy" secondAttribute="trailing" constant="15" id="LC9-M2-dRB"/>
                         <constraint firstItem="Rn1-aA-BzX" firstAttribute="top" secondItem="ckx-O6-cCH" secondAttribute="bottom" constant="2" id="XG1-Oq-SOO"/>
-                        <constraint firstItem="aQ0-3l-F2b" firstAttribute="top" secondItem="Rfd-7g-teU" secondAttribute="top" constant="15" id="aEG-qB-ZXb"/>
+                        <constraint firstItem="bQj-2l-tuy" firstAttribute="top" secondItem="Rfd-7g-teU" secondAttribute="top" constant="15" id="YFC-eB-tIc"/>
                         <constraint firstAttribute="bottom" secondItem="Rn1-aA-BzX" secondAttribute="bottom" constant="19" id="bbv-ov-vUo"/>
                         <constraint firstItem="ckx-O6-cCH" firstAttribute="top" secondItem="Rfd-7g-teU" secondAttribute="top" constant="10" id="cSe-Xl-w0d"/>
                         <constraint firstAttribute="bottom" secondItem="3FN-Lu-0kD" secondAttribute="bottom" constant="19" id="cqn-E7-cIK"/>

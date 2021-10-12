@@ -180,31 +180,17 @@
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCS-DM-rvC">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-8X-CzD">
                             <rect key="frame" x="281" y="15" width="24" height="24"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-8X-CzD">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                    <state key="normal" image="help"/>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="LNi-8X-CzD" firstAttribute="top" secondItem="cCS-DM-rvC" secondAttribute="top" id="60T-qe-ITz"/>
-                                <constraint firstAttribute="trailing" secondItem="LNi-8X-CzD" secondAttribute="trailing" id="7TD-Nv-IUN"/>
-                                <constraint firstAttribute="bottom" secondItem="LNi-8X-CzD" secondAttribute="bottom" id="Tbt-J7-l4w"/>
-                                <constraint firstItem="LNi-8X-CzD" firstAttribute="leading" secondItem="cCS-DM-rvC" secondAttribute="leading" id="wlS-5R-6LW"/>
-                            </constraints>
-                        </view>
+                            <state key="normal" image="help"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="QIR-kk-jgA" firstAttribute="top" secondItem="70F-j3-4ds" secondAttribute="bottom" constant="2" id="3dg-Cm-7up"/>
                         <constraint firstAttribute="bottom" secondItem="QIR-kk-jgA" secondAttribute="bottom" constant="19" id="3zG-lD-WS3"/>
-                        <constraint firstItem="cCS-DM-rvC" firstAttribute="top" secondItem="BVH-ym-pbe" secondAttribute="top" constant="15" id="6vC-sT-la6"/>
                         <constraint firstItem="QIR-kk-jgA" firstAttribute="centerX" secondItem="pvj-zF-S2A" secondAttribute="centerX" id="71C-NU-Yqi"/>
                         <constraint firstItem="70F-j3-4ds" firstAttribute="width" secondItem="BVH-ym-pbe" secondAttribute="width" multiplier="0.63" id="BT3-Pk-fhy"/>
-                        <constraint firstAttribute="trailing" secondItem="cCS-DM-rvC" secondAttribute="trailing" constant="15" id="MTf-wY-kyR"/>
                         <constraint firstItem="Tyf-j8-BKl" firstAttribute="top" secondItem="70F-j3-4ds" secondAttribute="bottom" constant="2" id="OUp-5w-aQ5"/>
                         <constraint firstItem="FOu-yy-fLm" firstAttribute="centerX" secondItem="Kwz-XD-HSl" secondAttribute="centerX" id="Taw-Pp-sxf"/>
                         <constraint firstItem="70F-j3-4ds" firstAttribute="top" secondItem="BVH-ym-pbe" secondAttribute="top" constant="10" id="VCo-Rs-6wp"/>
@@ -213,9 +199,11 @@
                         <constraint firstItem="FOu-yy-fLm" firstAttribute="top" secondItem="70F-j3-4ds" secondAttribute="bottom" constant="2" id="Wik-yO-gib"/>
                         <constraint firstAttribute="bottom" secondItem="Tyf-j8-BKl" secondAttribute="bottom" constant="19" id="Y97-B3-WsL"/>
                         <constraint firstAttribute="bottom" secondItem="5HO-BV-SBm" secondAttribute="bottom" constant="19" id="YUq-mn-p50"/>
+                        <constraint firstItem="LNi-8X-CzD" firstAttribute="top" secondItem="BVH-ym-pbe" secondAttribute="top" constant="15" id="enN-yP-hFy"/>
                         <constraint firstItem="70F-j3-4ds" firstAttribute="centerX" secondItem="BVH-ym-pbe" secondAttribute="centerX" id="fgu-yC-J0z"/>
                         <constraint firstAttribute="bottom" secondItem="FOu-yy-fLm" secondAttribute="bottom" constant="19" id="hLz-Bm-2eJ"/>
                         <constraint firstItem="5HO-BV-SBm" firstAttribute="centerX" secondItem="eoT-3I-kY2" secondAttribute="centerX" id="r03-6I-uly"/>
+                        <constraint firstAttribute="trailing" secondItem="LNi-8X-CzD" secondAttribute="trailing" constant="15" id="scd-5B-B8U"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsw-wW-Zgd">
