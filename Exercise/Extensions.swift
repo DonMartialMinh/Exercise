@@ -13,7 +13,6 @@ enum AssetsColor {
 }
 
 enum AppViewController {
-    case variationViewController
     case photoSelectViewController
     case designViewController
     case confirmViewController
@@ -32,8 +31,6 @@ extension UIColor {
 extension UIViewController {
     static func appViewController(_ name: AppViewController) -> UIViewController {
         switch name {
-        case .variationViewController:
-            return VariationViewController(nibName: "VariationViewController", bundle: nil)
         case .photoSelectViewController:
             return PhotoSelectViewController(nibName: "PhotoSelectViewController", bundle: nil)
         case .designViewController:
