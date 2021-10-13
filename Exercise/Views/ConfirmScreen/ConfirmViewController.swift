@@ -9,9 +9,10 @@ import UIKit
 
 class ConfirmViewController: UIViewController {
 
+    @IBOutlet weak var confirmProgressView: ProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        confirmProgressView.setState(.confirm)
         // Do any additional setup after loading the view.
     }
 

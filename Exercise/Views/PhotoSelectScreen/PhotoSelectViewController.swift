@@ -8,10 +8,11 @@
 import UIKit
 
 class PhotoSelectViewController: UIViewController {
-
+    @IBOutlet weak var photoSelectProgressView: ProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        photoSelectProgressView.setState(.photoSelect)
         // Do any additional setup after loading the view.
     }
 

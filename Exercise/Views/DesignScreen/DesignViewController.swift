@@ -9,9 +9,10 @@ import UIKit
 
 class DesignViewController: UIViewController {
 
+    @IBOutlet weak var designProgressView: ProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        designProgressView.setState(.design)
         // Do any additional setup after loading the view.
     }
 
