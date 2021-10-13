@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
 		83644201271498A300FED975 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644200271498A300FED975 /* VariationViewController.swift */; };
-		836442082715841900FED975 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836442072715841900FED975 /* ProgressView.xib */; };
 		8364420B2715869600FED975 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420A2715869600FED975 /* ProgressView.swift */; };
 		8364420E27166DBA00FED975 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420D27166DBA00FED975 /* NibView.swift */; };
 		83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */; };
@@ -18,19 +17,20 @@
 		83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */; };
 		83AC47EE270D2FE9001EDFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83AC47EC270D2FE9001EDFE1 /* LaunchScreen.storyboard */; };
 		83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */; };
-		83AC4859270D8E64001EDFE1 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */; };
 		83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC485C270D95FD001EDFE1 /* DesignViewController.swift */; };
-		83AC485F270D95FD001EDFE1 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC485D270D95FD001EDFE1 /* DesignViewController.xib */; };
 		83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */; };
-		83AC4867270D9BA7001EDFE1 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */; };
 		83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC486B270EA5EA001EDFE1 /* CustomView.swift */; };
+		83D7994B2716E3A2003CA963 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83D7994D2716E3A2003CA963 /* Localizable.strings */; };
+		83D799512716EA36003CA963 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799532716EA36003CA963 /* ProgressView.xib */; };
+		83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */; };
+		83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995F2716EBE5003CA963 /* DesignViewController.xib */; };
+		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
 		83EE9BCF27147E3600394729 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE9BCE27147E3600394729 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		83644200271498A300FED975 /* VariationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationViewController.swift; sourceTree = "<group>"; };
-		836442072715841900FED975 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 		8364420A2715869600FED975 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8364420D27166DBA00FED975 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		83AC47DE270D2FE8001EDFE1 /* Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,12 +41,21 @@
 		83AC47ED270D2FE9001EDFE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83AC47EF270D2FE9001EDFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
-		83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSelectViewController.xib; sourceTree = "<group>"; };
 		83AC485C270D95FD001EDFE1 /* DesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
-		83AC485D270D95FD001EDFE1 /* DesignViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DesignViewController.xib; sourceTree = "<group>"; };
 		83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
-		83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
 		83AC486B270EA5EA001EDFE1 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		83D799452716DD98003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		83D799462716DD98003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		83D7994C2716E3A2003CA963 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		83D7994F2716E3A3003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		83D799522716EA36003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = vi; path = vi.lproj/ProgressView.xib; sourceTree = "<group>"; };
+		83D799562716EA6D003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProgressView.xib; sourceTree = "<group>"; };
+		83D799592716EBC3003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PhotoSelectViewController.xib; sourceTree = "<group>"; };
+		83D7995E2716EBE5003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DesignViewController.xib; sourceTree = "<group>"; };
+		83D799632716EBE7003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/DesignViewController.strings; sourceTree = "<group>"; };
+		83D799652716EBFC003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmViewController.xib; sourceTree = "<group>"; };
+		83D799692716EBFE003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ConfirmViewController.strings; sourceTree = "<group>"; };
+		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
 		83EE9BCE27147E3600394729 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */,
-				83AC4857270D8E64001EDFE1 /* PhotoSelectViewController.xib */,
+				83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */,
 			);
 			path = PhotoSelectScreen;
 			sourceTree = "<group>";
@@ -74,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				83AC485C270D95FD001EDFE1 /* DesignViewController.swift */,
-				83AC485D270D95FD001EDFE1 /* DesignViewController.xib */,
+				83D7995F2716EBE5003CA963 /* DesignViewController.xib */,
 			);
 			path = DesignScreen;
 			sourceTree = "<group>";
@@ -83,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */,
-				83AC4865270D9BA7001EDFE1 /* ConfirmViewController.xib */,
+				83D799662716EBFC003CA963 /* ConfirmViewController.xib */,
 			);
 			path = ConfirmScreen;
 			sourceTree = "<group>";
@@ -91,7 +100,7 @@
 		83644206271583E000FED975 /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				836442072715841900FED975 /* ProgressView.xib */,
+				83D799532716EA36003CA963 /* ProgressView.xib */,
 				8364420A2715869600FED975 /* ProgressView.swift */,
 			);
 			path = ProgressView;
@@ -125,6 +134,7 @@
 				83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */,
 				83AC47EC270D2FE9001EDFE1 /* LaunchScreen.storyboard */,
 				83AC47EF270D2FE9001EDFE1 /* Info.plist */,
+				83D7994D2716E3A2003CA963 /* Localizable.strings */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -192,6 +202,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 83AC47D5270D2FE8001EDFE1;
 			productRefGroup = 83AC47DF270D2FE8001EDFE1 /* Products */;
@@ -208,13 +219,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836442082715841900FED975 /* ProgressView.xib in Resources */,
+				83D799512716EA36003CA963 /* ProgressView.xib in Resources */,
 				83AC47EE270D2FE9001EDFE1 /* LaunchScreen.storyboard in Resources */,
-				83AC4867270D9BA7001EDFE1 /* ConfirmViewController.xib in Resources */,
+				83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */,
 				83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */,
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
-				83AC485F270D95FD001EDFE1 /* DesignViewController.xib in Resources */,
-				83AC4859270D8E64001EDFE1 /* PhotoSelectViewController.xib in Resources */,
+				83D7994B2716E3A2003CA963 /* Localizable.strings in Resources */,
+				83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */,
+				83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +258,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				83AC47E8270D2FE8001EDFE1 /* Base */,
+				83D799452716DD98003CA963 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -254,8 +267,54 @@
 			isa = PBXVariantGroup;
 			children = (
 				83AC47ED270D2FE9001EDFE1 /* Base */,
+				83D799462716DD98003CA963 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		83D7994D2716E3A2003CA963 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D7994C2716E3A2003CA963 /* en */,
+				83D7994F2716E3A3003CA963 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		83D799532716EA36003CA963 /* ProgressView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D799522716EA36003CA963 /* vi */,
+				83D799562716EA6D003CA963 /* Base */,
+			);
+			name = ProgressView.xib;
+			sourceTree = "<group>";
+		};
+		83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D799592716EBC3003CA963 /* Base */,
+				83D7996D27174292003CA963 /* vi */,
+			);
+			name = PhotoSelectViewController.xib;
+			sourceTree = "<group>";
+		};
+		83D7995F2716EBE5003CA963 /* DesignViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D7995E2716EBE5003CA963 /* Base */,
+				83D799632716EBE7003CA963 /* vi */,
+			);
+			name = DesignViewController.xib;
+			sourceTree = "<group>";
+		};
+		83D799662716EBFC003CA963 /* ConfirmViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83D799652716EBFC003CA963 /* Base */,
+				83D799692716EBFE003CA963 /* vi */,
+			);
+			name = ConfirmViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -265,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -326,6 +386,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

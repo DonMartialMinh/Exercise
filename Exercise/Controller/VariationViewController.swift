@@ -32,7 +32,7 @@ class VariationViewController: UIViewController {
     
     func initializeBarButton() {
         let nextButton = UIButton(frame: CGRect(x: 0, y: 0, width: 52, height: 35))
-        nextButton.setTitle(Constants.nextBarButtonTitle, for: .normal)
+        nextButton.setTitle(Constants.nextBarButtonTitle.localized, for: .normal)
         nextButton.titleLabel?.font = .systemFont(ofSize: 11, weight: .bold)
         nextButton.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         nextButton.titleLabel?.textAlignment = .center
@@ -42,7 +42,7 @@ class VariationViewController: UIViewController {
         nextBarButton.customView = nextButton
         
         let backButton = UIButton(type: .system)
-        backButton.setTitle(Constants.backBarButtonTittle, for: .normal)
+        backButton.setTitle(Constants.backBarButtonTittle.localized, for: .normal)
         backButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .regular)
         backButton.titleLabel?.textAlignment = .center
         backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
@@ -65,13 +65,13 @@ class VariationViewController: UIViewController {
     }
     
     @objc func didTapNextBarButton(sender: UIButton!) {
-        let title = navigationItem.title!
-        if title == Constants.NavigationTitle.confirm { return }
-        if title == Constants.NavigationTitle.variation {
+        let title = navigationItem.title!.localized
+        if title == Constants.NavigationTitle.confirm.localized { return }
+        if title == Constants.NavigationTitle.variation.localized {
             navigationController?.pushViewController(photoSelectViewController, animated: true)
-        } else if title == Constants.NavigationTitle.photoSelect {
+        } else if title == Constants.NavigationTitle.photoSelect.localized {
             navigationController?.pushViewController(designViewController, animated: true)
-        } else if title == Constants.NavigationTitle.design {
+        } else if title == Constants.NavigationTitle.design.localized {
             navigationController?.pushViewController(confirmViewController, animated: true)
         }
         changeNavigationItemForward(with: title)
@@ -80,15 +80,15 @@ class VariationViewController: UIViewController {
     private func changeNavigationItemForward(with title: String)  {
         let nextButton = nextBarButton.customView as! UIButton
         let backButton = backBarButton.customView as! UIButton
-        if title == Constants.NavigationTitle.variation {
-            navigationItem.title = Constants.NavigationTitle.photoSelect
-            nextButton.setTitle(Constants.nextBarButtonTitle, for: .normal)
-        } else if title == Constants.NavigationTitle.photoSelect {
-            navigationItem.title = Constants.NavigationTitle.design
-            nextButton.setTitle(Constants.nextBarButtonTitle, for: .normal)
-        } else if title == Constants.NavigationTitle.design {
-            navigationItem.title = Constants.NavigationTitle.confirm
-            nextButton.setTitle(Constants.nextBarButtonEndTitle, for: .normal)
+        if title == Constants.NavigationTitle.variation.localized {
+            navigationItem.title = Constants.NavigationTitle.photoSelect.localized
+            nextButton.setTitle(Constants.nextBarButtonTitle.localized, for: .normal)
+        } else if title == Constants.NavigationTitle.photoSelect.localized {
+            navigationItem.title = Constants.NavigationTitle.design.localized
+            nextButton.setTitle(Constants.nextBarButtonTitle.localized, for: .normal)
+        } else if title == Constants.NavigationTitle.design.localized {
+            navigationItem.title = Constants.NavigationTitle.confirm.localized
+            nextButton.setTitle(Constants.nextBarButtonEndTitle.localized, for: .normal)
         }
         backButton.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
     }
@@ -96,16 +96,16 @@ class VariationViewController: UIViewController {
     private func changeNavigationItemBackward(with title: String)  {
         let nextButton = nextBarButton.customView as! UIButton
         let backButton = backBarButton.customView as! UIButton
-        if title == Constants.NavigationTitle.photoSelect {
-            navigationItem.title = Constants.NavigationTitle.variation
-            nextButton.setTitle(Constants.nextBarButtonTitle, for: .normal)
+        if title == Constants.NavigationTitle.photoSelect.localized {
+            navigationItem.title = Constants.NavigationTitle.variation.localized
+            nextButton.setTitle(Constants.nextBarButtonTitle.localized, for: .normal)
             backButton.setImage(nil, for: .normal)
-        } else if title == Constants.NavigationTitle.design {
-            navigationItem.title = Constants.NavigationTitle.photoSelect
-            nextButton.setTitle(Constants.nextBarButtonTitle, for: .normal)
-        } else if title == Constants.NavigationTitle.confirm {
-            navigationItem.title = Constants.NavigationTitle.design
-            nextButton.setTitle(Constants.nextBarButtonTitle, for: .normal)
+        } else if title == Constants.NavigationTitle.design.localized {
+            navigationItem.title = Constants.NavigationTitle.photoSelect.localized
+            nextButton.setTitle(Constants.nextBarButtonTitle.localized, for: .normal)
+        } else if title == Constants.NavigationTitle.confirm.localized {
+            navigationItem.title = Constants.NavigationTitle.design.localized
+            nextButton.setTitle(Constants.nextBarButtonTitle.localized, for: .normal)
         }
     }
     
