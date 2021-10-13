@@ -13,9 +13,9 @@ class VariationViewController: UIViewController {
     @IBOutlet weak var backBarButton: UIBarButtonItem!
     @IBOutlet weak var variationProgressView: ProgressView!
     
-    lazy var photoSelectViewController  = UIViewController.appViewController(.photoSelectViewController)
-    lazy var designViewController  = UIViewController.appViewController(.designViewController)
-    lazy var confirmViewController  = UIViewController.appViewController(.confirmViewController)
+    lazy var photoSelectViewController  = PhotoSelectViewController.loadFromNib()
+    lazy var designViewController  = DesignViewController.loadFromNib()
+    lazy var confirmViewController  = ConfirmViewController.loadFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()

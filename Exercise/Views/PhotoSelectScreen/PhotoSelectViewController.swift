@@ -28,3 +28,9 @@ class PhotoSelectViewController: UIViewController {
     */
 
 }
+
+extension PhotoSelectViewController {
+    static func loadFromNib() -> UIViewController {
+        return PhotoSelectViewController(nibName: String(describing: self), bundle: nil)
+    }
+}

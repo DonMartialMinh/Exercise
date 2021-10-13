@@ -28,3 +28,9 @@ class ConfirmViewController: UIViewController {
     */
 
 }
+
+extension ConfirmViewController {
+    static func loadFromNib() -> UIViewController {
+        return ConfirmViewController(nibName: String(describing: self), bundle: nil)
+    }
+}
