@@ -26,44 +26,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsw-wW-Zgd">
                     <rect key="frame" x="0.0" y="51" width="320" height="463.5"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOR-2l-mXI" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
-                            <rect key="frame" x="40" y="0.0" width="240" height="398.5"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template" translatesAutoresizingMaskIntoConstraints="NO" id="QoU-aN-aUl">
-                                    <rect key="frame" x="15" y="10" width="210" height="378.5"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template" translatesAutoresizingMaskIntoConstraints="NO" id="ZRH-9K-Yub">
+                            <rect key="frame" x="33.5" y="0.0" width="253" height="358.5"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="QoU-aN-aUl" secondAttribute="trailing" constant="15" id="00c-BB-OXE"/>
-                                <constraint firstItem="QoU-aN-aUl" firstAttribute="leading" secondItem="qOR-2l-mXI" secondAttribute="leading" constant="15" id="Qxk-aM-EfS"/>
-                                <constraint firstAttribute="bottom" secondItem="QoU-aN-aUl" secondAttribute="bottom" constant="10" id="SOI-41-QYP"/>
-                                <constraint firstItem="QoU-aN-aUl" firstAttribute="top" secondItem="qOR-2l-mXI" secondAttribute="top" constant="10" id="VdZ-BK-6qQ"/>
+                                <constraint firstAttribute="width" secondItem="ZRH-9K-Yub" secondAttribute="height" multiplier="166:235" id="90q-lG-7TQ"/>
                             </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                    <color key="value" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                    <size key="value" width="0.0" height="0.0"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                    <real key="value" value="3"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="0.59999999999999998"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Ih-oTC">
                             <rect key="frame" x="8" y="395.5" width="62" height="62"/>
                             <state key="normal" image="sample_btn"/>
@@ -75,13 +43,12 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="qOR-2l-mXI" firstAttribute="centerX" secondItem="lsw-wW-Zgd" secondAttribute="centerX" id="3nd-Kj-Xoa"/>
+                        <constraint firstItem="ZRH-9K-Yub" firstAttribute="width" secondItem="lsw-wW-Zgd" secondAttribute="width" multiplier="0.790625" id="4Zy-yM-4Z8"/>
                         <constraint firstAttribute="bottom" secondItem="zxc-Xa-eOX" secondAttribute="bottom" constant="6" id="4oi-Gn-tI4"/>
-                        <constraint firstItem="qOR-2l-mXI" firstAttribute="top" secondItem="lsw-wW-Zgd" secondAttribute="top" id="98V-L7-why"/>
+                        <constraint firstItem="ZRH-9K-Yub" firstAttribute="centerX" secondItem="lsw-wW-Zgd" secondAttribute="centerX" id="9RD-uI-Buk"/>
                         <constraint firstAttribute="trailing" secondItem="zxc-Xa-eOX" secondAttribute="trailing" constant="8" id="EhK-lE-6ME"/>
-                        <constraint firstItem="qOR-2l-mXI" firstAttribute="height" secondItem="lsw-wW-Zgd" secondAttribute="height" multiplier="0.86" id="L3h-Md-8fY"/>
                         <constraint firstAttribute="bottom" secondItem="Hzh-Ih-oTC" secondAttribute="bottom" constant="6" id="R7m-cf-laP"/>
-                        <constraint firstItem="qOR-2l-mXI" firstAttribute="width" secondItem="lsw-wW-Zgd" secondAttribute="width" multiplier="0.75" id="b0r-I4-b0k"/>
+                        <constraint firstItem="ZRH-9K-Yub" firstAttribute="top" secondItem="lsw-wW-Zgd" secondAttribute="top" id="tFI-mE-Lr2"/>
                         <constraint firstItem="Hzh-Ih-oTC" firstAttribute="leading" secondItem="lsw-wW-Zgd" secondAttribute="leading" constant="8" id="ytm-ax-cQ0"/>
                     </constraints>
                 </view>
@@ -102,7 +69,6 @@
                     <constraints>
                         <constraint firstItem="bnE-1D-63D" firstAttribute="leading" secondItem="VWH-L2-sUZ" secondAttribute="leading" id="2tj-fd-qn0"/>
                         <constraint firstItem="bnE-1D-63D" firstAttribute="top" secondItem="VWH-L2-sUZ" secondAttribute="top" id="66a-xu-idX"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53.5" id="6tn-hl-kND"/>
                         <constraint firstAttribute="bottom" secondItem="bnE-1D-63D" secondAttribute="bottom" id="Yaz-ey-bWe"/>
                         <constraint firstAttribute="trailing" secondItem="bnE-1D-63D" secondAttribute="trailing" id="bZF-ML-2Sm"/>
                     </constraints>
@@ -111,13 +77,17 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="BVH-ym-pbe" firstAttribute="height" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.09" id="2Kl-ed-JwL"/>
+                <constraint firstItem="BVH-ym-pbe" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.09" id="2Kl-ed-JwL">
+                    <variation key="heightClass=compact" constant="20"/>
+                </constraint>
                 <constraint firstItem="VWH-L2-sUZ" firstAttribute="top" secondItem="lsw-wW-Zgd" secondAttribute="bottom" id="2Lc-1Y-eib"/>
                 <constraint firstItem="lsw-wW-Zgd" firstAttribute="trailing" secondItem="VWH-L2-sUZ" secondAttribute="trailing" id="2fR-fD-vdD"/>
-                <constraint firstItem="VWH-L2-sUZ" firstAttribute="height" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.094" id="38h-yc-tun"/>
+                <constraint firstItem="VWH-L2-sUZ" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.094" id="38h-yc-tun">
+                    <variation key="heightClass=compact" constant="20"/>
+                </constraint>
                 <constraint firstItem="3IM-Vb-Isv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Evp-j9-bEN"/>
                 <constraint firstItem="VWH-L2-sUZ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Gt1-eH-h0s"/>
-                <constraint firstItem="lsw-wW-Zgd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BVH-ym-pbe" secondAttribute="bottom" id="QO6-sG-vKe"/>
+                <constraint firstItem="lsw-wW-Zgd" firstAttribute="top" secondItem="BVH-ym-pbe" secondAttribute="bottom" id="QO6-sG-vKe"/>
                 <constraint firstItem="BVH-ym-pbe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UWL-ro-aKA"/>
                 <constraint firstItem="BVH-ym-pbe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lW4-fO-p4u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3IM-Vb-Isv" secondAttribute="trailing" constant="15" id="pTS-3L-bg0"/>
