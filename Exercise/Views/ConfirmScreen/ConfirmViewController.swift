@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  FourViewController.swift
 //  Exercise
 //
 //  Created by Vo Minh Don on 10/6/21.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ConfirmViewController: UIViewController {
 
+    @IBOutlet weak var confirmProgressView: ProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        confirmProgressView.setState(.confirm)
         // Do any additional setup after loading the view.
     }
 
@@ -26,4 +27,10 @@ class FirstViewController: UIViewController {
     }
     */
 
+}
+
+extension ConfirmViewController {
+    static func loadFromNib() -> UIViewController {
+        return ConfirmViewController(nibName: String(describing: self), bundle: nil)
+    }
 }

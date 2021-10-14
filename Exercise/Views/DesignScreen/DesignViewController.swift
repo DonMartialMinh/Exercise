@@ -1,5 +1,5 @@
 //
-//  FourViewController.swift
+//  ThirdViewController.swift
 //  Exercise
 //
 //  Created by Vo Minh Don on 10/6/21.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class FourViewController: UIViewController {
+class DesignViewController: UIViewController {
 
+    @IBOutlet weak var designProgressView: ProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        designProgressView.setState(.design)
         // Do any additional setup after loading the view.
     }
 
@@ -26,4 +27,10 @@ class FourViewController: UIViewController {
     }
     */
 
+}
+
+extension DesignViewController {
+    static func loadFromNib() -> UIViewController {
+        return DesignViewController(nibName: String(describing: self), bundle: nil)
+    }
 }

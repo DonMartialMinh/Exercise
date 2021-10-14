@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  SecondViewController.swift
 //  Exercise
 //
 //  Created by Vo Minh Don on 10/6/21.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-
+class PhotoSelectViewController: UIViewController {
+    @IBOutlet weak var photoSelectProgressView: ProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        photoSelectProgressView.setState(.photoSelect)
         // Do any additional setup after loading the view.
     }
 
@@ -26,4 +27,10 @@ class ThirdViewController: UIViewController {
     }
     */
 
+}
+
+extension PhotoSelectViewController {
+    static func loadFromNib() -> UIViewController {
+        return PhotoSelectViewController(nibName: String(describing: self), bundle: nil)
+    }
 }

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "スタンプ"; ObjectID = "1k1-0H-lsl"; */
+"1k1-0H-lsl.text" = "Tem";
+
+/* Class = "UILabel"; text = "差出人"; ObjectID = "2H7-03-SU7"; */
+"2H7-03-SU7.text" = "Người gửi";
+
+/* Class = "UILabel"; text = "フォント"; ObjectID = "JCo-Ya-9Kc"; */
+"JCo-Ya-9Kc.text" = "Nét chữ";
+
+/* Class = "UILabel"; text = "メッセージ"; ObjectID = "KMc-mx-gMB"; */
+"KMc-mx-gMB.text" = "Thông điệp";
