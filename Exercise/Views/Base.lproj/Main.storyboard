@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--バリエーションを選択-->
+        <!--Select a variation-->
         <scene sceneID="ddz-rt-0VJ">
             <objects>
                 <viewController id="jtm-pc-ZZk" customClass="VariationViewController" customModule="Exercise" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,8 +62,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elp-3H-z6X">
                                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="49.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カラーを選ぶ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-jy-LOQ">
-                                                        <rect key="frame" x="25.5" y="30.5" width="55.5" height="11"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-jy-LOQ">
+                                                        <rect key="frame" x="18.5" y="30.5" width="69.5" height="11"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -88,8 +88,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-wH-QMM">
                                                 <rect key="frame" x="106.5" y="0.0" width="107" height="49.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真枚数を選ぶ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuk-0a-Q9k">
-                                                        <rect key="frame" x="21.5" y="30.5" width="64.5" height="11"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuk-0a-Q9k">
+                                                        <rect key="frame" x="18.5" y="30.5" width="70" height="11"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -114,8 +114,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heC-R0-vXK">
                                                 <rect key="frame" x="213.5" y="0.0" width="106.5" height="49.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="賀詞を選ぶ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-CP-yIq">
-                                                        <rect key="frame" x="30" y="30.5" width="46" height="11"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-CP-yIq">
+                                                        <rect key="frame" x="10.5" y="30.5" width="85" height="11"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -172,11 +172,11 @@
                             <constraint firstItem="dR4-I3-yUj" firstAttribute="leading" secondItem="lYa-xr-kNA" secondAttribute="leading" id="rjL-SU-sJj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="バリエーションを選択" id="mIo-Ft-Vff">
-                        <barButtonItem key="leftBarButtonItem" title="戻る" id="dSw-D9-er8">
+                    <navigationItem key="navigationItem" title="Select a variation" id="mIo-Ft-Vff">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="dSw-D9-er8">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="次へ" id="PTD-jN-E6B">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="PTD-jN-E6B">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>

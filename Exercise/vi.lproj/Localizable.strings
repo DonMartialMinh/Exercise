@@ -5,10 +5,10 @@
   Created by Vo Minh Don on 10/13/21.
   
 */
-"次へ" = "Tiếp theo";
-" 戻る" = "Trở lại";
-"バリエーションを選択" = "Chọn biến thể";
-"配置したい写真を選択" = "Chọn ảnh muốn đặt";
-"デザイン・差出人の編集" = "Thiết kế và chỉnh sửa";
-"デザインを最終確認" = "Xác nhận thiết kế";
-"注文へ\n進む" = "Đi đến đặt hàng";
+"Next" = "Tiếp theo";
+"Back" = "Trở lại";
+"Select a variation" = "Chọn biến thể";
+"Select a photo" = "Chọn ảnh muốn đặt";
+"Design and edit" = "Thiết kế và chỉnh sửa";
+"Confirmation of design" = "Xác nhận thiết kế";
+"Proceed to order" = "Đi đến đặt hàng";
