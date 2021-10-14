@@ -17,6 +17,8 @@ public struct Constants {
         static let confirm = "Confirmation of design"
     }
     
+    static let imageCellIdentifier = "imageCell"
+    
     static let backBarButtonTittle = "Back"
     static let nextBarButtonTitle = "Next"
     static let nextBarButtonEndTitle = "Proceed to order"

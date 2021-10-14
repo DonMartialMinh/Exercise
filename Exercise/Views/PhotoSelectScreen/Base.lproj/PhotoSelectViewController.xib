@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoSelectViewController" customModule="Exercise" customModuleProvider="target">
             <connections>
+                <outlet property="loadedImageView" destination="ZRH-9K-Yub" id="4rH-b9-dGU"/>
                 <outlet property="photoSelectProgressView" destination="BVH-ym-pbe" id="D2q-bf-2tG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -63,6 +64,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                             <state key="normal" title="Add / edit / check photo you want to use" image="candidate_photo_btn"/>
+                            <connections>
+                                <action selector="editPhotoButtonPressed:" destination="-1" eventType="touchUpInside" id="dkc-UG-TA2"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.42711997029999998" green="0.77332204579999997" blue="0.70195639129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
