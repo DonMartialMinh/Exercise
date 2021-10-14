@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  Exercise
+
+  Created by Vo Minh Don on 10/13/21.
+  
+*/
+"Next" = "次へ";
+"Back" = " 戻る";
+"Select a variation" = "バリエーションを選択";
+"Select a photo" = "配置したい写真を選択";
+"Design and edit" = "デザイン・差出人の編集";
+"Confirmation of design" = "デザインを最終確認";
+"Proceed to order" = "注文へ\n進む";

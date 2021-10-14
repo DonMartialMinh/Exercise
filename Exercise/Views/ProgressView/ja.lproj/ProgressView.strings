@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Photo selection"; ObjectID = "FcL-xU-69l"; */
+"FcL-xU-69l.text" = "写真選択";
+
+/* Class = "UILabel"; text = "Design"; ObjectID = "Mis-dB-Ewk"; */
+"Mis-dB-Ewk.text" = "デザイン";
+
+/* Class = "UILabel"; text = "Confirmation"; ObjectID = "czX-kC-wMX"; */
+"czX-kC-wMX.text" = "最終確認";
+
+/* Class = "UILabel"; text = "Select a variation"; ObjectID = "k9c-it-vYK"; */
+"k9c-it-vYK.text" = "バリエーションを選択";
