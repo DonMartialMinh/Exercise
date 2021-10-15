@@ -41,14 +41,14 @@ class LibraryViewController: UIViewController {
     @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
         guard let indexPaths = libraryCollectionView.indexPathsForSelectedItems else { return }
         if indexPaths != [] {
-            let ac = UIAlertController(title: "Unselected item?", message: "Going back will undo the selection you made", preferredStyle: .alert)
-            let goBack = UIAlertAction(title: "Go back", style: .default) { (_) in
+            let ac = UIAlertController(title: Constants.Alert.unselectImageTitle.localized, message: Constants.Alert.unselectImageMessage.localized, preferredStyle: .alert)
+            let goBack = UIAlertAction(title: Constants.Alert.goBack.localized, style: .default) { (_) in
                 let selectedCell = self.libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
                 selectedCell.setState(.normal)
                 self.libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
                 self.dismiss(animated: true, completion: nil)
             }
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let cancel = UIAlertAction(title: Constants.Alert.cancel.localized, style: .cancel, handler: nil)
             ac.addAction(goBack)
             ac.addAction(cancel)
             present(ac, animated: true, completion: nil)
@@ -60,9 +60,9 @@ class LibraryViewController: UIViewController {
     fileprivate func getPhotos() {
         let manager = PHImageManager.default()
         let requestOptions = PHImageRequestOptions()
-        requestOptions.isSynchronous = false
+        requestOptions.isSynchronous = true
         requestOptions.deliveryMode = .highQualityFormat
-        // .highQualityFormat will return better quality photos
+        //requestOptions.version = .original
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
@@ -70,7 +70,7 @@ class LibraryViewController: UIViewController {
         if results.count > 0 {
             for i in 0..<results.count {
                 let asset = results.object(at: i)
-                let size = CGSize(width: 700, height: 700)
+                let size = CGSize(width: 200, height: 200)
                 manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
                     if let image = image {
                         self.images.append(image)
