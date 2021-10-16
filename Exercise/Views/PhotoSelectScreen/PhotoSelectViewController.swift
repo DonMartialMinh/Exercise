@@ -27,8 +27,8 @@ class PhotoSelectViewController: UIViewController {
                     self.libraryViewController.modalPresentationStyle = .fullScreen
                     self.present(self.libraryViewController, animated: true, completion: nil)
                 } else {
-                    let ac = UIAlertController(title: Constants.Alert.photoAccessTitle.localized, message: Constants.Alert.photoAccessMessage.localized, preferredStyle: .alert)
-                    let goToSettings = UIAlertAction(title: Constants.Alert.settings.localized, style: .default) { (_) in
+                    let ac = UIAlertController(title: "Enable photos access?", message: "To use this feature you must enable photos access in settings", preferredStyle: .alert)
+                    let goToSettings = UIAlertAction(title: "Settings", style: .default) { (_) in
                         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString)  else {
                             return
                         }
@@ -37,7 +37,7 @@ class PhotoSelectViewController: UIViewController {
                         }
                     }
                     ac.addAction(goToSettings)
-                    ac.addAction(UIAlertAction(title: Constants.Alert.cancel.localized, style: .cancel, handler: nil))
+                    ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                     self.present(ac, animated: true, completion: nil)
                 }
             }
