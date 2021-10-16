@@ -12,3 +12,10 @@
 "Design and edit" = "デザイン・差出人の編集";
 "Confirmation of design" = "デザインを最終確認";
 "Proceed to order" = "注文へ\n進む";
+"Enable photos access?" = "写真へのアクセスを有効にしますか?";
+"To use this feature you must enable photos access in settings" = "この機能を使用するには、設定で写真へのアクセスを有効にする必要があります";
+"Unselected item?" = "未選択のアイテム?";
+"Going back will undo the selection you made" = "戻ると、行った選択が取り消されます";
+"Go back" = "戻る";
+"Settings" = "設定";
+"Cancel" = "キャンセル";
