@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Exercise
+
+  Created by Vo Minh Don on 10/16/21.
+  
+*/
+"NSPhotoLibraryUsageDescription" = "Ứng dụng cần truy cập vào thư viện của bạn để tiếp tục thực hiện công việc";

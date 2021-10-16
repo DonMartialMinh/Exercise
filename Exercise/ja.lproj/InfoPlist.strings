@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  Exercise
+
+  Created by Vo Minh Don on 10/16/21.
+  
+*/
+"NSPhotoLibraryUsageDescription" = "アクションを続行するには、フォトライブラリにアクセスする必要があります";

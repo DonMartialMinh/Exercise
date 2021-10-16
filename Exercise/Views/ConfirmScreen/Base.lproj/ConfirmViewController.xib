@@ -28,9 +28,85 @@
                                 <constraint firstAttribute="width" secondItem="J0v-82-RDl" secondAttribute="height" multiplier="166:235" id="ZM6-vE-YJL"/>
                             </constraints>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zio-gQ-q1d" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
+                            <rect key="frame" x="33.5" y="0.0" width="253" height="359"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMQ-KO-aqF">
+                                    <rect key="frame" x="0.0" y="0.0" width="15" height="359"/>
+                                    <color key="backgroundColor" red="0.42712038759999998" green="0.77728992699999999" blue="0.70195585490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="15" id="taB-Uu-EJp"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnW-rA-zIK">
+                                    <rect key="frame" x="238" y="0.0" width="15" height="359"/>
+                                    <color key="backgroundColor" red="0.42712038759999998" green="0.77728992699999999" blue="0.70195585490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="ZBz-2T-Bq7"/>
+                                        <constraint firstAttribute="width" constant="15" id="zkO-OF-Chp"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iP-l2-06R">
+                                    <rect key="frame" x="0.0" y="349" width="253" height="10"/>
+                                    <color key="backgroundColor" red="0.42712038759999998" green="0.77728992699999999" blue="0.70195585490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="j5O-1z-bfm"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="xxF-za-NHv"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5j-t6-oln">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="10"/>
+                                    <color key="backgroundColor" red="0.42712038759999998" green="0.77728992699999999" blue="0.70195585490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="z2F-ax-rSC"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="MnW-rA-zIK" firstAttribute="top" secondItem="zio-gQ-q1d" secondAttribute="top" id="1YV-lB-kfz"/>
+                                <constraint firstAttribute="trailing" secondItem="V5j-t6-oln" secondAttribute="trailing" id="8Zy-kP-E70"/>
+                                <constraint firstItem="V5j-t6-oln" firstAttribute="leading" secondItem="zio-gQ-q1d" secondAttribute="leading" id="JyI-tC-BLk"/>
+                                <constraint firstItem="V5j-t6-oln" firstAttribute="top" secondItem="zio-gQ-q1d" secondAttribute="top" id="Kle-4O-QTD"/>
+                                <constraint firstAttribute="bottom" secondItem="iMQ-KO-aqF" secondAttribute="bottom" id="Ntc-7a-O4K"/>
+                                <constraint firstItem="3iP-l2-06R" firstAttribute="leading" secondItem="zio-gQ-q1d" secondAttribute="leading" id="QRU-0p-RDn"/>
+                                <constraint firstItem="iMQ-KO-aqF" firstAttribute="top" secondItem="zio-gQ-q1d" secondAttribute="top" id="Sax-Se-A2Q"/>
+                                <constraint firstAttribute="trailing" secondItem="MnW-rA-zIK" secondAttribute="trailing" id="eY0-Qs-e6C"/>
+                                <constraint firstAttribute="bottom" secondItem="3iP-l2-06R" secondAttribute="bottom" id="hz9-bV-hDq"/>
+                                <constraint firstAttribute="bottom" secondItem="MnW-rA-zIK" secondAttribute="bottom" id="qWs-Bq-Feh"/>
+                                <constraint firstItem="iMQ-KO-aqF" firstAttribute="leading" secondItem="zio-gQ-q1d" secondAttribute="leading" id="tSv-bM-ERL"/>
+                                <constraint firstAttribute="trailing" secondItem="3iP-l2-06R" secondAttribute="trailing" id="wCC-ZM-yCW"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="0.69999999999999996"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="zio-gQ-q1d" firstAttribute="height" secondItem="J0v-82-RDl" secondAttribute="height" multiplier="1.00139" id="0rV-Cm-Oql"/>
+                        <constraint firstItem="zio-gQ-q1d" firstAttribute="top" secondItem="ca0-ee-Icf" secondAttribute="top" id="5Wt-QQ-hWP"/>
+                        <constraint firstItem="zio-gQ-q1d" firstAttribute="width" secondItem="J0v-82-RDl" secondAttribute="width" id="Cba-EU-6tV"/>
+                        <constraint firstItem="zio-gQ-q1d" firstAttribute="centerX" secondItem="J0v-82-RDl" secondAttribute="centerX" id="Sdc-8w-Qtg"/>
                         <constraint firstItem="J0v-82-RDl" firstAttribute="top" secondItem="ca0-ee-Icf" secondAttribute="top" id="TjF-St-m8E"/>
                         <constraint firstItem="J0v-82-RDl" firstAttribute="width" secondItem="ca0-ee-Icf" secondAttribute="width" multiplier="0.790625" id="kvw-UJ-cbn"/>
                         <constraint firstItem="J0v-82-RDl" firstAttribute="centerX" secondItem="ca0-ee-Icf" secondAttribute="centerX" id="obg-hT-oVB"/>
@@ -93,7 +169,6 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Ys8-9o-bJN" secondAttribute="bottom" constant="38.5" id="JKa-Py-wj3"/>
                         <constraint firstItem="Ys8-9o-bJN" firstAttribute="centerX" secondItem="ev6-bl-fIA" secondAttribute="centerX" id="gc4-r3-GBU"/>
