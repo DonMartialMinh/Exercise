@@ -11,12 +11,14 @@ import Photos
 class PhotoSelectViewController: UIViewController {
     @IBOutlet weak var loadedImageView: UIImageView!
     @IBOutlet weak var photoSelectProgressView: ProgressView!
+    @IBOutlet weak var pictureFrameView: PictureFrame!
     
     lazy var libraryViewController = LibraryViewController.loadFromNib()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         photoSelectProgressView.setState(.photoSelect)
+        pictureFrameView.setColor(.purple)
         // Do any additional setup after loading the view.
     }
     

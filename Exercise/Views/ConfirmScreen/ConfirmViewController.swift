@@ -10,9 +10,11 @@ import UIKit
 class ConfirmViewController: UIViewController {
 
     @IBOutlet weak var confirmProgressView: ProgressView!
+    @IBOutlet weak var pictureFrameView: PictureFrame!
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmProgressView.setState(.confirm)
+        pictureFrameView.setColor(.lightGreen)
         // Do any additional setup after loading the view.
     }
 

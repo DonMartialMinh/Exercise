@@ -12,6 +12,7 @@ class VariationViewController: UIViewController {
     @IBOutlet weak var nextBarButton: UIBarButtonItem!
     @IBOutlet weak var backBarButton: UIBarButtonItem!
     @IBOutlet weak var variationProgressView: ProgressView!
+    @IBOutlet weak var pictureFrameView: PictureFrame!
     
     lazy var photoSelectViewController  = PhotoSelectViewController.loadFromNib()
     lazy var designViewController  = DesignViewController.loadFromNib()
@@ -26,6 +27,7 @@ class VariationViewController: UIViewController {
     func setup() {
         navigationController?.navigationBar.delegate = self
         variationProgressView.setState(.variation)
+        pictureFrameView.setColor(.purple)
         initializeBarButton()
         shadowNavigationBar()
     }
