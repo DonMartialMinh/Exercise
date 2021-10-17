@@ -19,8 +19,15 @@ class LibraryViewController: UIViewController {
         libraryCollectionView.dataSource = self
         libraryCollectionView.register(ImageCollectionViewCell.loadFromNib(), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
         libraryCollectionView.allowsMultipleSelection = false
-        getPhotos()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getPhotos()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        images.removeAll()
     }
     
     @IBAction func chooseBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -85,6 +92,12 @@ class LibraryViewController: UIViewController {
             print("no photos to display")
         }
         
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        guard let flowLayout = libraryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        flowLayout.invalidateLayout()
     }
     
 }
