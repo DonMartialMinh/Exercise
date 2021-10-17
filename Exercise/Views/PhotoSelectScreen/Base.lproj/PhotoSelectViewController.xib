@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="loadedImageView" destination="ZRH-9K-Yub" id="4rH-b9-dGU"/>
                 <outlet property="photoSelectProgressView" destination="BVH-ym-pbe" id="D2q-bf-2tG"/>
+                <outlet property="pictureFrameView" destination="hPq-3n-Uq6" id="A7m-xC-sKa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,77 +34,8 @@
                                 <constraint firstAttribute="width" secondItem="ZRH-9K-Yub" secondAttribute="height" multiplier="166:235" id="90q-lG-7TQ"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPq-3n-Uq6" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPq-3n-Uq6" customClass="PictureFrame" customModule="Exercise" customModuleProvider="target">
                             <rect key="frame" x="33.5" y="0.0" width="253" height="359"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-O8-ujQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="15" height="359"/>
-                                    <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="15" id="eIF-ZA-Nh7"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mt7-YS-6LA">
-                                    <rect key="frame" x="238" y="0.0" width="15" height="359"/>
-                                    <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="7O1-Or-YDc"/>
-                                        <constraint firstAttribute="width" constant="15" id="EG0-9a-lWv"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-U8-PS4">
-                                    <rect key="frame" x="0.0" y="349" width="253" height="10"/>
-                                    <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="10" id="Au1-gB-ivC"/>
-                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="Eed-bZ-96J"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZP-lO-2TW">
-                                    <rect key="frame" x="0.0" y="0.0" width="253" height="10"/>
-                                    <color key="backgroundColor" red="0.46498113870000002" green="0.56263083219999999" blue="0.88238829370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="10" id="PM7-K0-BjR"/>
-                                    </constraints>
-                                </view>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="CQk-U8-PS4" secondAttribute="bottom" id="33v-l9-t6p"/>
-                                <constraint firstAttribute="trailing" secondItem="mt7-YS-6LA" secondAttribute="trailing" id="BgC-aM-TQk"/>
-                                <constraint firstItem="mt7-YS-6LA" firstAttribute="top" secondItem="hPq-3n-Uq6" secondAttribute="top" id="CXD-rf-aDh"/>
-                                <constraint firstItem="iZP-lO-2TW" firstAttribute="top" secondItem="hPq-3n-Uq6" secondAttribute="top" id="GLC-1L-ZVQ"/>
-                                <constraint firstItem="iZP-lO-2TW" firstAttribute="leading" secondItem="hPq-3n-Uq6" secondAttribute="leading" id="TtZ-C9-kaD"/>
-                                <constraint firstAttribute="bottom" secondItem="mt7-YS-6LA" secondAttribute="bottom" id="UCo-Qr-sC9"/>
-                                <constraint firstAttribute="trailing" secondItem="iZP-lO-2TW" secondAttribute="trailing" id="gHg-nM-eTQ"/>
-                                <constraint firstItem="CQk-U8-PS4" firstAttribute="leading" secondItem="hPq-3n-Uq6" secondAttribute="leading" id="gaL-mq-V6a"/>
-                                <constraint firstItem="i7X-O8-ujQ" firstAttribute="leading" secondItem="hPq-3n-Uq6" secondAttribute="leading" id="kZU-jk-QK9"/>
-                                <constraint firstAttribute="trailing" secondItem="CQk-U8-PS4" secondAttribute="trailing" id="kaU-GU-Rd9"/>
-                                <constraint firstAttribute="bottom" secondItem="i7X-O8-ujQ" secondAttribute="bottom" id="o1c-UK-pgd"/>
-                                <constraint firstItem="i7X-O8-ujQ" firstAttribute="top" secondItem="hPq-3n-Uq6" secondAttribute="top" id="vVt-bt-8tU"/>
-                            </constraints>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                    <real key="value" value="0.69999999999999996"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                    <size key="value" width="0.0" height="0.0"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-Ih-oTC">
                             <rect key="frame" x="8" y="395.5" width="62" height="62"/>

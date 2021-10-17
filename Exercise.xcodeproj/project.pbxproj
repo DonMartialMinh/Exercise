@@ -14,6 +14,8 @@
 		83644201271498A300FED975 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644200271498A300FED975 /* VariationViewController.swift */; };
 		8364420B2715869600FED975 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420A2715869600FED975 /* ProgressView.swift */; };
 		8364420E27166DBA00FED975 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420D27166DBA00FED975 /* NibView.swift */; };
+		83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4815C271C1607007872E5 /* PictureFrame.swift */; };
+		83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A48161271C1C38007872E5 /* PictureFrame.xib */; };
 		83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */; };
 		83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC47E3270D2FE8001EDFE1 /* SceneDelegate.swift */; };
 		83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83AC47E7270D2FE8001EDFE1 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		83644200271498A300FED975 /* VariationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationViewController.swift; sourceTree = "<group>"; };
 		8364420A2715869600FED975 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8364420D27166DBA00FED975 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		83A4815C271C1607007872E5 /* PictureFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureFrame.swift; sourceTree = "<group>"; };
+		83A48161271C1C38007872E5 /* PictureFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureFrame.xib; sourceTree = "<group>"; };
 		83AC47DE270D2FE8001EDFE1 /* Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83AC47E3270D2FE8001EDFE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,15 @@
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
+		83A48158271C15DF007872E5 /* PictureFrame */ = {
+			isa = PBXGroup;
+			children = (
+				83A4815C271C1607007872E5 /* PictureFrame.swift */,
+				83A48161271C1C38007872E5 /* PictureFrame.xib */,
+			);
+			path = PictureFrame;
+			sourceTree = "<group>";
+		};
 		83AC47D5270D2FE8001EDFE1 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				83AC47E7270D2FE8001EDFE1 /* Main.storyboard */,
+				83A48158271C15DF007872E5 /* PictureFrame */,
 				83644206271583E000FED975 /* ProgressView */,
 				830B8A812712DB980053B419 /* PhotoSelectScreen */,
 				830B8A822712DBA80053B419 /* DesignScreen */,
@@ -269,6 +283,7 @@
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
 				83C2BD56271A880A000BAE24 /* LibraryViewController.xib in Resources */,
 				83D7994B2716E3A2003CA963 /* Localizable.strings in Resources */,
+				83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */,
 				83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */,
 				83C2BD61271A8A31000BAE24 /* InfoPlist.strings in Resources */,
 				83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */,
@@ -294,6 +309,7 @@
 				8364420B2715869600FED975 /* ProgressView.swift in Sources */,
 				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
 				835102D92718174000CF1806 /* LibraryViewController.swift in Sources */,
+				83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */,
 				830B8A872712DC0F0053B419 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
