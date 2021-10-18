@@ -31,8 +31,4 @@ class DesignViewController: UIViewController {
 
 }
 
-extension DesignViewController {
-    static func loadFromNib() -> UIViewController {
-        return DesignViewController(nibName: String(describing: self), bundle: nil)
-    }
-}
+extension DesignViewController: InterfaceInitable {}

@@ -35,10 +35,10 @@ class LibraryViewController: UIViewController {
         if indexPaths != [] {
             if let navigationController = presentingViewController as? UINavigationController {
                 if let presenter = navigationController.topViewController as? PhotoSelectViewController {
-                    let selectedCell = self.libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
+                    let selectedCell = libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
                     presenter.loadedImageView.image = selectedCell.pictureImageView.image
                     selectedCell.setState(.normal)
-                    self.libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
+                    libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
                 }
             }
             dismiss(animated: true, completion: nil)
@@ -114,7 +114,6 @@ extension LibraryViewController: UICollectionViewDataSource {
         return cell
     }
     
-    
 }
 
 //MARK: - UICollectionViewDelegate
@@ -149,8 +148,4 @@ extension LibraryViewController: UICollectionViewDelegateFlowLayout {
 }
 
 //MARK: - Extension
-extension LibraryViewController {
-    static func loadFromNib() -> UIViewController{
-        return LibraryViewController(nibName: String(describing: self), bundle: nil)
-    }
-}
+extension LibraryViewController: InterfaceInitable {}

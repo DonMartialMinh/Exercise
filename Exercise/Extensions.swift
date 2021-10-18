@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//MARK: - Color
 enum AssetsColor {
     case orange
     case purple
@@ -29,8 +30,27 @@ extension UIColor {
     }
 }
 
+//MARK: - String
 extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
+    }
+}
+
+//MARK: - InterfaceInitable
+protocol InterfaceInitable: class {
+    static var classId: String { get }
+    static func initFromNib() -> Self
+}
+
+extension InterfaceInitable where Self: UIViewController {
+    static var classId: String {
+        autoreleasepool {
+            return String(describing: Self.self)
+        }
+    }
+    
+    static func initFromNib() -> Self {
+        return Self(nibName: classId, bundle: nil)
     }
 }

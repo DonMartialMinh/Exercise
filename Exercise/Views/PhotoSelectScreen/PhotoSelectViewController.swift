@@ -13,7 +13,9 @@ class PhotoSelectViewController: UIViewController {
     @IBOutlet weak var photoSelectProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
     
-    lazy var libraryViewController = LibraryViewController.loadFromNib()
+    lazy var libraryViewController: LibraryViewController = {
+        return LibraryViewController.initFromNib()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +50,4 @@ class PhotoSelectViewController: UIViewController {
     
 }
 
-extension PhotoSelectViewController {
-    static func loadFromNib() -> UIViewController {
-        return PhotoSelectViewController(nibName: String(describing: self), bundle: nil)
-    }
-}
+extension PhotoSelectViewController: InterfaceInitable {}
