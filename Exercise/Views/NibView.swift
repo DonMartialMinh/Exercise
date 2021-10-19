@@ -9,24 +9,22 @@ import Foundation
 import UIKit
 
 class NibView: UIView {
-    
     var view: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
+
     private func commonInit() {
         view = loadNib()
         view.frame = bounds
         addSubview(view)
     }
-
 }
 
 extension UIView {

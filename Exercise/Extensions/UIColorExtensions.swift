@@ -1,8 +1,8 @@
 //
-//  extensions.swift
+//  UIColorExtensions.swift
 //  Exercise
 //
-//  Created by Vo Minh Don on 10/11/21.
+//  Created by Vo Minh Don on 10/19/21.
 //
 
 import Foundation
@@ -15,7 +15,6 @@ enum AssetsColor {
 }
 
 extension UIColor {
-    
     static func appColor(_ name: AssetsColor) -> UIColor? {
         switch name {
         case .orange:
@@ -26,11 +25,5 @@ extension UIColor {
             return UIColor(named: "lightGreen")
             
         }
-    }
-}
-
-extension String {
-    var localized: String {
-        return NSLocalizedString(self, comment: "")
     }
 }

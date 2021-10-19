@@ -7,32 +7,24 @@
 
 import UIKit
 
-class ConfirmViewController: UIViewController {
-
+class ConfirmViewController: BaseViewController {
+    // MARK: - IBOutlet
     @IBOutlet weak var confirmProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
+
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmProgressView.setState(.confirm)
         pictureFrameView.setColor(.lightGreen)
+        navigationItem.title = Constants.NavigationTitle.confirm.localized
         // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension ConfirmViewController {
-    static func loadFromNib() -> UIViewController {
-        return ConfirmViewController(nibName: String(describing: self), bundle: nil)
+    // MARK: - ConfigureNavigationBar
+    override func configureNavigationBar() {
+        super.configureNavigationBar()
+        let button = navigationItem.rightBarButtonItem?.customView as! UIButton
+        button.setTitle(Constants.nextBarButtonEndTitle.localized, for: .normal)
     }
 }

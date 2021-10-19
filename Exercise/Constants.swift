@@ -9,14 +9,14 @@ import Foundation
 
 
 public struct Constants {
-   
+
     struct NavigationTitle {
         static let variation = "Select a variation"
         static let photoSelect = "Select a photo"
         static let design = "Design and edit"
         static let confirm = "Confirmation of design"
     }
-    
+
     struct Alert {
         static let photoAccessTitle = "Enable photos access?"
         static let photoAccessMessage = "To use this feature you must enable photos access in settings"
@@ -28,9 +28,8 @@ public struct Constants {
         static let cancel = "Cancel"
     }
 
-    
     static let imageCellIdentifier = "imageCell"
-    
+
     static let backBarButtonTittle = "Back"
     static let nextBarButtonTitle = "Next"
     static let nextBarButtonEndTitle = "Proceed to order"
