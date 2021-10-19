@@ -147,5 +147,3 @@ extension LibraryViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-//MARK: - Extension
-extension LibraryViewController: InterfaceInitable {}

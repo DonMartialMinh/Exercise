@@ -12,18 +12,18 @@ class PhotoSelectViewController: UIViewController {
     @IBOutlet weak var loadedImageView: UIImageView!
     @IBOutlet weak var photoSelectProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
-    
+
     lazy var libraryViewController: LibraryViewController = {
         return LibraryViewController.initFromNib()
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         photoSelectProgressView.setState(.photoSelect)
         pictureFrameView.setColor(.purple)
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func editPhotoButtonPressed(_ sender: UIButton) {
         PHPhotoLibrary.requestAuthorization { (status) in
             DispatchQueue.main.async {
@@ -47,7 +47,4 @@ class PhotoSelectViewController: UIViewController {
             }
         }
     }
-    
 }
-
-extension PhotoSelectViewController: InterfaceInitable {}
