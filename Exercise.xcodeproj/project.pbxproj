@@ -37,6 +37,7 @@
 		83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995F2716EBE5003CA963 /* DesignViewController.xib */; };
 		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
 		83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */; };
+		83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		83D799692716EBFE003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ConfirmViewController.strings; sourceTree = "<group>"; };
 		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
 		83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
+		83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */,
 				83038D26271E5B4900080502 /* UIColorExtensions.swift */,
 				83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */,
+				83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,
 				83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */,
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,

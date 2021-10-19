@@ -9,27 +9,34 @@ import UIKit
 import Photos
 
 class LibraryViewController: UIViewController {
-    
-    var images = [UIImage]()
-    
+    // MARK: - IBOutlet
     @IBOutlet weak var libraryCollectionView: UICollectionView!
+    var allPhotos = PHFetchResult<PHAsset>()
+
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryCollectionView.delegate = self
         libraryCollectionView.dataSource = self
         libraryCollectionView.register(ImageCollectionViewCell.loadNib(), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
         libraryCollectionView.allowsMultipleSelection = false
-        // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        PHPhotoLibrary.shared().register(self)
         getPhotos()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        images.removeAll()
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        guard let flowLayout = libraryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        flowLayout.invalidateLayout()
     }
-    
+
+    fileprivate func getPhotos() {
+        let fetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
+    }
+
+    // MARK: - ButtonCLicked
     @IBAction func chooseBarButtonPressed(_ sender: UIBarButtonItem) {
         guard let indexPaths = libraryCollectionView.indexPathsForSelectedItems else { return }
         if indexPaths != [] {
@@ -44,7 +51,7 @@ class LibraryViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         }
     }
-    
+
     @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
         guard let indexPaths = libraryCollectionView.indexPathsForSelectedItems else { return }
         if indexPaths != [] {
@@ -63,73 +70,34 @@ class LibraryViewController: UIViewController {
             dismiss(animated: true, completion: nil)
         }
     }
-    
-    fileprivate func getPhotos() {
-        let manager = PHImageManager.default()
-        let requestOptions = PHImageRequestOptions()
-        requestOptions.isSynchronous = true
-        requestOptions.deliveryMode = .highQualityFormat
-        //requestOptions.version = .original
-        // .highQualityFormat will return better quality photos
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-        
-        let results: PHFetchResult = PHAsset.fetchAssets(with: .image, options: fetchOptions)
-        if results.count > 0 {
-            for i in 0..<results.count {
-                let asset = results.object(at: i)
-                let size = CGSize(width: 200, height: 200)
-                manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFill, options: requestOptions) { (image, _) in
-                    if let image = image {
-                        self.images.append(image)
-                        self.libraryCollectionView.reloadData()
-                    } else {
-                        print("error asset to image")
-                    }
-                }
-            }
-        } else {
-            print("no photos to display")
-        }
-        
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        guard let flowLayout = libraryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        flowLayout.invalidateLayout()
-    }
-    
 }
 
-//MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension LibraryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return allPhotos.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCellIdentifier, for: indexPath) as! ImageCollectionViewCell
-        cell.pictureImageView.image = images[indexPath.row]
+        let asset = allPhotos.object(at: indexPath.row)
+        cell.pictureImageView.fetchImage(asset: asset, targetSize: cell.pictureImageView.frame.size, contentMode: .aspectFit)
         return cell
     }
-    
 }
 
-//MARK: - UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 extension LibraryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
         selectedCell.setState(.selected)
     }
-    
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
         selectedCell.setState(.normal)
     }
 }
 
-//MARK: - UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionViewDelegateFlowLayout
 extension LibraryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionWidth = collectionView.bounds.width
@@ -137,13 +105,41 @@ extension LibraryViewController: UICollectionViewDelegateFlowLayout {
         let itemHeight = itemWidth
         return CGSize(width: itemWidth, height: itemHeight)
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
 }
 
+// MARK: - PHPhotoLibraryChangeObserver
+extension LibraryViewController: PHPhotoLibraryChangeObserver {
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        guard let collectionView = self.libraryCollectionView else { return }
+        DispatchQueue.main.sync {
+            if let changes = changeInstance.changeDetails(for: allPhotos) {
+                allPhotos = changes.fetchResultAfterChanges
+                if changes.hasIncrementalChanges {
+                    collectionView.performBatchUpdates({
+                        if let removed = changes.removedIndexes, removed.count > 0 {
+                            collectionView.deleteItems(at: removed.map { IndexPath(item: $0, section:0) })
+                        }
+                        if let inserted = changes.insertedIndexes, inserted.count > 0 {
+                            collectionView.insertItems(at: inserted.map { IndexPath(item: $0, section:0) })
+                        }
+                        if let changed = changes.changedIndexes, changed.count > 0 {
+                            collectionView.reloadItems(at: changed.map { IndexPath(item: $0, section:0) })
+                        }
+                        changes.enumerateMoves { fromIndex, toIndex in
+                            collectionView.moveItem(at: IndexPath(item: fromIndex, section: 0),
+                                                    to: IndexPath(item: toIndex, section: 0))
+                        }
+                    })
+                } else {
+                    collectionView.reloadData()
+                }
+            }
+        }
+    }
+}
