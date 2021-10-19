@@ -10,6 +10,7 @@
 		83038D20271E5B0000080502 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D1F271E5B0000080502 /* StringExtensions.swift */; };
 		83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */; };
 		83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D26271E5B4900080502 /* UIColorExtensions.swift */; };
+		83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D2A271E5DAF00080502 /* BaseViewController.swift */; };
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
 		835102D92718174000CF1806 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102D72718174000CF1806 /* LibraryViewController.swift */; };
 		835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102EB27181A3000CF1806 /* ImageCollectionViewCell.swift */; };
@@ -35,12 +36,14 @@
 		83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */; };
 		83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995F2716EBE5003CA963 /* DesignViewController.xib */; };
 		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
+		83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		83038D1F271E5B0000080502 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		83038D26271E5B4900080502 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		83038D2A271E5DAF00080502 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		835102C92717C78800CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		835102CA2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressView.strings; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 		83D799652716EBFC003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmViewController.xib; sourceTree = "<group>"; };
 		83D799692716EBFE003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ConfirmViewController.strings; sourceTree = "<group>"; };
 		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
+		83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				83038D1F271E5B0000080502 /* StringExtensions.swift */,
 				83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */,
 				83038D26271E5B4900080502 /* UIColorExtensions.swift */,
+				83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 		83AC47F7270D3127001EDFE1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				83038D2A271E5DAF00080502 /* BaseViewController.swift */,
 				83644200271498A300FED975 /* VariationViewController.swift */,
 			);
 			path = Controller;
@@ -313,11 +319,13 @@
 			files = (
 				83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */,
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
+				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
 				83644201271498A300FED975 /* VariationViewController.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
 				83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */,
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
 				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
+				83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,
 				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,

@@ -15,7 +15,6 @@ enum AssetsColor {
 }
 
 extension UIColor {
-    
     static func appColor(_ name: AssetsColor) -> UIColor? {
         switch name {
         case .orange:

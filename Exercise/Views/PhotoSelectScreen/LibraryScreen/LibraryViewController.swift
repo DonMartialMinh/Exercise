@@ -17,7 +17,7 @@ class LibraryViewController: UIViewController {
         super.viewDidLoad()
         libraryCollectionView.delegate = self
         libraryCollectionView.dataSource = self
-        libraryCollectionView.register(ImageCollectionViewCell.loadFromNib(), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
+        libraryCollectionView.register(ImageCollectionViewCell.loadNib(), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
         libraryCollectionView.allowsMultipleSelection = false
         // Do any additional setup after loading the view.
     }

@@ -14,7 +14,7 @@ extension UIViewController {
             return String(describing: Self.self)
         }
     }
-    
+
     static func initFromNib() -> Self {
         return Self(nibName: classId, bundle: nil)
     }

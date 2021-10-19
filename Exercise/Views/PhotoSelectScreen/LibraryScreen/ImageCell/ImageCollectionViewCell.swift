@@ -7,15 +7,22 @@
 
 import UIKit
 
+enum cellState {
+    case selected
+    case normal
+}
+
 class ImageCollectionViewCell: UICollectionViewCell {
-    
-    
+    // MARK: - IBOutlet
     @IBOutlet weak var pictureImageView: UIImageView!
+
+    // MARK: - awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
+    // MARK: - SetState
     func setState(_ state: cellState)
     {
         switch state {
@@ -27,15 +34,4 @@ class ImageCollectionViewCell: UICollectionViewCell {
         }
     }
 
-}
-
-enum cellState {
-    case selected
-    case normal
-}
-
-extension ImageCollectionViewCell {
-    static func loadFromNib() -> UINib {
-        return UINib(nibName: String(describing: self), bundle: nil)
-    }
 }

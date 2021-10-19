@@ -179,17 +179,8 @@
                             <constraint firstItem="dR4-I3-yUj" firstAttribute="leading" secondItem="lYa-xr-kNA" secondAttribute="leading" id="rjL-SU-sJj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Select a variation" id="mIo-Ft-Vff">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="dSw-D9-er8">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="PTD-jN-E6B">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Select a variation" id="mIo-Ft-Vff"/>
                     <connections>
-                        <outlet property="backBarButton" destination="dSw-D9-er8" id="ruh-ZF-TQd"/>
-                        <outlet property="nextBarButton" destination="PTD-jN-E6B" id="iZh-SL-rGM"/>
                         <outlet property="pictureFrameView" destination="KBh-AC-MTz" id="0Kg-zH-FXm"/>
                         <outlet property="variationProgressView" destination="VLw-94-rUg" id="5bV-66-Rxi"/>
                     </connections>
@@ -206,6 +197,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEd-Gj-zlz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

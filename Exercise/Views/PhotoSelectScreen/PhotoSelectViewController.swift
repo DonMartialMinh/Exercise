@@ -8,28 +8,34 @@
 import UIKit
 import Photos
 
-class PhotoSelectViewController: UIViewController {
+class PhotoSelectViewController: BaseViewController {
+    // MARK: - IBOutlet
     @IBOutlet weak var loadedImageView: UIImageView!
     @IBOutlet weak var photoSelectProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
 
-    lazy var libraryViewController: LibraryViewController = {
-        return LibraryViewController.initFromNib()
-    }()
-
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         photoSelectProgressView.setState(.photoSelect)
         pictureFrameView.setColor(.purple)
+        navigationItem.title = Constants.NavigationTitle.photoSelect.localized
         // Do any additional setup after loading the view.
+    }
+
+    // MARK: - ButtonClicked
+    override func nextButtonClicked(_ sender: UIBarButtonItem) {
+        let designVC  = DesignViewController.initFromNib()
+        navigationController?.pushViewController(designVC, animated: true)
     }
 
     @IBAction func editPhotoButtonPressed(_ sender: UIButton) {
         PHPhotoLibrary.requestAuthorization { (status) in
             DispatchQueue.main.async {
                 if status == .authorized{
-                    self.libraryViewController.modalPresentationStyle = .fullScreen
-                    self.present(self.libraryViewController, animated: true, completion: nil)
+                    let libraryVC = LibraryViewController.initFromNib()
+                    libraryVC.modalPresentationStyle = .fullScreen
+                    self.present(libraryVC, animated: true, completion: nil)
                 } else {
                     let ac = UIAlertController(title: Constants.Alert.photoAccessTitle.localized, message: Constants.Alert.photoAccessMessage.localized, preferredStyle: .alert)
                     let goToSettings = UIAlertAction(title: Constants.Alert.settings.localized, style: .default) { (_) in

@@ -15,6 +15,7 @@ enum ProgressState {
 }
 
 class ProgressView: NibView {
+    // MARK: - IBOutlet
     @IBOutlet weak var variationCustomView: CustomView!
     @IBOutlet weak var photoSelectCustomView: CustomView!
     @IBOutlet weak var designCustomView: CustomView!
@@ -23,13 +24,11 @@ class ProgressView: NibView {
     @IBOutlet weak var photoSelectLabel: UILabel!
     @IBOutlet weak var designLabel: UILabel!
     @IBOutlet weak var confirmLabel: UILabel!
-    
     @IBOutlet weak var lineStagePhotoSelectView: UIView!
     @IBOutlet weak var lineStageDesignView: UIView!
     @IBOutlet weak var lineStageConfirmView: UIView!
-    
-    
-    
+
+    // MARK: - SetState
     func setState (_ state: ProgressState) {
         switch state {
         case .variation:
