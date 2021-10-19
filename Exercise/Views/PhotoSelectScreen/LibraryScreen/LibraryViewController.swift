@@ -8,10 +8,15 @@
 import UIKit
 import Photos
 
+protocol LibraryViewControllerDelegate: class {
+    func didUpdateImage(_ libraryViewController: LibraryViewController, _ image: UIImage)
+}
+
 class LibraryViewController: UIViewController {
     // MARK: - IBOutlet
     @IBOutlet weak var libraryCollectionView: UICollectionView!
     var allPhotos = PHFetchResult<PHAsset>()
+    weak var delegate: LibraryViewControllerDelegate?
 
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
@@ -30,6 +35,7 @@ class LibraryViewController: UIViewController {
         flowLayout.invalidateLayout()
     }
 
+    // MARK: - GetPhotos
     fileprivate func getPhotos() {
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
@@ -40,14 +46,11 @@ class LibraryViewController: UIViewController {
     @IBAction func chooseBarButtonPressed(_ sender: UIBarButtonItem) {
         guard let indexPaths = libraryCollectionView.indexPathsForSelectedItems else { return }
         if indexPaths != [] {
-            if let navigationController = presentingViewController as? UINavigationController {
-                if let presenter = navigationController.topViewController as? PhotoSelectViewController {
-                    let selectedCell = libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
-                    presenter.loadedImageView.image = selectedCell.pictureImageView.image
-                    selectedCell.setState(.normal)
-                    libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
-                }
-            }
+            let selectedCell = libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
+            guard let image = selectedCell.pictureImageView.image else { return }
+            delegate?.didUpdateImage(self, image)
+            selectedCell.setState(.normal)
+            libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
             dismiss(animated: true, completion: nil)
         }
     }

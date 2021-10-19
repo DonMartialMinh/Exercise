@@ -34,6 +34,7 @@ class PhotoSelectViewController: BaseViewController {
             DispatchQueue.main.async {
                 if status == .authorized{
                     let libraryVC = LibraryViewController.initFromNib()
+                    libraryVC.delegate = self
                     libraryVC.modalPresentationStyle = .fullScreen
                     self.present(libraryVC, animated: true, completion: nil)
                 } else {
@@ -52,5 +53,12 @@ class PhotoSelectViewController: BaseViewController {
                 }
             }
         }
+    }
+}
+
+// MARK: - LibraryViewControllerDelegate
+extension PhotoSelectViewController: LibraryViewControllerDelegate {
+    func didUpdateImage(_ libraryViewController: LibraryViewController, _ image: UIImage) {
+        loadedImageView.image = image
     }
 }
