@@ -153,6 +153,7 @@
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.1428339183" green="0.1182946339" blue="0.26668080690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstItem="DZQ-9k-NpG" firstAttribute="centerX" secondItem="abi-fF-u4V" secondAttribute="centerX" id="5or-Mo-ojv"/>
                                         <constraint firstItem="1k1-0H-lsl" firstAttribute="centerX" secondItem="abi-fF-u4V" secondAttribute="centerX" id="aq8-c6-aHd"/>
@@ -161,6 +162,9 @@
                                         <constraint firstItem="1k1-0H-lsl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DZQ-9k-NpG" secondAttribute="bottom" constant="3" id="hhW-5h-Wfw"/>
                                         <constraint firstItem="1k1-0H-lsl" firstAttribute="bottom" secondItem="abi-fF-u4V" secondAttribute="bottomMargin" id="puD-SV-ctm"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="jhE-ms-wRS" appends="YES" id="YV6-XQ-twZ"/>
+                                    </connections>
                                 </view>
                             </subviews>
                         </stackView>
@@ -198,6 +202,11 @@
             </constraints>
             <point key="canvasLocation" x="18.840579710144929" y="103.79464285714285"/>
         </view>
+        <tapGestureRecognizer id="jhE-ms-wRS">
+            <connections>
+                <action selector="stampTaped:" destination="-1" id="XRj-Kh-Za0"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="enlargement_btn" width="62" height="62"/>
