@@ -26,4 +26,9 @@ class DesignViewController: BaseViewController {
         let confirmVC = ConfirmViewController.initFromNib()
         navigationController?.pushViewController(confirmVC, animated: true)
     }
+    @IBAction func stampTaped(_ sender: UITapGestureRecognizer) {
+        let stampCollectionVC = StampCollectionViewController.initFromNib()
+        stampCollectionVC.modalPresentationStyle = .fullScreen
+        present(stampCollectionVC, animated: true, completion: nil)
+    }
 }

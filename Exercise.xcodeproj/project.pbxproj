@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,14 @@
 		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
 		83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */; };
 		83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */; };
+		83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */; };
+		83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8388271FF37E00F282AE /* ResponseError.swift */; };
+		83EA838D271FF42000F282AE /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838C271FF42000F282AE /* TargetType.swift */; };
+		83EA8390271FF91800F282AE /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838F271FF91800F282AE /* DataAPI.swift */; };
+		83EA83932720179C00F282AE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83922720179C00F282AE /* APIManager.swift */; };
+		83EA83992720210B00F282AE /* StampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83982720210B00F282AE /* StampModel.swift */; };
+		83EA839C27207A9700F282AE /* StampCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA839E27207A9700F282AE /* StampCollectionViewController.xib */; };
+		842747E2821906586ADCF7A8 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A52B82A74FB451BC9AABBC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +99,18 @@
 		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
 		83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCollectionViewController.swift; sourceTree = "<group>"; };
+		83EA8388271FF37E00F282AE /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		83EA838C271FF42000F282AE /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		83EA838F271FF91800F282AE /* DataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
+		83EA83922720179C00F282AE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		83EA83982720210B00F282AE /* StampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampModel.swift; sourceTree = "<group>"; };
+		83EA839D27207A9700F282AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StampCollectionViewController.xib; sourceTree = "<group>"; };
+		83EA83A127207A9C00F282AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/StampCollectionViewController.strings; sourceTree = "<group>"; };
+		83EA83A327207A9F00F282AE /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/StampCollectionViewController.strings; sourceTree = "<group>"; };
+		8B6B628301F20118D16B2269 /* Pods-Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise.debug.xcconfig"; path = "Target Support Files/Pods-Exercise/Pods-Exercise.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A52B82A74FB451BC9AABBC /* Pods_Exercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE9AABA01FF89D1B60FCD2B /* Pods-Exercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise.release.xcconfig"; path = "Target Support Files/Pods-Exercise/Pods-Exercise.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +118,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842747E2821906586ADCF7A8 /* Pods_Exercise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5099B92CDCE77C283A9F5AF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B6B628301F20118D16B2269 /* Pods-Exercise.debug.xcconfig */,
+				DFE9AABA01FF89D1B60FCD2B /* Pods-Exercise.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		83038D1E271E5A8E00080502 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +159,7 @@
 		830B8A822712DBA80053B419 /* DesignScreen */ = {
 			isa = PBXGroup;
 			children = (
+				83EA8381271FC0B200F282AE /* StampCollectionScreen */,
 				83AC485C270D95FD001EDFE1 /* DesignViewController.swift */,
 				83D7995F2716EBE5003CA963 /* DesignViewController.xib */,
 			);
@@ -186,6 +217,8 @@
 			children = (
 				83AC47E0270D2FE8001EDFE1 /* Exercise */,
 				83AC47DF270D2FE8001EDFE1 /* Products */,
+				5099B92CDCE77C283A9F5AF5 /* Pods */,
+				BDC8EFECB454056F35210820 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,8 +235,9 @@
 			children = (
 				83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */,
 				83AC47E3270D2FE8001EDFE1 /* SceneDelegate.swift */,
-				83AC47F7270D3127001EDFE1 /* Controller */,
+				83EA8387271FEF6100F282AE /* Models */,
 				83AC47F6270D311D001EDFE1 /* Views */,
+				83AC47F7270D3127001EDFE1 /* Controller */,
 				83038D1E271E5A8E00080502 /* Extensions */,
 				830B8A862712DC0F0053B419 /* Constants.swift */,
 				83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */,
@@ -239,6 +273,35 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		83EA8381271FC0B200F282AE /* StampCollectionScreen */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */,
+				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
+			);
+			path = StampCollectionScreen;
+			sourceTree = "<group>";
+		};
+		83EA8387271FEF6100F282AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8388271FF37E00F282AE /* ResponseError.swift */,
+				83EA838C271FF42000F282AE /* TargetType.swift */,
+				83EA838F271FF91800F282AE /* DataAPI.swift */,
+				83EA83922720179C00F282AE /* APIManager.swift */,
+				83EA83982720210B00F282AE /* StampModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BDC8EFECB454056F35210820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2A52B82A74FB451BC9AABBC /* Pods_Exercise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,9 +309,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83AC47F2270D2FE9001EDFE1 /* Build configuration list for PBXNativeTarget "Exercise" */;
 			buildPhases = (
+				2CC59E6F90015A46733DE894 /* [CP] Check Pods Manifest.lock */,
 				83AC47DA270D2FE8001EDFE1 /* Sources */,
 				83AC47DB270D2FE8001EDFE1 /* Frameworks */,
 				83AC47DC270D2FE8001EDFE1 /* Resources */,
+				C4094F078E1101D6740EE3DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D799512716EA36003CA963 /* ProgressView.xib in Resources */,
+				83EA839C27207A9700F282AE /* StampCollectionViewController.xib in Resources */,
 				83AC47EE270D2FE9001EDFE1 /* LaunchScreen.storyboard in Resources */,
 				83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */,
 				83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */,
@@ -315,29 +381,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CC59E6F90015A46733DE894 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Exercise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4094F078E1101D6740EE3DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Exercise/Pods-Exercise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Exercise/Pods-Exercise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Exercise/Pods-Exercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83AC47DA270D2FE8001EDFE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
 				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,
 				83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */,
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
+				83EA8390271FF91800F282AE /* DataAPI.swift in Sources */,
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
 				83644201271498A300FED975 /* VariationViewController.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
+				83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */,
+				83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */,
 				83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */,
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
 				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
 				83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,
+				83EA83992720210B00F282AE /* StampModel.swift in Sources */,
 				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,
 				8364420B2715869600FED975 /* ProgressView.swift in Sources */,
 				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
 				835102D92718174000CF1806 /* LibraryViewController.swift in Sources */,
 				83038D20271E5B0000080502 /* StringExtensions.swift in Sources */,
 				83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */,
+				83EA838D271FF42000F282AE /* TargetType.swift in Sources */,
 				830B8A872712DC0F0053B419 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +546,16 @@
 				835102CD2717C78900CF1806 /* ja */,
 			);
 			name = ConfirmViewController.xib;
+			sourceTree = "<group>";
+		};
+		83EA839E27207A9700F282AE /* StampCollectionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83EA839D27207A9700F282AE /* Base */,
+				83EA83A127207A9C00F282AE /* ja */,
+				83EA83A327207A9F00F282AE /* vi */,
+			);
+			name = StampCollectionViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -557,6 +681,7 @@
 		};
 		83AC47F3270D2FE9001EDFE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6B628301F20118D16B2269 /* Pods-Exercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,6 +701,7 @@
 		};
 		83AC47F4270D2FE9001EDFE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE9AABA01FF89D1B60FCD2B /* Pods-Exercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
