@@ -49,7 +49,7 @@ extension DataAPI: TargetType {
     var encoding: ParameterEncoding {
         switch self {
         case .stamps:
-            return JSONEncoding.default
+            return URLEncoding.default
         }
     }
 }

@@ -17,7 +17,7 @@ struct Stamp: Codable {
     let compositionImageUrl: String
     let compositionImageFilename: String
     let useType: [String]
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case thumbnailImageUrl = "thumbnail_image_url"
