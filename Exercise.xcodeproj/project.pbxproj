@@ -203,6 +203,17 @@
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
+		8388373427251B1800291F38 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				83EA83922720179C00F282AE /* APIManager.swift */,
+				83EA838F271FF91800F282AE /* DataAPI.swift */,
+				83EA8388271FF37E00F282AE /* ResponseError.swift */,
+				83EA838C271FF42000F282AE /* TargetType.swift */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
 		83A48158271C15DF007872E5 /* PictureFrame */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,9 +246,10 @@
 			children = (
 				83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */,
 				83AC47E3270D2FE8001EDFE1 /* SceneDelegate.swift */,
+				8388373427251B1800291F38 /* Networks */,
 				83EA8387271FEF6100F282AE /* Models */,
 				83AC47F6270D311D001EDFE1 /* Views */,
-				83AC47F7270D3127001EDFE1 /* Controller */,
+				83AC47F7270D3127001EDFE1 /* Controllers */,
 				83038D1E271E5A8E00080502 /* Extensions */,
 				830B8A862712DC0F0053B419 /* Constants.swift */,
 				83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */,
@@ -264,13 +276,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		83AC47F7270D3127001EDFE1 /* Controller */ = {
+		83AC47F7270D3127001EDFE1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				83038D2A271E5DAF00080502 /* BaseViewController.swift */,
 				83644200271498A300FED975 /* VariationViewController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		83EA8381271FC0B200F282AE /* StampCollectionScreen */ = {
@@ -285,10 +297,6 @@
 		83EA8387271FEF6100F282AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				83EA8388271FF37E00F282AE /* ResponseError.swift */,
-				83EA838C271FF42000F282AE /* TargetType.swift */,
-				83EA838F271FF91800F282AE /* DataAPI.swift */,
-				83EA83922720179C00F282AE /* APIManager.swift */,
 				83EA83982720210B00F282AE /* StampModel.swift */,
 			);
 			path = Models;
