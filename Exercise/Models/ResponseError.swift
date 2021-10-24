@@ -8,7 +8,7 @@
 import Foundation
 
 class ​ResponseError​: Codable, Error {
-    // MARK: - Parameters
-    var key: String?
-    var message: String
+  // MARK: - Parameters
+  var key: String?
+  var message: String
 }

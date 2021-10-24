@@ -9,11 +9,11 @@ import Foundation
 import Alamofire
 
 protocol TargetType {
-    var params: [String : Any] {get}
-    var baseUrl: String { get }
-    var path: String { get }
-    var httpMethod: HTTPMethod { get }
-    var headers: HTTPHeaders? { get }
-    var url: URL { get }
-    var encoding: ParameterEncoding { get }
+  var params: [String : Any] {get}
+  var baseUrl: String { get }
+  var path: String { get }
+  var httpMethod: HTTPMethod { get }
+  var headers: HTTPHeaders? { get }
+  var url: URL { get }
+  var encoding: ParameterEncoding { get }
 }
