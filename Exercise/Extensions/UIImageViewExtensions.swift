@@ -9,7 +9,7 @@ import Foundation
 import Photos
 import Alamofire
 
-let imageCache = NSCache<NSString, UIImage>()
+fileprivate let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
   func fetchImage(asset: PHAsset, targetSize: CGSize, contentMode: PHImageContentMode){
@@ -29,12 +29,11 @@ extension UIImageView {
     } else {
       guard let url = URL(string: urlString) else { return }
       AF.request(url, method: .get).response { [weak self] responseData in
-        if let data = responseData.data {
-          if let image = UIImage(data: data) {
-            imageCache.setObject(image, forKey: urlString as NSString)
-            DispatchQueue.main.async {
-              self?.image = image
-            }
+        guard let self = self else { return }
+        if let data = responseData.data, let image = UIImage(data: data) {
+          imageCache.setObject(image, forKey: urlString as NSString)
+          DispatchQueue.main.async {
+            self.image = image
           }
         }
       }

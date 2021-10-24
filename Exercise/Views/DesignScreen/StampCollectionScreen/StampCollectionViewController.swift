@@ -8,7 +8,7 @@
 import UIKit
 
 class StampCollectionViewController: UIViewController {
-  var stamps: [Stamp] = []
+  private var stamps: [Stamp] = []
   // MARK: - IBOutlet
   @IBOutlet weak var stampCollectionView: UICollectionView!
 
@@ -35,7 +35,8 @@ class StampCollectionViewController: UIViewController {
 
   // MARK: - fetchStamps
   func fetchStamps() {
-    APIManager.shared.fetchData { [unowned self] result in
+    APIManager.shared.fetchData { [weak self] result in
+      guard let self = self else { return }
       switch result {
       case .success(let stamps):
         self.stamps = stamps!.data
@@ -63,21 +64,16 @@ extension StampCollectionViewController: UICollectionViewDataSource {
   }
 }
 
-// MARK: - UICollectionViewDelegate
-extension StampCollectionViewController: UICollectionViewDelegate {
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
-  }
-  func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-    
-  }
-}
-
 // MARK: - UICollectionViewFlowLayout
 extension StampCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let collectionWidth = collectionView.bounds.width
-    let itemWidth = collectionWidth/3  - 2
+    let collectionWidth = Double(collectionView.bounds.width)
+    var itemWidth: Double
+    if UIDevice.current.orientation.isLandscape {
+      itemWidth = collectionWidth/5 - 2
+    } else {
+      itemWidth = collectionWidth/3 - 2
+    }
     let itemHeight = itemWidth
     return CGSize(width: itemWidth, height: itemHeight)
   }

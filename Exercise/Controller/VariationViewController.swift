@@ -20,7 +20,6 @@ class VariationViewController: BaseViewController {
 
   // MARK: - SetUp
   func setup() {
-    navigationController?.navigationBar.delegate = self
     variationProgressView.setState(.variation)
     pictureFrameView.setColor(.purple)
   }
@@ -35,12 +34,5 @@ class VariationViewController: BaseViewController {
   override func nextButtonClicked(_ sender: UIBarButtonItem) {
     let photoSelectVC = PhotoSelectViewController.initFromNib()
     navigationController?.pushViewController(photoSelectVC, animated: true)
-  }
-}
-
-// MARK: - UINavigationBarDelegate
-extension VariationViewController: UINavigationBarDelegate {
-  func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
-    return true
   }
 }

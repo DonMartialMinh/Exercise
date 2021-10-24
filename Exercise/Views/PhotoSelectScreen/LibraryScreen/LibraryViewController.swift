@@ -13,7 +13,7 @@ protocol LibraryViewControllerDelegate: class {
 }
 
 class LibraryViewController: UIViewController {
-  var allPhotos = PHFetchResult<PHAsset>()
+  private var allPhotos = PHFetchResult<PHAsset>()
   weak var delegate: LibraryViewControllerDelegate?
   // MARK: - IBOutlet
   @IBOutlet weak var libraryCollectionView: UICollectionView!
@@ -103,8 +103,13 @@ extension LibraryViewController: UICollectionViewDelegate {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension LibraryViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let collectionWidth = collectionView.bounds.width
-    let itemWidth = collectionWidth/3  - 2
+    let collectionWidth = Double(collectionView.bounds.width)
+    var itemWidth: Double
+    if UIDevice.current.orientation.isLandscape {
+      itemWidth = collectionWidth/5 - 2
+    } else {
+      itemWidth = collectionWidth/3 - 2
+    }
     let itemHeight = itemWidth
     return CGSize(width: itemWidth, height: itemHeight)
   }

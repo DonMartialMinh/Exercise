@@ -5,7 +5,6 @@
 //  Created by Vo Minh Don on 10/7/21.
 //
 
-import Foundation
 import UIKit
 
 @IBDesignable class CustomView: UIView {

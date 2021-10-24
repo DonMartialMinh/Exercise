@@ -39,9 +39,7 @@ class PhotoSelectViewController: BaseViewController {
         } else {
           let ac = UIAlertController(title: Constants.Alert.photoAccessTitle.localized, message: Constants.Alert.photoAccessMessage.localized, preferredStyle: .alert)
           let goToSettings = UIAlertAction(title: Constants.Alert.settings.localized, style: .default) { (_) in
-            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString)  else {
-              return
-            }
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString)  else { return }
             if (UIApplication.shared.canOpenURL(settingsUrl)) {
               UIApplication.shared.open(settingsUrl, completionHandler: nil)
             }

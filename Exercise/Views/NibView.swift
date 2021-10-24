@@ -5,7 +5,6 @@
 //  Created by Vo Minh Don on 10/13/21.
 //
 
-import Foundation
 import UIKit
 
 class NibView: UIView {
