@@ -8,16 +8,25 @@
 import Foundation
 import Alamofire
 
-enum DataAPI {
-  case stamps
+enum StampAPI {
+  case stamps(Int)
+  case categories
 }
 
-// MARK: - UserAPI
-extension DataAPI: TargetType {
-  var params: [String : Any] {
-    return ["category_id": 4,
-            "asp_key": "shimapri",
-            "use_type": "n"]
+// MARK: - StampAPI
+extension StampAPI: TargetType {
+  var params: Parameters {
+    get {
+      switch self {
+      case .stamps(let id):
+        return ["category_id": id,
+                "asp_key": "shimapri",
+                "use_type": "n"]
+      case .categories:
+        return ["asp_key": "shimapri",
+                "use_type": "n"]
+      }
+    }
   }
 
   var baseUrl: String {
@@ -28,12 +37,14 @@ extension DataAPI: TargetType {
     switch self {
     case .stamps:
       return "stamps"
+    case .categories:
+      return "stamps/categories"
     }
   }
 
   var httpMethod: HTTPMethod {
     switch self {
-    case .stamps:
+    case .stamps, .categories:
       return .get
     }
   }
@@ -48,7 +59,7 @@ extension DataAPI: TargetType {
 
   var encoding: ParameterEncoding {
     switch self {
-    case .stamps:
+    case .stamps, .categories:
       return URLEncoding.default
     }
   }

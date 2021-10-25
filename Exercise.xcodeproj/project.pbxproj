@@ -18,6 +18,9 @@
 		83644201271498A300FED975 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644200271498A300FED975 /* VariationViewController.swift */; };
 		8364420B2715869600FED975 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420A2715869600FED975 /* ProgressView.swift */; };
 		8364420E27166DBA00FED975 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420D27166DBA00FED975 /* NibView.swift */; };
+		8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */; };
+		8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */; };
+		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
 		83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4815C271C1607007872E5 /* PictureFrame.swift */; };
 		83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A48161271C1C38007872E5 /* PictureFrame.xib */; };
 		83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */; };
@@ -41,7 +44,7 @@
 		83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */; };
 		83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8388271FF37E00F282AE /* ResponseError.swift */; };
 		83EA838D271FF42000F282AE /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838C271FF42000F282AE /* TargetType.swift */; };
-		83EA8390271FF91800F282AE /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838F271FF91800F282AE /* DataAPI.swift */; };
+		83EA8390271FF91800F282AE /* StampAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838F271FF91800F282AE /* StampAPI.swift */; };
 		83EA83932720179C00F282AE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83922720179C00F282AE /* APIManager.swift */; };
 		83EA83992720210B00F282AE /* StampModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83982720210B00F282AE /* StampModel.swift */; };
 		83EA839C27207A9700F282AE /* StampCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA839E27207A9700F282AE /* StampCollectionViewController.xib */; };
@@ -68,6 +71,9 @@
 		83644200271498A300FED975 /* VariationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationViewController.swift; sourceTree = "<group>"; };
 		8364420A2715869600FED975 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8364420D27166DBA00FED975 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		83A4815C271C1607007872E5 /* PictureFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureFrame.swift; sourceTree = "<group>"; };
 		83A48161271C1C38007872E5 /* PictureFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureFrame.xib; sourceTree = "<group>"; };
 		83AC47DE270D2FE8001EDFE1 /* Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +108,7 @@
 		83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCollectionViewController.swift; sourceTree = "<group>"; };
 		83EA8388271FF37E00F282AE /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		83EA838C271FF42000F282AE /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
-		83EA838F271FF91800F282AE /* DataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
+		83EA838F271FF91800F282AE /* StampAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampAPI.swift; sourceTree = "<group>"; };
 		83EA83922720179C00F282AE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		83EA83982720210B00F282AE /* StampModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampModel.swift; sourceTree = "<group>"; };
 		83EA839D27207A9700F282AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StampCollectionViewController.xib; sourceTree = "<group>"; };
@@ -207,11 +213,20 @@
 			isa = PBXGroup;
 			children = (
 				83EA83922720179C00F282AE /* APIManager.swift */,
-				83EA838F271FF91800F282AE /* DataAPI.swift */,
+				83EA838F271FF91800F282AE /* StampAPI.swift */,
 				83EA8388271FF37E00F282AE /* ResponseError.swift */,
 				83EA838C271FF42000F282AE /* TargetType.swift */,
 			);
 			path = Networks;
+			sourceTree = "<group>";
+		};
+		8388373827264F6E00291F38 /* CategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */,
+				8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCell;
 			sourceTree = "<group>";
 		};
 		83A48158271C15DF007872E5 /* PictureFrame */ = {
@@ -288,6 +303,7 @@
 		83EA8381271FC0B200F282AE /* StampCollectionScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8388373827264F6E00291F38 /* CategoryCell */,
 				83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */,
 				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
 			);
@@ -298,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				83EA83982720210B00F282AE /* StampModel.swift */,
+				8388373E272658BA00291F38 /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -379,6 +396,7 @@
 				835102EE27181A3000CF1806 /* ImageCollectionViewCell.xib in Resources */,
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
 				83C2BD56271A880A000BAE24 /* LibraryViewController.xib in Resources */,
+				8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */,
 				83D7994B2716E3A2003CA963 /* Localizable.strings in Resources */,
 				83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */,
 				83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */,
@@ -440,8 +458,9 @@
 				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,
 				83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */,
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
-				83EA8390271FF91800F282AE /* DataAPI.swift in Sources */,
+				83EA8390271FF91800F282AE /* StampAPI.swift in Sources */,
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
+				8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */,
 				83644201271498A300FED975 /* VariationViewController.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
 				83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */,
@@ -451,6 +470,7 @@
 				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
 				83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
+				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,
 				83EA83992720210B00F282AE /* StampModel.swift in Sources */,
 				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,

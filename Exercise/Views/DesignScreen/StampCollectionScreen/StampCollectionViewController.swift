@@ -9,9 +9,11 @@ import UIKit
 
 class StampCollectionViewController: UIViewController {
   private var stamps: [Stamp] = []
+  private var categories: [Category] = []
   // MARK: - IBOutlet
   @IBOutlet weak var stampCollectionView: UICollectionView!
-
+  @IBOutlet weak var categotyCollectionView: UICollectionView!
+  
   // MARK: - ViewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,7 +21,12 @@ class StampCollectionViewController: UIViewController {
     stampCollectionView.delegate = self
     stampCollectionView.dataSource = self
     stampCollectionView.allowsMultipleSelection = false
-    fetchStamps()
+    
+    categotyCollectionView.register(CategoryCollectionViewCell.loadNib(), forCellWithReuseIdentifier: Constants.categoryCellIdentifier)
+    categotyCollectionView.delegate = self
+    categotyCollectionView.dataSource = self
+    categotyCollectionView.allowsMultipleSelection = false
+    fetchCategories()
   }
 
   override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -33,13 +40,28 @@ class StampCollectionViewController: UIViewController {
     dismiss(animated: true, completion: nil)
   }
 
-  // MARK: - fetchStamps
-  func fetchStamps() {
-    APIManager.shared.fetchData { [weak self] result in
+  // MARK: - fetchData
+  func fetchCategories() {
+    APIManager.shared.fetchCategories { [weak self] result in
+      guard let self = self else { return }
+      switch result {
+      case .success(let categories):
+        self.categories.append(contentsOf: categories!.data)
+        DispatchQueue.main.async {
+          self.categotyCollectionView.reloadData()
+        }
+      case .failure(let error):
+        print("Request failed with error \(error)")
+      }
+    }
+  }
+  func fetchStamps(with id: Int) {
+    APIManager.shared.fetchStamps(id: id) { [weak self] result in
       guard let self = self else { return }
       switch result {
       case .success(let stamps):
-        self.stamps = stamps!.data
+        self.stamps.removeAll()
+        self.stamps.append(contentsOf: stamps!.data)
         DispatchQueue.main.async {
           self.stampCollectionView.reloadData()
         }
@@ -53,14 +75,41 @@ class StampCollectionViewController: UIViewController {
 // MARK: - UICollectionViewDatasource
 extension StampCollectionViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return stamps.count
+    if collectionView == stampCollectionView {
+      return stamps.count
+    } else {
+      return categories.count
+    }
   }
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCellIdentifier, for: indexPath) as! ImageCollectionViewCell
-    let imageUrl = stamps[indexPath.row].thumbnailImageUrl
-    cell.pictureImageView.loadFromUrl(imageUrl)
-    cell.pictureImageView.contentMode = .scaleAspectFit
-    return cell
+    if collectionView == stampCollectionView {
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCellIdentifier, for: indexPath) as! ImageCollectionViewCell
+      let imageUrl = stamps[indexPath.row].thumbnailImageUrl
+      cell.pictureImageView.loadFromUrl(imageUrl)
+      cell.pictureImageView.contentMode = .scaleAspectFit
+      return cell
+    } else {
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.categoryCellIdentifier, for: indexPath) as! CategoryCollectionViewCell
+      cell.titleLabel.text = categories[indexPath.row].name
+      return cell
+    }
+  }
+}
+
+// MARK: - UICollectionViewDelegate
+extension StampCollectionViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    if collectionView == categotyCollectionView {
+      let selectedCell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
+      selectedCell.setState(.selected)
+      fetchStamps(with: categories[indexPath.row].id)
+    }
+  }
+  func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    if collectionView == categotyCollectionView {
+      let selectedCell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
+      selectedCell.setState(.normal)
+    }
   }
 }
 
@@ -68,19 +117,23 @@ extension StampCollectionViewController: UICollectionViewDataSource {
 extension StampCollectionViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let collectionWidth = Double(collectionView.bounds.width)
+    let collectionHeight = Double(collectionView.bounds.height)
     var itemWidth: Double
-    if UIDevice.current.orientation.isLandscape {
-      itemWidth = collectionWidth/5 - 2
+    var itemHeight: Double
+    if collectionView == stampCollectionView {
+      if UIDevice.current.orientation.isLandscape {
+        itemWidth = collectionWidth/5 - 15
+      } else {
+        itemWidth = collectionWidth/3 - 15
+      }
+      itemHeight = itemWidth
     } else {
-      itemWidth = collectionWidth/3 - 2
+      itemHeight = collectionHeight
+      itemWidth = collectionWidth/4 - 15
     }
-    let itemHeight = itemWidth
     return CGSize(width: itemWidth, height: itemHeight)
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 2
-  }
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 2
+    return 15
   }
 }

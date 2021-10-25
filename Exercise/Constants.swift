@@ -24,7 +24,8 @@ public struct Constants {
     static let settings = "Settings"
     static let cancel = "Cancel"
   }
-  static let imageCellIdentifier = "imageCell"
+  static let imageCellIdentifier = "ImageCell"
+  static let categoryCellIdentifier = "CategoryCell"
   static let backBarButtonTittle = "Back"
   static let nextBarButtonTitle = "Next"
   static let nextBarButtonEndTitle = "Proceed to order"
