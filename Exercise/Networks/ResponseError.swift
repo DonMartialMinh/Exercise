@@ -10,5 +10,7 @@ import Foundation
 class ​ResponseError​: Codable, Error {
   // MARK: - Parameters
   var key: String?
+  var code: String
+  var parameter: String
   var message: String
 }

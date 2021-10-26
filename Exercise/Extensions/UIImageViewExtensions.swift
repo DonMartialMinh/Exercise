@@ -9,7 +9,11 @@ import Foundation
 import Photos
 import Alamofire
 
-fileprivate let imageCache = NSCache<NSString, UIImage>()
+fileprivate let imageCache: NSCache<NSString, UIImage> = {
+  let cache = NSCache<NSString, UIImage>()
+  cache.totalCostLimit = 100_000_000
+  return cache
+}()
 
 extension UIImageView {
   func fetchImage(asset: PHAsset, targetSize: CGSize, contentMode: PHImageContentMode){

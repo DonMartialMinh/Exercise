@@ -28,13 +28,11 @@ class APIManager {
             let result = try! decoder.decode(T.self, from: jsonData)
             completionHandler(.success(result))
           }
-          break
         case .failure(_):
           let decoder = JSONDecoder()
           if let jsonData = data.data, let error = try? decoder.decode(​ResponseError​.self, from: jsonData) {
             completionHandler(.failure(error))
           }
-          break
         }
       }
   }
