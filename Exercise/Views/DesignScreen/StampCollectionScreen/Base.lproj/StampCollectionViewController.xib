@@ -47,6 +47,9 @@
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rn5-r0-Rv2">
                     <rect key="frame" x="0.0" y="46" width="320" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="J6b-nv-tN0"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dR6-1y-jwk">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -59,7 +62,6 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="EJ2-rn-rag" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2dx-Nf-67Q"/>
-                <constraint firstItem="rn5-r0-Rv2" firstAttribute="height" secondItem="dPx-Rp-7la" secondAttribute="height" multiplier="1.13636" id="DRH-rs-rPr"/>
                 <constraint firstItem="rn5-r0-Rv2" firstAttribute="top" secondItem="dPx-Rp-7la" secondAttribute="bottom" constant="2" id="IC5-8L-neZ"/>
                 <constraint firstItem="EJ2-rn-rag" firstAttribute="top" secondItem="rn5-r0-Rv2" secondAttribute="bottom" id="MMX-0q-8em"/>
                 <constraint firstItem="rn5-r0-Rv2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="SYR-pc-9rg"/>

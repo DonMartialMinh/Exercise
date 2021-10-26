@@ -10,6 +10,7 @@ import UIKit
 class StampCollectionViewController: UIViewController {
   private var stamps: [Stamp] = []
   private var categories: [Category] = []
+  private var selectedCategory: IndexPath? = nil
   // MARK: - IBOutlet
   @IBOutlet weak var stampCollectionView: UICollectionView!
   @IBOutlet weak var categotyCollectionView: UICollectionView!
@@ -91,6 +92,7 @@ extension StampCollectionViewController: UICollectionViewDataSource {
     } else {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.categoryCellIdentifier, for: indexPath) as! CategoryCollectionViewCell
       cell.titleLabel.text = categories[indexPath.row].name
+      indexPath == selectedCategory ? cell.setState(.selected) : cell.setState(.normal)
       return cell
     }
   }
@@ -102,12 +104,14 @@ extension StampCollectionViewController: UICollectionViewDelegate {
     if collectionView == categotyCollectionView {
       let selectedCell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
       selectedCell.setState(.selected)
+      selectedCategory = indexPath
+      collectionView.reloadData()
       fetchStamps(with: categories[indexPath.row].id)
     }
   }
   func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
     if collectionView == categotyCollectionView {
-      let selectedCell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
+      guard let selectedCell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell else { return }
       selectedCell.setState(.normal)
     }
   }
@@ -128,8 +132,8 @@ extension StampCollectionViewController: UICollectionViewDelegateFlowLayout {
       }
       itemHeight = itemWidth
     } else {
-      itemHeight = collectionHeight
       itemWidth = collectionWidth/4 - 15
+      itemHeight = collectionHeight
     }
     return CGSize(width: itemWidth, height: itemHeight)
   }
