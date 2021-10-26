@@ -21,6 +21,10 @@
 		8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */; };
 		8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */; };
 		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
+		8388374D2727F76D00291F38 /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388374B2727F76D00291F38 /* StampViewController.swift */; };
+		8388374E2727F76D00291F38 /* StampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388374C2727F76D00291F38 /* StampViewController.xib */; };
+		838837522727F8DE00291F38 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838837502727F8DE00291F38 /* CategoryViewController.swift */; };
+		838837532727F8DE00291F38 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838837512727F8DE00291F38 /* CategoryViewController.xib */; };
 		83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4815C271C1607007872E5 /* PictureFrame.swift */; };
 		83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A48161271C1C38007872E5 /* PictureFrame.xib */; };
 		83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */; };
@@ -74,6 +78,10 @@
 		8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		8388374B2727F76D00291F38 /* StampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
+		8388374C2727F76D00291F38 /* StampViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampViewController.xib; sourceTree = "<group>"; };
+		838837502727F8DE00291F38 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		838837512727F8DE00291F38 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
 		83A4815C271C1607007872E5 /* PictureFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureFrame.swift; sourceTree = "<group>"; };
 		83A48161271C1C38007872E5 /* PictureFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureFrame.xib; sourceTree = "<group>"; };
 		83AC47DE270D2FE8001EDFE1 /* Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +237,24 @@
 			path = CategoryCell;
 			sourceTree = "<group>";
 		};
+		83883755272807E400291F38 /* Stamp */ = {
+			isa = PBXGroup;
+			children = (
+				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
+				8388374B2727F76D00291F38 /* StampViewController.swift */,
+			);
+			path = Stamp;
+			sourceTree = "<group>";
+		};
+		83883756272807F200291F38 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				838837502727F8DE00291F38 /* CategoryViewController.swift */,
+				838837512727F8DE00291F38 /* CategoryViewController.xib */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		83A48158271C15DF007872E5 /* PictureFrame */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,8 +330,10 @@
 			isa = PBXGroup;
 			children = (
 				8388373827264F6E00291F38 /* CategoryCell */,
+				83883756272807F200291F38 /* Category */,
+				83883755272807E400291F38 /* Stamp */,
 				83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */,
-				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
+				8388374C2727F76D00291F38 /* StampViewController.xib */,
 			);
 			path = StampCollectionScreen;
 			sourceTree = "<group>";
@@ -396,9 +424,11 @@
 				835102EE27181A3000CF1806 /* ImageCollectionViewCell.xib in Resources */,
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
 				83C2BD56271A880A000BAE24 /* LibraryViewController.xib in Resources */,
+				838837532727F8DE00291F38 /* CategoryViewController.xib in Resources */,
 				8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */,
 				83D7994B2716E3A2003CA963 /* Localizable.strings in Resources */,
 				83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */,
+				8388374E2727F76D00291F38 /* StampViewController.xib in Resources */,
 				83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */,
 				83C2BD61271A8A31000BAE24 /* InfoPlist.strings in Resources */,
 				83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */,
@@ -462,6 +492,7 @@
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
 				8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */,
 				83644201271498A300FED975 /* VariationViewController.swift in Sources */,
+				8388374D2727F76D00291F38 /* StampViewController.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
 				83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */,
 				83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */,
@@ -477,6 +508,7 @@
 				8364420B2715869600FED975 /* ProgressView.swift in Sources */,
 				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
 				835102D92718174000CF1806 /* LibraryViewController.swift in Sources */,
+				838837522727F8DE00291F38 /* CategoryViewController.swift in Sources */,
 				83038D20271E5B0000080502 /* StringExtensions.swift in Sources */,
 				83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */,
 				83EA838D271FF42000F282AE /* TargetType.swift in Sources */,
