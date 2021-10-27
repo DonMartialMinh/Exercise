@@ -7,4 +7,5 @@ target 'Exercise' do
 
   # Pods for Exercise
   pod 'Alamofire', '~> 5.4'
+  pod 'SVProgressHUD'
 end
