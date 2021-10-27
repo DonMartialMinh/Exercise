@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol TargetType {
-  var params: [String : Any] {get}
+  var params: Parameters { get }
   var baseUrl: String { get }
   var path: String { get }
   var httpMethod: HTTPMethod { get }

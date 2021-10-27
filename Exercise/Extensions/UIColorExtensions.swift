@@ -11,6 +11,7 @@ enum AssetsColor {
   case orange
   case purple
   case lightGreen
+  case darkPurple
 }
 
 extension UIColor {
@@ -22,7 +23,8 @@ extension UIColor {
       return UIColor(named: "purple")
     case .lightGreen:
       return UIColor(named: "lightGreen")
-      
+    case .darkPurple:
+      return UIColor(named: "darkPurple")
     }
   }
 }

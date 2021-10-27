@@ -14,10 +14,10 @@ class APIManager {
   private init() {}
 
   // MARK: - Method
-  func call<T> (type: TargetType, completionHandler: @escaping (_ result: Result<T?, ​ResponseError​>)->()) where T: Codable {
+  func call<T> (type: TargetType, params: Parameters? = nil, completionHandler: @escaping (_ result: Result<T?, ​ResponseError​>)->()) where T: Codable {
     AF.request(type.url,
                method: type.httpMethod,
-               parameters: type.params,
+               parameters: params,
                encoding: type.encoding,
                headers: type.headers)
       .validate().responseJSON { (data) in
@@ -28,19 +28,28 @@ class APIManager {
             let result = try! decoder.decode(T.self, from: jsonData)
             completionHandler(.success(result))
           }
-          break
         case .failure(_):
           let decoder = JSONDecoder()
           if let jsonData = data.data, let error = try? decoder.decode(​ResponseError​.self, from: jsonData) {
             completionHandler(.failure(error))
           }
-          break
         }
       }
   }
 
-  func fetchData (completionHandler: @escaping (_ result: Result<StampModel?, ​ResponseError​>)->()) {
-    APIManager.shared.call(type: DataAPI.stamps) { (result: Result<StampModel?, ​ResponseError​>) in
+  func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<StampModel?, ​ResponseError​>)->()) {
+    APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<StampModel?, ​ResponseError​>) in
+      switch result {
+      case .success(let results):
+        completionHandler(.success(results))
+      case .failure(let error):
+        completionHandler(.failure(error))
+      }
+    }
+  }
+
+  func fetchCategories (completionHandler: @escaping (_ result: Result<CategoryModel?, ​ResponseError​>)->()) {
+    APIManager.shared.call(type: StampAPI.categories, params: StampAPI.categories.params) { (result: Result<CategoryModel?, ​ResponseError​>) in
       switch result {
       case .success(let results):
         completionHandler(.success(results))

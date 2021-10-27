@@ -14,6 +14,7 @@ protocol LibraryViewControllerDelegate: class {
 
 class LibraryViewController: UIViewController {
   private var allPhotos = PHFetchResult<PHAsset>()
+  private var selectedIndex: IndexPath? = nil
   weak var delegate: LibraryViewControllerDelegate?
   // MARK: - IBOutlet
   @IBOutlet weak var libraryCollectionView: UICollectionView!
@@ -44,25 +45,24 @@ class LibraryViewController: UIViewController {
 
   // MARK: - ButtonCLicked
   @IBAction func chooseBarButtonPressed(_ sender: UIBarButtonItem) {
-    guard let indexPaths = libraryCollectionView.indexPathsForSelectedItems else { return }
-    if indexPaths != [] {
-      let selectedCell = libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
-      guard let image = selectedCell.pictureImageView.image else { return }
+    if selectedIndex != nil {
+      guard let selectedCell = libraryCollectionView.dataSource?.collectionView(libraryCollectionView, cellForItemAt: selectedIndex!) as? ImageCollectionViewCell,
+            let image = selectedCell.pictureImageView.image
+      else { return }
       delegate?.didUpdateImage(self, image)
       selectedCell.setState(.normal)
-      libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
+      libraryCollectionView.deselectItem(at: selectedIndex!, animated: false)
       dismiss(animated: true, completion: nil)
     }
   }
 
   @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
-    guard let indexPaths = libraryCollectionView.indexPathsForSelectedItems else { return }
-    if indexPaths != [] {
+    if selectedIndex != nil {
       let ac = UIAlertController(title: Constants.Alert.unselectImageTitle.localized, message: Constants.Alert.unselectImageMessage.localized, preferredStyle: .alert)
       let goBack = UIAlertAction(title: Constants.Alert.goBack.localized, style: .default) { (_) in
-        let selectedCell = self.libraryCollectionView.cellForItem(at: indexPaths[0]) as! ImageCollectionViewCell
+        guard let selectedCell = self.libraryCollectionView.dataSource?.collectionView(self.libraryCollectionView, cellForItemAt: self.selectedIndex!) as? ImageCollectionViewCell else { return }
         selectedCell.setState(.normal)
-        self.libraryCollectionView.deselectItem(at: indexPaths[0], animated: false)
+        self.libraryCollectionView.deselectItem(at: self.selectedIndex!, animated: false)
         self.dismiss(animated: true, completion: nil)
       }
       let cancel = UIAlertAction(title: Constants.Alert.cancel.localized, style: .cancel, handler: nil)
@@ -84,6 +84,7 @@ extension LibraryViewController: UICollectionViewDataSource {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.imageCellIdentifier, for: indexPath) as! ImageCollectionViewCell
     let asset = allPhotos.object(at: indexPath.row)
     cell.pictureImageView.fetchImage(asset: asset, targetSize: cell.pictureImageView.frame.size, contentMode: .aspectFit)
+    indexPath == selectedIndex ? cell.setState(.selected) : cell.setState(.normal)
     return cell
   }
 }
@@ -93,9 +94,11 @@ extension LibraryViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let selectedCell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
     selectedCell.setState(.selected)
+    selectedIndex = indexPath
+    collectionView.reloadData()
   }
   func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-    let selectedCell = collectionView.cellForItem(at: indexPath) as! ImageCollectionViewCell
+    guard let selectedCell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell else { return }
     selectedCell.setState(.normal)
   }
 }
