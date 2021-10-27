@@ -8,7 +8,7 @@
 import UIKit
 
 extension UICollectionViewCell {
-  static func loadNib() -> UINib {
-    return UINib(nibName: String(describing: self), bundle: nil)
-  }
+    static func loadNib() -> UINib {
+        return UINib(nibName: String(describing: self), bundle: nil)
+    }
 }

@@ -8,32 +8,33 @@
 import UIKit
 
 class StampCollectionViewController: UIViewController {
-  // MARK: - IBOutlet
-  @IBOutlet weak var categoryView: UIView!
-  @IBOutlet weak var stampView: UIView!
-  
-  // MARK: - ViewDidLoad
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setUp()
-  }
+    // MARK: - IBOutlet
+    @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var stampView: UIView!
 
-  func setUp() {
-    let categoryViewController = CategoryViewController()
-    let stampViewController = StampViewController()
-    categoryViewController.delegate = stampViewController
-    addChild(categoryViewController)
-    addChild(stampViewController)
-    categoryView.addSubview(categoryViewController.view)
-    stampView.addSubview(stampViewController.view)
-    categoryViewController.didMove(toParent: self)
-    stampViewController.didMove(toParent: self)
-    categoryViewController.view.frame = categoryView.bounds
-    stampViewController.view.frame = stampView.bounds
-  }
+    // MARK: - ViewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUp()
+    }
 
-  // MARK: - ButtonPressed
-  @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
-    dismiss(animated: true, completion: nil)
-  }
+    // MARK: - SetUp
+    func setUp() {
+        let categoryViewController = CategoryViewController()
+        let stampViewController = StampViewController()
+        categoryViewController.delegate = stampViewController
+        addChild(categoryViewController)
+        addChild(stampViewController)
+        categoryView.addSubview(categoryViewController.view)
+        stampView.addSubview(stampViewController.view)
+        categoryViewController.didMove(toParent: self)
+        stampViewController.didMove(toParent: self)
+        categoryViewController.view.frame = categoryView.bounds
+        stampViewController.view.frame = stampView.bounds
+    }
+
+    // MARK: - ButtonPressed
+    @IBAction func cancelBarButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
 }
