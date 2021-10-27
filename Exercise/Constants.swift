@@ -29,4 +29,5 @@ public struct Constants {
   static let backBarButtonTittle = "Back"
   static let nextBarButtonTitle = "Next"
   static let nextBarButtonEndTitle = "Proceed to order"
+  static let hubLoading = "Loading"
 }

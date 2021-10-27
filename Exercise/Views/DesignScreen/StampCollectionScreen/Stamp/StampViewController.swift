@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class StampViewController: UIViewController {
   private var stamps: [Stamp] = []
@@ -29,6 +30,7 @@ class StampViewController: UIViewController {
 
   // MARK: - fetchData
   func fetchStamps(with id: Int) {
+    SVProgressHUD.show(withStatus: Constants.hubLoading.localized)
     APIManager.shared.fetchStamps(id: id) { [weak self] result in
       guard let self = self else { return }
       switch result {
@@ -38,6 +40,7 @@ class StampViewController: UIViewController {
         DispatchQueue.main.async {
           self.stampCollectionView.reloadData()
         }
+        SVProgressHUD.dismiss()
       case .failure(let error):
         print("Request failed with error \(error)")
       }

@@ -8,7 +8,6 @@
 import UIKit
 
 class StampCollectionViewController: UIViewController {
-
   // MARK: - IBOutlet
   @IBOutlet weak var categoryView: UIView!
   @IBOutlet weak var stampView: UIView!
