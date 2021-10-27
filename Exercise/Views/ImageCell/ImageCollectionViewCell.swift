@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum cellState {
-    case selected
-    case normal
-}
-
 class ImageCollectionViewCell: UICollectionViewCell {
     // MARK: - IBOutlet
     @IBOutlet weak var pictureImageView: UIImageView!
@@ -22,7 +17,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     }
 
     // MARK: - SetState
-    func setState(_ state: cellState) {
+    func setState(_ state: CellState) {
         switch state {
         case .selected:
             self.layer.borderWidth = 2

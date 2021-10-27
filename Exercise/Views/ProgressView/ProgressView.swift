@@ -7,13 +7,6 @@
 
 import UIKit
 
-enum ProgressState {
-    case variation
-    case photoSelect
-    case design
-    case confirm
-}
-
 class ProgressView: NibView {
     // MARK: - IBOutlet
     @IBOutlet weak var variationCustomView: CustomView!

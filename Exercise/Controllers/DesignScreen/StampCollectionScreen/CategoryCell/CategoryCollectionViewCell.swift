@@ -19,7 +19,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         backView.layer.cornerRadius = 5.0
     }
 
-    func setState(_ state: cellState) {
+    func setState(_ state: CellState) {
         switch state {
         case .selected:
             titleLabel.textColor = UIColor.white

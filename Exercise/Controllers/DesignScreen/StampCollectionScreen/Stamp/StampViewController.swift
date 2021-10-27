@@ -10,6 +10,7 @@ import SVProgressHUD
 
 class StampViewController: UIViewController {
     private var stamps: [Stamp] = []
+    private var viewModel = StampViewModel()
 
     // MARK: - IBOutlet
     @IBOutlet weak var stampCollectionView: UICollectionView!
@@ -21,6 +22,7 @@ class StampViewController: UIViewController {
         stampCollectionView.delegate = self
         stampCollectionView.dataSource = self
         stampCollectionView.allowsMultipleSelection = false
+        viewModel.delegate = self
     }
 
     // MARK: - ViewWillTransition
@@ -28,25 +30,6 @@ class StampViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let flowLayout = stampCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         flowLayout.invalidateLayout()
-    }
-
-    // MARK: - fetchData
-    func fetchStamps(with id: Int) {
-        SVProgressHUD.show(withStatus: Constants.hubLoading.localized)
-        APIManager.shared.fetchStamps(id: id) { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let stamps):
-                self.stamps.removeAll()
-                self.stamps.append(contentsOf: stamps!.data)
-                DispatchQueue.main.async {
-                    self.stampCollectionView.reloadData()
-                }
-                SVProgressHUD.dismiss()
-            case .failure(let error):
-                print("Request failed with error \(error)")
-            }
-        }
     }
 }
 
@@ -87,7 +70,24 @@ extension StampViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - CategoryCollectionViewDelegate
 extension StampViewController: CategoryViewControllerDelegate {
-    func didUpdateStamp(_ categoryViewController: CategoryViewController, _ id: Int) {
-        fetchStamps(with: id)
+    func fetchStamp(_ categoryViewController: CategoryViewController, _ id: Int) {
+        SVProgressHUD.show(withStatus: Constants.hubLoading.localized)
+        viewModel.fetchStamps(with: id)
+    }
+}
+
+// MARK: - StampViewModelEvents
+extension StampViewController: StampViewModelEvents {
+    func didUpdateStamp(_ stampViewModel: StampViewModel, _ stamps: [Stamp]) {
+        self.stamps.removeAll()
+        self.stamps.append(contentsOf: stamps)
+        DispatchQueue.main.async {
+            self.stampCollectionView.reloadData()
+        }
+        SVProgressHUD.dismiss()
+    }
+
+    func didFailWithError(error: Error) {
+        print("Request failed with error \(error)")
     }
 }

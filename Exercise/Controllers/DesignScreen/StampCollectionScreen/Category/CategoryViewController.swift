@@ -8,12 +8,13 @@
 import UIKit
 
 protocol CategoryViewControllerDelegate: class {
-    func didUpdateStamp(_ categoryViewController: CategoryViewController, _ id: Int)
+    func fetchStamp(_ categoryViewController: CategoryViewController, _ id: Int)
 }
 
 class CategoryViewController: UIViewController {
     private var categories: [Category] = []
     private var selectedCategory: IndexPath? = nil
+    private var viewModel = CategoryViewModel()
     weak var delegate: CategoryViewControllerDelegate?
 
     // MARK: - IBOutlet
@@ -26,7 +27,13 @@ class CategoryViewController: UIViewController {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         categoryCollectionView.allowsMultipleSelection = false
-        fetchCategories()
+        viewModel.delegate = self
+    }
+    
+    // MARK: - ViewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchCategories()
     }
 
     // MARK: - ViewWillTransition
@@ -34,22 +41,6 @@ class CategoryViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let flowLayout = categoryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         flowLayout.invalidateLayout()
-    }
-
-    // MARK: - fetchData
-    func fetchCategories() {
-        APIManager.shared.fetchCategories { [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(let categories):
-                self.categories.append(contentsOf: categories!.data)
-                DispatchQueue.main.async {
-                    self.categoryCollectionView.reloadData()
-                }
-            case .failure(let error):
-                print("Request failed with error \(error)")
-            }
-        }
     }
 }
 
@@ -73,7 +64,7 @@ extension CategoryViewController: UICollectionViewDelegate {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! CategoryCollectionViewCell
         selectedCell.setState(.selected)
         selectedCategory = indexPath
-        delegate?.didUpdateStamp(self, categories[indexPath.row].id)
+        delegate?.fetchStamp(self, categories[indexPath.row].id)
         collectionView.reloadData()
     }
 
@@ -97,5 +88,20 @@ extension CategoryViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
+    }
+}
+
+// MARK: - CategoryViewModelEvents
+extension CategoryViewController: CategoryViewModelEvents {
+    func didUpdateCategory(_ categoryViewModel: CategoryViewModel, _ categories: [Category]) {
+        self.categories.append(contentsOf: categories)
+        DispatchQueue.main.async {
+            self.categoryCollectionView.reloadData()
+        }
+    }
+
+    func didFailWithError(error: Error)
+    {
+        print("Request failed with error \(error)")
     }
 }
