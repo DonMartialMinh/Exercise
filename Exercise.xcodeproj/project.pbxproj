@@ -240,8 +240,8 @@
 		83883755272807E400291F38 /* Stamp */ = {
 			isa = PBXGroup;
 			children = (
-				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
 				8388374B2727F76D00291F38 /* StampViewController.swift */,
+				8388374C2727F76D00291F38 /* StampViewController.xib */,
 			);
 			path = Stamp;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				83883756272807F200291F38 /* Category */,
 				83883755272807E400291F38 /* Stamp */,
 				83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */,
-				8388374C2727F76D00291F38 /* StampViewController.xib */,
+				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
 			);
 			path = StampCollectionScreen;
 			sourceTree = "<group>";

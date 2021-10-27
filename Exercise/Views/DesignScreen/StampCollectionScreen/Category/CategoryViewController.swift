@@ -90,12 +90,12 @@ extension CategoryViewController: UICollectionViewDelegateFlowLayout {
         let collectionHeight = Double(collectionView.bounds.height)
         var itemWidth: Double
         var itemHeight: Double
-        itemWidth = collectionWidth/4 - 15
+        itemWidth = collectionWidth/4 - 2
         itemHeight = collectionHeight
         return CGSize(width: itemWidth, height: itemHeight)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 2
     }
 }
