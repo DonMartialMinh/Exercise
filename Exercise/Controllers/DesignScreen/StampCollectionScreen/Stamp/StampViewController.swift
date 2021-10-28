@@ -87,7 +87,19 @@ extension StampViewController: StampViewModelEvents {
         SVProgressHUD.dismiss()
     }
 
-    func didFailWithError(error: Error) {
-        print("Request failed with error \(error)")
+    func didFailWithError(error: ​ResponseError​) {
+        if error.errors.count != 0 {
+            print(
+                """
+                Request failed with errors:
+                    "code": \(error.errors[0].code)
+                    "parameter": \(error.errors[0].parameter)
+                    "message": \(error.errors[0].message)
+                """
+            )
+        } else {
+            print("Request failed with error: \(error)")
+        }
+        SVProgressHUD.dismiss()
     }
 }

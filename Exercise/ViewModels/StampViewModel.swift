@@ -9,7 +9,7 @@ import Foundation
 
 protocol StampViewModelEvents: class {
     func didUpdateStamp(_ stampViewModel: StampViewModel, _ stamps: [Stamp])
-    func didFailWithError(error: Error)
+    func didFailWithError(error: ​ResponseError​)
 }
 
 struct StampViewModel {

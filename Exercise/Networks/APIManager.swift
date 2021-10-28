@@ -25,9 +25,13 @@ class APIManager {
                 switch data.result {
                 case .success(_):
                     let decoder = JSONDecoder()
-                    if let jsonData = data.data {
-                        let result = try! decoder.decode(T.self, from: jsonData)
-                        completionHandler(.success(result))
+                    if let jsonData = data.data, let errors = try? decoder.decode(​ResponseError​.self, from: jsonData){
+                        if errors.errors.count == 0 {
+                            let result = try! decoder.decode(T.self, from: jsonData)
+                            completionHandler(.success(result))
+                        } else {
+                            completionHandler(.failure(errors))
+                        }
                     }
                 case .failure(_):
                     let decoder = JSONDecoder()

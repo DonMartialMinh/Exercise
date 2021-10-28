@@ -9,7 +9,7 @@ import Foundation
 
 protocol CategoryViewModelEvents: class {
     func didUpdateCategory(_ categoryViewModel: CategoryViewModel, _ categories: [Category])
-    func didFailWithError(error: Error)
+    func didFailWithError(error: ​ResponseError​)
 }
 
 struct CategoryViewModel {
