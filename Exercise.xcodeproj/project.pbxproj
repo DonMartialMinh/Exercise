@@ -11,6 +11,7 @@
 		83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */; };
 		83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D26271E5B4900080502 /* UIColorExtensions.swift */; };
 		83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D2A271E5DAF00080502 /* BaseViewController.swift */; };
+		830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E9272A3CC30089F876 /* PhotoViewModel.swift */; };
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
 		835102D92718174000CF1806 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102D72718174000CF1806 /* LibraryViewController.swift */; };
 		835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102EB27181A3000CF1806 /* ImageCollectionViewCell.swift */; };
@@ -63,6 +64,7 @@
 		83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		83038D26271E5B4900080502 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		83038D2A271E5DAF00080502 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		830786E9272A3CC30089F876 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		835102C92717C78800CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		835102CA2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressView.strings; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			children = (
 				836D8F15272952ED0086E481 /* CategoryViewModel.swift */,
 				836D8F1827295A5D0086E481 /* StampViewModel.swift */,
+				830786E9272A3CC30089F876 /* PhotoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
+				830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
 				836D8F1127294A7C0086E481 /* State.swift in Sources */,
 				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,

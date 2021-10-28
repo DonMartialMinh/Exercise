@@ -15,6 +15,7 @@ protocol LibraryViewControllerDelegate: class {
 class LibraryViewController: UIViewController {
     private var allPhotos = PHFetchResult<PHAsset>()
     private var selectedIndex: IndexPath? = nil
+    private var viewModel = PhotoViewModel()
     weak var delegate: LibraryViewControllerDelegate?
 
     // MARK: - IBOutlet
@@ -28,7 +29,13 @@ class LibraryViewController: UIViewController {
         libraryCollectionView.register(ImageCollectionViewCell.loadNib(), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
         libraryCollectionView.allowsMultipleSelection = false
         PHPhotoLibrary.shared().register(self)
-        getPhotos()
+        viewModel.delegate = self
+    }
+
+    // MARK: - ViewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchPhotos()
     }
 
     // MARK: - ViewWillTransition
@@ -36,13 +43,6 @@ class LibraryViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let flowLayout = libraryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         flowLayout.invalidateLayout()
-    }
-
-    // MARK: - GetPhotos
-    private func getPhotos() {
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
-        allPhotos = PHAsset.fetchAssets(with: .image, options: fetchOptions)
     }
 
     // MARK: - ButtonCLicked
@@ -158,5 +158,12 @@ extension LibraryViewController: PHPhotoLibraryChangeObserver {
                 }
             }
         }
+    }
+}
+
+// MARK: - PhotoViewModelEvents
+extension LibraryViewController: PhotoViewModelEvents {
+    func didUpdatePhoto(_ photoViewModel: PhotoViewModel, _ photos: PHFetchResult<PHAsset>) {
+        allPhotos = photos
     }
 }
