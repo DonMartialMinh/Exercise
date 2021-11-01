@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct StampModel: Codable {
-    let data : [Stamp]
-}
-
 struct Stamp: Codable {
     let id: Int
     let thumbnailImageUrl: String
