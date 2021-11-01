@@ -89,6 +89,10 @@ extension StampViewController: StampViewModelEvents {
 
     func didFailWithError(error: ​ResponseError​) {
         if error.errors.count != 0 {
+            let ac = UIAlertController(title: "Error", message: (error.errors[0].message), preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ac.addAction(cancelAction)
+            self.present(ac, animated: true, completion: nil)
             print(
                 """
                 Request failed with errors:
@@ -98,6 +102,10 @@ extension StampViewController: StampViewModelEvents {
                 """
             )
         } else {
+            let ac = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ac.addAction(cancelAction)
+            self.present(ac, animated: true, completion: nil)
             print("Request failed with error: \(error)")
         }
         SVProgressHUD.dismiss()
