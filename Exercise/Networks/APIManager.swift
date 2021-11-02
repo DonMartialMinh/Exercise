@@ -42,8 +42,8 @@ class APIManager {
             }
     }
 
-    func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<StampModel?, ​ResponseError​>)->()) {
-        APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<StampModel?, ​ResponseError​>) in
+    func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<BaseResponseModel<Stamp>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<BaseResponseModel<Stamp>?, ​ResponseError​>) in
             switch result {
             case .success(let results):
                 completionHandler(.success(results))
@@ -53,8 +53,8 @@ class APIManager {
         }
     }
 
-    func fetchCategories (completionHandler: @escaping (_ result: Result<CategoryModel?, ​ResponseError​>)->()) {
-        APIManager.shared.call(type: StampAPI.categories, params: StampAPI.categories.params) { (result: Result<CategoryModel?, ​ResponseError​>) in
+    func fetchCategories (completionHandler: @escaping (_ result: Result<BaseResponseModel<Category>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: StampAPI.categories, params: StampAPI.categories.params) { (result: Result<BaseResponseModel<Category>?, ​ResponseError​>) in
             switch result {
             case .success(let results):
                 completionHandler(.success(results))
