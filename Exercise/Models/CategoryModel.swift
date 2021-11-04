@@ -10,11 +10,11 @@ import Foundation
 struct Category: Codable {
     let id: Int
     let name: String
-    let useType: [String]
+    //let useType: [String]
 
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case useType = "use_type"
+        //case useType = "use_type"
     }
 }

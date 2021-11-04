@@ -12,7 +12,9 @@ protocol CategoryViewControllerDelegate: class {
 }
 
 class CategoryViewController: UIViewController {
-    private var categories: [Category] = []
+    private var categories: [Category] = [
+        Category(id: 1, name: Constants.savedCategoryTitle.localized)
+    ]
     private var selectedCategory: IndexPath? = nil
     private var viewModel = CategoryViewModel()
     weak var delegate: CategoryViewControllerDelegate?
@@ -29,11 +31,20 @@ class CategoryViewController: UIViewController {
         categoryCollectionView.allowsMultipleSelection = false
         viewModel.delegate = self
     }
-    
+
     // MARK: - ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchCategories()
+    }
+
+    // MARK: - ViewDidAppear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        selectedCategory = IndexPath(row: 0, section: 0)
+        categoryCollectionView.selectItem(at: selectedCategory, animated: false, scrollPosition: .top)
+        delegate?.fetchStamp(self, categories[selectedCategory!.row].id)
+        categoryCollectionView.reloadData()
     }
 
     // MARK: - ViewWillTransition
@@ -101,25 +112,10 @@ extension CategoryViewController: CategoryViewModelEvents {
     }
 
     func didFailWithError(error: ​ResponseError​) {
-        if error.errors.count != 0 {
-            let ac = UIAlertController(title: "Error", message: (error.errors[0].message), preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            self.present(ac, animated: true, completion: nil)
-            print(
-                """
-                Request failed with errors:
-                    "code": \(error.errors[0].code)
-                    "parameter": \(error.errors[0].parameter)
-                    "message": \(error.errors[0].message)
-                """
-            )
-        } else {
-            let ac = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            self.present(ac, animated: true, completion: nil)
-            print("Request failed with error: \(error)")
-        }
+        let ac = UIAlertController(title: "Error", message: error.errors, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        self.present(ac, animated: true, completion: nil)
+        print("Request failed with error: \(error)")
     }
 }

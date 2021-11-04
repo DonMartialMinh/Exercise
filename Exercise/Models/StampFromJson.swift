@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Stamp: Codable {
+struct StampFromJson: Codable {
     let id: Int
     let thumbnailImageUrl: String
     let compositionImageUrl: String
