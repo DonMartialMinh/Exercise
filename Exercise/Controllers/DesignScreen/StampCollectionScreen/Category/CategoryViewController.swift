@@ -13,7 +13,7 @@ protocol CategoryViewControllerDelegate: class {
 
 class CategoryViewController: UIViewController {
     private var categories: [Category] = [
-        Category(id: 1, name: "Saved")
+        Category(id: 1, name: Constants.savedCategoryTitle.localized)
     ]
 
     private var selectedCategory: IndexPath? = nil
