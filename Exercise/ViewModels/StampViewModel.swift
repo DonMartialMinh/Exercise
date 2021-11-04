@@ -36,12 +36,14 @@ struct StampViewModel {
     }
 
     func saveStamp(stamp: Stamp) {
-        do {
-            try realm.write({
-                realm.add(stamp)
-            })
-        } catch {
-            print("Error saving stamp: \(error)")
+        if !checkDuplicated(stamp: stamp) {
+            do {
+                try realm.write({
+                    realm.add(stamp)
+                })
+            } catch {
+                print("Error saving stamp: \(error)")
+            }
         }
     }
 
@@ -53,5 +55,15 @@ struct StampViewModel {
         } catch {
             print("Error deleting stamp: \(error)")
         }
+    }
+
+    func checkDuplicated(stamp: Stamp) -> Bool {
+        let stamps = realm.objects(Stamp.self)
+        for item in stamps {
+            if item.name == stamp.name {
+                return true
+            }
+        }
+        return false
     }
 }
