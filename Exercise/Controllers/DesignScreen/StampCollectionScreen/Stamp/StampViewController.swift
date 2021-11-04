@@ -14,14 +14,12 @@ enum ItemType {
     case stampsFromJson
 }
 
-
 class StampViewController: UIViewController {
     private var stampsFromJson: [StampFromJson] = []
     private var stamps: Results<Stamp>?
     private var viewModel = StampViewModel()
     private var type: ItemType = .stamps
     private var selectedIndex: IndexPath? = nil
-
 
     // MARK: - IBOutlet
     @IBOutlet weak var stampCollectionView: UICollectionView!
@@ -53,7 +51,6 @@ extension StampViewController: UICollectionViewDataSource {
         case .stampsFromJson:
             return stampsFromJson.count
         }
-
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,7 +67,6 @@ extension StampViewController: UICollectionViewDataSource {
             cell.pictureImageView.contentMode = .scaleAspectFit
         }
         indexPath == selectedIndex ? cell.setState(.selected) : cell.setState(.normal)
-
         return cell
     }
 }
@@ -155,26 +151,11 @@ extension StampViewController: StampViewModelEvents {
     }
 
     func didFailWithError(error: ​ResponseError​) {
-        if error.errors.count != 0 {
-            let ac = UIAlertController(title: "Error", message: (error.errors[0].message), preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            self.present(ac, animated: true, completion: nil)
-            print(
-                """
-                Request failed with errors:
-                    "code": \(error.errors[0].code)
-                    "parameter": \(error.errors[0].parameter)
-                    "message": \(error.errors[0].message)
-                """
-            )
-        } else {
-            let ac = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            self.present(ac, animated: true, completion: nil)
-            print("Request failed with error: \(error)")
-        }
+        let ac = UIAlertController(title: "Error", message: error.errors, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        self.present(ac, animated: true, completion: nil)
+        print("Request failed with error: \(error)")
         SVProgressHUD.dismiss()
     }
 }

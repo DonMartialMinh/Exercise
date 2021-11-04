@@ -26,6 +26,9 @@
 		8374F80227339EC5002BF4DE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8374F80127339EC5002BF4DE /* Realm */; };
 		8374F80427339EC5002BF4DE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8374F80327339EC5002BF4DE /* RealmSwift */; };
 		8374F80B2733AC54002BF4DE /* Stamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F80A2733AC54002BF4DE /* Stamp.swift */; };
+		8374F80F2733B054002BF4DE /* APIManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F80E2733B054002BF4DE /* APIManagerExtensions.swift */; };
+		8374F8122733B08F002BF4DE /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8112733B08F002BF4DE /* StatusResponse.swift */; };
+		8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */; };
 		8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */; };
 		8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */; };
 		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
@@ -89,6 +92,9 @@
 		836D8F15272952ED0086E481 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		836D8F1827295A5D0086E481 /* StampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewModel.swift; sourceTree = "<group>"; };
 		8374F80A2733AC54002BF4DE /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
+		8374F80E2733B054002BF4DE /* APIManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerExtensions.swift; sourceTree = "<group>"; };
+		8374F8112733B08F002BF4DE /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
+		8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidRequestError.swift; sourceTree = "<group>"; };
 		8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 				83038D26271E5B4900080502 /* UIColorExtensions.swift */,
 				83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */,
 				83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */,
+				8374F80E2733B054002BF4DE /* APIManagerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,13 +257,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		8374F8172733B26D002BF4DE /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8388271FF37E00F282AE /* ResponseError.swift */,
+				8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		8388373427251B1800291F38 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				8374F8172733B26D002BF4DE /* Errors */,
 				83EA83922720179C00F282AE /* APIManager.swift */,
 				83EA838F271FF91800F282AE /* StampAPI.swift */,
-				83EA8388271FF37E00F282AE /* ResponseError.swift */,
 				83EA838C271FF42000F282AE /* TargetType.swift */,
+				8374F8112733B08F002BF4DE /* StatusResponse.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -541,16 +558,19 @@
 				836D8F16272952ED0086E481 /* CategoryViewModel.swift in Sources */,
 				83EA8390271FF91800F282AE /* StampAPI.swift in Sources */,
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
+				8374F8122733B08F002BF4DE /* StatusResponse.swift in Sources */,
 				8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */,
 				83644201271498A300FED975 /* VariationViewController.swift in Sources */,
 				8388374D2727F76D00291F38 /* StampViewController.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
 				83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */,
 				83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */,
+				8374F80F2733B054002BF4DE /* APIManagerExtensions.swift in Sources */,
 				83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */,
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
 				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
 				83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */,
+				8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
 				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,

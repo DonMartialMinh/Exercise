@@ -15,7 +15,6 @@ class CategoryViewController: UIViewController {
     private var categories: [Category] = [
         Category(id: 1, name: Constants.savedCategoryTitle.localized)
     ]
-
     private var selectedCategory: IndexPath? = nil
     private var viewModel = CategoryViewModel()
     weak var delegate: CategoryViewControllerDelegate?
@@ -113,25 +112,10 @@ extension CategoryViewController: CategoryViewModelEvents {
     }
 
     func didFailWithError(error: ​ResponseError​) {
-        if error.errors.count != 0 {
-            let ac = UIAlertController(title: "Error", message: (error.errors[0].message), preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            self.present(ac, animated: true, completion: nil)
-            print(
-                """
-                Request failed with errors:
-                    "code": \(error.errors[0].code)
-                    "parameter": \(error.errors[0].parameter)
-                    "message": \(error.errors[0].message)
-                """
-            )
-        } else {
-            let ac = UIAlertController(title: "Error", message: "\(error)", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            self.present(ac, animated: true, completion: nil)
-            print("Request failed with error: \(error)")
-        }
+        let ac = UIAlertController(title: "Error", message: error.errors, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        self.present(ac, animated: true, completion: nil)
+        print("Request failed with error: \(error)")
     }
 }
