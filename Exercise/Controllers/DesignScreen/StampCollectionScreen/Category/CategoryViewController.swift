@@ -12,7 +12,10 @@ protocol CategoryViewControllerDelegate: class {
 }
 
 class CategoryViewController: UIViewController {
-    private var categories: [Category] = []
+    private var categories: [Category] = [
+        Category(id: 1, name: "Saved")
+    ]
+
     private var selectedCategory: IndexPath? = nil
     private var viewModel = CategoryViewModel()
     weak var delegate: CategoryViewControllerDelegate?
@@ -29,11 +32,20 @@ class CategoryViewController: UIViewController {
         categoryCollectionView.allowsMultipleSelection = false
         viewModel.delegate = self
     }
-    
+
     // MARK: - ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchCategories()
+    }
+
+    // MARK: - ViewDidAppear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        selectedCategory = IndexPath(row: 0, section: 0)
+        categoryCollectionView.selectItem(at: selectedCategory, animated: false, scrollPosition: .top)
+        delegate?.fetchStamp(self, categories[selectedCategory!.row].id)
+        categoryCollectionView.reloadData()
     }
 
     // MARK: - ViewWillTransition

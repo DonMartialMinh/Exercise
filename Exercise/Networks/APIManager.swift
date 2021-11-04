@@ -42,8 +42,8 @@ class APIManager {
             }
     }
 
-    func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<BaseResponseModel<Stamp>?, ​ResponseError​>)->()) {
-        APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<BaseResponseModel<Stamp>?, ​ResponseError​>) in
+    func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<BaseResponseModel<StampFromJson>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<BaseResponseModel<StampFromJson>?, ​ResponseError​>) in
             switch result {
             case .success(let results):
                 completionHandler(.success(results))
