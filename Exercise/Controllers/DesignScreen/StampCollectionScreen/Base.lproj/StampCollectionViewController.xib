@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StampCollectionViewController" customModule="Exercise" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryView" destination="qgN-sO-G9h" id="gcy-gu-ban"/>
+                <outlet property="stampView" destination="HnO-5E-5cx" id="coz-U4-cgj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPx-Rp-7la">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <navigationItem title="Stamp Collection" id="vp4-H5-hgk">
+                            <barButtonItem key="rightBarButtonItem" title="Item" image="xmark" catalog="system" id="CFZ-Qu-mi8">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="cancelBarButtonPressed:" destination="-1" id="uet-a3-OF1"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-5E-5cx">
+                    <rect key="frame" x="0.0" y="85" width="320" height="483"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgN-sO-G9h">
+                    <rect key="frame" x="0.0" y="45" width="320" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="e7k-0D-tbN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HnO-5E-5cx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0uH-wW-qrw"/>
+                <constraint firstItem="qgN-sO-G9h" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2uj-Ht-0X3"/>
+                <constraint firstItem="HnO-5E-5cx" firstAttribute="top" secondItem="qgN-sO-G9h" secondAttribute="bottom" constant="-10" id="Je6-j0-M5W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HnO-5E-5cx" secondAttribute="bottom" id="RMB-0d-HjX"/>
+                <constraint firstItem="qgN-sO-G9h" firstAttribute="top" secondItem="dPx-Rp-7la" secondAttribute="bottom" constant="1" id="SdK-Cy-Qkr"/>
+                <constraint firstItem="qgN-sO-G9h" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Yj9-Su-1gh"/>
+                <constraint firstItem="dPx-Rp-7la" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gEl-ne-FyQ"/>
+                <constraint firstItem="dPx-Rp-7la" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="is0-LW-iEG"/>
+                <constraint firstItem="dPx-Rp-7la" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jRT-EG-DaJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HnO-5E-5cx" secondAttribute="trailing" id="w82-dX-5JN"/>
+            </constraints>
+            <point key="canvasLocation" x="138.75" y="84.507042253521121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

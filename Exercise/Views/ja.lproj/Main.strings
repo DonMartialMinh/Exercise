@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Choose a color"; ObjectID = "6bm-jy-LOQ"; */
+"6bm-jy-LOQ.text" = "カラーを選ぶ";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "PTD-jN-E6B"; */
+"PTD-jN-E6B.title" = "次へ";
+
+/* Class = "UILabel"; text = "Choose a greeting"; ObjectID = "RkK-CP-yIq"; */
+"RkK-CP-yIq.text" = "賀詞を選ぶ";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "dSw-D9-er8"; */
+"dSw-D9-er8.title" = "戻る";
+
+/* Class = "UINavigationItem"; title = "Select a variation"; ObjectID = "mIo-Ft-Vff"; */
+"mIo-Ft-Vff.title" = "バリエーションを選択";
+
+/* Class = "UILabel"; text = "Choose photos"; ObjectID = "uuk-0a-Q9k"; */
+"uuk-0a-Q9k.text" = "写真枚数を選ぶ";
