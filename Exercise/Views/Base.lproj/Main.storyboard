@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,18 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VLw-94-rUg" customClass="ProgressView" customModule="Exercise" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="320" height="47"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5q-NX-M3C">
-                                <rect key="frame" x="0.0" y="91" width="320" height="427.5"/>
+                                <rect key="frame" x="0.0" y="51" width="320" height="463.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-ne-UJt">
-                                        <rect key="frame" x="8" y="359.5" width="62" height="62"/>
+                                        <rect key="frame" x="8" y="395.5" width="62" height="62"/>
                                         <state key="normal" image="sample_btn"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifB-YE-kHx">
-                                        <rect key="frame" x="250" y="359.5" width="62" height="62"/>
+                                        <rect key="frame" x="250" y="395.5" width="62" height="62"/>
                                         <state key="normal" image="enlargement_btn"/>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="template" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-Ru-bta">
@@ -57,26 +58,26 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZr-jS-XgA">
-                                <rect key="frame" x="281" y="59" width="24" height="24"/>
+                                <rect key="frame" x="281" y="15" width="24" height="24"/>
                                 <state key="normal" image="help"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-I3-yUj">
-                                <rect key="frame" x="0.0" y="518.5" width="320" height="49.5"/>
+                                <rect key="frame" x="0.0" y="514.5" width="320" height="53.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T9L-ny-EIP">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elp-3H-z6X">
-                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="49.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="53.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-jy-LOQ">
-                                                        <rect key="frame" x="18.5" y="30.5" width="69.5" height="11"/>
+                                                        <rect key="frame" x="18.5" y="34.5" width="69.5" height="11"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="color_wh_s" translatesAutoresizingMaskIntoConstraints="NO" id="EOa-vM-FbV">
-                                                        <rect key="frame" x="38.5" y="9" width="30" height="23"/>
+                                                        <rect key="frame" x="38.5" y="10.5" width="30" height="25.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="QjY-ti-xcI"/>
                                                         </constraints>
@@ -93,16 +94,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-wH-QMM">
-                                                <rect key="frame" x="106.5" y="0.0" width="107" height="49.5"/>
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="53.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose photos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuk-0a-Q9k">
-                                                        <rect key="frame" x="18.5" y="30.5" width="70" height="11"/>
+                                                        <rect key="frame" x="18.5" y="34.5" width="70" height="11"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candidate_photo_btn" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-Vc-ix5">
-                                                        <rect key="frame" x="41" y="8" width="25" height="20"/>
+                                                        <rect key="frame" x="41" y="10.5" width="25" height="21.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="0mG-wX-BQ0"/>
                                                         </constraints>
@@ -119,16 +120,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heC-R0-vXK">
-                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="49.5"/>
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="53.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-CP-yIq">
-                                                        <rect key="frame" x="10.5" y="30.5" width="85" height="11"/>
+                                                        <rect key="frame" x="10.5" y="34.5" width="85" height="11"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_gashi_white" translatesAutoresizingMaskIntoConstraints="NO" id="FUu-pV-oDF">
-                                                        <rect key="frame" x="42" y="9.5" width="22" height="17.5"/>
+                                                        <rect key="frame" x="42" y="12" width="22" height="19"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="22" id="GwY-cv-TFv"/>
                                                         </constraints>
@@ -187,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1H6-UK-1Gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271.25" y="31.690140845070424"/>
+            <point key="canvasLocation" x="1986" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XcI-bu-b6h">
@@ -201,12 +202,33 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jtm-pc-ZZk" kind="relationship" relationship="rootViewController" id="4Iz-V8-Bq1"/>
+                        <segue destination="5as-yr-UZP" kind="relationship" relationship="rootViewController" id="H62-I3-i3E"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJX-6V-YMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372.89719626168221" y="31.749460043196546"/>
+        </scene>
+        <!--New Year's card design list-->
+        <scene sceneID="gcP-3L-AHH">
+            <objects>
+                <viewController id="5as-yr-UZP" customClass="CardListViewController" customModule="Exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WZM-Qj-UgQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="k35-ju-lHo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Year's card design list" id="f7H-Vl-Zf4">
+                        <barButtonItem key="leftBarButtonItem" id="TdG-En-P5u">
+                            <imageReference key="image" image="line.horizontal.3" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZE-Kb-9mf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="32"/>
         </scene>
     </scenes>
     <resources>
@@ -215,6 +237,7 @@
         <image name="enlargement_btn" width="62" height="62"/>
         <image name="help" width="24" height="24"/>
         <image name="icon_gashi_white" width="18.5" height="18"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="sample_btn" width="62" height="62"/>
         <image name="template" width="1228" height="1748"/>
         <systemColor name="systemBackgroundColor">

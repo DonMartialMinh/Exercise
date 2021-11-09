@@ -14,6 +14,7 @@
 		830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E9272A3CC30089F876 /* PhotoViewModel.swift */; };
 		830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */; };
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
+		8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331C87D2738B94D008234BE /* CardListViewController.swift */; };
 		835102D92718174000CF1806 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102D72718174000CF1806 /* LibraryViewController.swift */; };
 		835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102EB27181A3000CF1806 /* ImageCollectionViewCell.swift */; };
 		835102EE27181A3000CF1806 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835102EC27181A3000CF1806 /* ImageCollectionViewCell.xib */; };
@@ -74,6 +75,7 @@
 		830786E9272A3CC30089F876 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8331C87D2738B94D008234BE /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		835102C92717C78800CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		835102CA2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressView.strings; sourceTree = "<group>"; };
 		835102CB2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 				83D799662716EBFC003CA963 /* ConfirmViewController.xib */,
 			);
 			path = ConfirmScreen;
+			sourceTree = "<group>";
+		};
+		8331C87C2738B92D008234BE /* CardListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8331C87D2738B94D008234BE /* CardListViewController.swift */,
+			);
+			path = CardListScreen;
 			sourceTree = "<group>";
 		};
 		835102D62718171F00CF1806 /* LibraryScreen */ = {
@@ -370,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				83038D2A271E5DAF00080502 /* BaseViewController.swift */,
+				8331C87C2738B92D008234BE /* CardListScreen */,
 				836D8F0E2729454F0086E481 /* VariationScreen */,
 				830B8A812712DB980053B419 /* PhotoSelectScreen */,
 				830B8A822712DBA80053B419 /* DesignScreen */,
@@ -549,6 +560,7 @@
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
 				830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */,
 				830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */,
+				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
 				8374F80B2733AC54002BF4DE /* Stamp.swift in Sources */,
 				836D8F1127294A7C0086E481 /* State.swift in Sources */,
