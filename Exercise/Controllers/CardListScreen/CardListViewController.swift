@@ -9,23 +9,16 @@ import UIKit
 import WebKit
 
 class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
-    
+    let userDefault = UserDefaults.standard
     var webView: WKWebView!
-    
+
     override func loadView() {
+        super.loadView()
         let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.userContentController.add(self, name: "isFavoriteDesign")
+        webConfiguration.userContentController.add(self, name: "addFavoriteDesign")
+        webConfiguration.userContentController.add(self, name: "deleteFavoriteDesign")
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
-//        let source =
-//            """
-//                document.getElementById('favorite-button').addEventListener("click", function(){
-//                window.webkit.messageHandlers.addFavoriteDesign.postMessage("123");
-//                });
-//            """
-//        let script = WKUserScript(source: source, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
-//        webView.configuration.userContentController.addUserScript(script)
-        webView.configuration.userContentController.add(self, name: "addFavoriteDesign")
-        webView.configuration.userContentController.add(self, name: "deleteFavoriteDesign")
-        webView.configuration.userContentController.add(self, name: "isFavoriteDesign")
         webView.navigationDelegate = self
         webView.uiDelegate = self
         view = webView
@@ -41,49 +34,30 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
 
 extension CardListViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print(message.name)
+        guard let dict = message.body as? [String: Any] else { return }
+        let code = dict["code"] as! String
+        let colorCode = dict["color_code"] as! String
+        let greetingType = dict["greeting_type"] as! Int
+        let photoCount = dict["photo_count"] as! Int
+        let favoriteDesign = FavoriteDesign(
+            code: code,
+            colorCode: colorCode,
+            greetingType: greetingType,
+            photoCount: photoCount
+        )
+        print(favoriteDesign)
         if message.name == "addFavoriteDesign" {
-            webView.evaluateJavaScript("changeFaved(true);") {
-                (result, error) in
-                if error == nil {
-                    print(result)
-                } else {
-                    print(error)
-                }
-            }
-            print(message.body)
-//            if let dict = message.body as? Dictionary<String, String> {
-//                let code = dict["code"]
-//                let greetingType = dict["greeting_type"]
-//                let colorCode = dict["color_code"]
-//                let photoCount = dict["photo_count"]
-//                print(code)
-//                print(greetingType)
-//                print(colorCode)
-//                print(photoCount)
-//            }
+            userDefault.setValue(true, forKey: favoriteDesign.code)
+            webView.evaluateJavaScript("changeFaved(true);")
         } else if message.name == "deleteFavoriteDesign" {
-            webView.evaluateJavaScript("changeFaved(false);") {
-                (result, error) in
-                if error == nil {
-                    print(result)
-                } else {
-                    print(error)
-                }
-            }
-            print(message.body)
-//            if let dict = message.body as? Dictionary<String, String> {
-//                let code = dict["code"]
-//                let greetingType = dict["greeting_type"]
-//                let colorCode = dict["color_code"]
-//                let photoCount = dict["photo_count"]
-//                print(code)
-//                print(greetingType)
-//                print(colorCode)
-//                print(photoCount)
-//            }
+            userDefault.removeObject(forKey: favoriteDesign.code)
+            webView.evaluateJavaScript("changeFaved(false);")
         } else if message.name == "isFavoriteDesign" {
-            print(message.body)
-            
+            webView.evaluateJavaScript("changeFaved(false);")
+            if userDefault.object(forKey: favoriteDesign.code) != nil {
+                webView.evaluateJavaScript("changeFaved(true);")
+            }
         }
     }
 }
