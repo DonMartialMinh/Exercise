@@ -30,5 +30,6 @@ public struct Constants {
     static let nextBarButtonEndTitle = "Proceed to order"
     static let hubLoading = "Loading"
     static let savedCategoryTitle = "Saved"
+    static let favoriteDesignskey = "favDesignArray"
 
 }
