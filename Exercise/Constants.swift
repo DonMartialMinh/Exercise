@@ -23,6 +23,21 @@ public struct Constants {
         static let settings = "Settings"
         static let cancel = "Cancel"
     }
+    struct Design {
+        struct Event {
+            static let add = "addFavoriteDesign"
+            static let delete = "deleteFavoriteDesign"
+            static let check = "isFavoriteDesign"
+            static let setFirebasefunnel = "setFirebaseFunnels"
+            static let select = "handleDesignSelected"
+        }
+        struct Properties {
+            static let code = "code"
+            static let colorCode = "color_code"
+            static let photoCount = "photo_count"
+            static let greetingType = "greeting_type"
+        }
+    }
     static let imageCellIdentifier = "ImageCell"
     static let categoryCellIdentifier = "CategoryCell"
     static let backBarButtonTittle = "Back"
@@ -31,5 +46,6 @@ public struct Constants {
     static let hubLoading = "Loading"
     static let savedCategoryTitle = "Saved"
     static let favoriteDesignskey = "favDesignArray"
+    static let goToVariationScreenSegue = "GoToVariationScreen"
 
 }
