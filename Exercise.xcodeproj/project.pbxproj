@@ -32,6 +32,10 @@
 		8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */; };
 		8381DA42273B6F130059B337 /* FavoriteDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA41273B6F130059B337 /* FavoriteDesign.swift */; };
 		8381DA45273CE9920059B337 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA44273CE9920059B337 /* CardListViewModel.swift */; };
+		8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA472741FF550059B337 /* TemplateFromJson.swift */; };
+		8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA4D27420C9E0059B337 /* TemplateAPI.swift */; };
+		8381DA51274212B50059B337 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA50274212B50059B337 /* Template.swift */; };
+		8381DA54274213A20059B337 /* VariationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA53274213A20059B337 /* VariationOptions.swift */; };
 		8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */; };
 		8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */; };
 		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
@@ -101,6 +105,10 @@
 		8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidRequestError.swift; sourceTree = "<group>"; };
 		8381DA41273B6F130059B337 /* FavoriteDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDesign.swift; sourceTree = "<group>"; };
 		8381DA44273CE9920059B337 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		8381DA472741FF550059B337 /* TemplateFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFromJson.swift; sourceTree = "<group>"; };
+		8381DA4D27420C9E0059B337 /* TemplateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAPI.swift; sourceTree = "<group>"; };
+		8381DA50274212B50059B337 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		8381DA53274213A20059B337 /* VariationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationOptions.swift; sourceTree = "<group>"; };
 		8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -281,6 +289,17 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		8381DA4A274201720059B337 /* JsonModels */ = {
+			isa = PBXGroup;
+			children = (
+				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
+				8388373E272658BA00291F38 /* CategoryModel.swift */,
+				83EA83982720210B00F282AE /* StampFromJson.swift */,
+				8381DA472741FF550059B337 /* TemplateFromJson.swift */,
+			);
+			path = JsonModels;
+			sourceTree = "<group>";
+		};
 		8388373427251B1800291F38 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +308,7 @@
 				83EA838F271FF91800F282AE /* StampAPI.swift */,
 				83EA838C271FF42000F282AE /* TargetType.swift */,
 				8374F8112733B08F002BF4DE /* StatusResponse.swift */,
+				8381DA4D27420C9E0059B337 /* TemplateAPI.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -409,12 +429,12 @@
 		83EA8387271FEF6100F282AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
-				83EA83982720210B00F282AE /* StampFromJson.swift */,
-				8388373E272658BA00291F38 /* CategoryModel.swift */,
+				8381DA4A274201720059B337 /* JsonModels */,
 				836D8F1027294A7C0086E481 /* State.swift */,
 				8374F80A2733AC54002BF4DE /* Stamp.swift */,
 				8381DA41273B6F130059B337 /* FavoriteDesign.swift */,
+				8381DA50274212B50059B337 /* Template.swift */,
+				8381DA53274213A20059B337 /* VariationOptions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -566,8 +586,10 @@
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
 				830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */,
 				830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */,
+				8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */,
 				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
+				8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */,
 				8374F80B2733AC54002BF4DE /* Stamp.swift in Sources */,
 				836D8F1127294A7C0086E481 /* State.swift in Sources */,
 				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,
@@ -590,6 +612,7 @@
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
 				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
 				83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */,
+				8381DA51274212B50059B337 /* Template.swift in Sources */,
 				8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
 				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
@@ -602,6 +625,7 @@
 				838837522727F8DE00291F38 /* CategoryViewController.swift in Sources */,
 				83038D20271E5B0000080502 /* StringExtensions.swift in Sources */,
 				83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */,
+				8381DA54274213A20059B337 /* VariationOptions.swift in Sources */,
 				83EA838D271FF42000F282AE /* TargetType.swift in Sources */,
 				830B8A872712DC0F0053B419 /* Constants.swift in Sources */,
 			);

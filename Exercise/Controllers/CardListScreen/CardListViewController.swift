@@ -9,10 +9,12 @@ import UIKit
 import WebKit
 
 class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
-    var favoriteDesigns: [FavoriteDesign] = []
-    var webView: WKWebView!
-    var viewModel = CardListViewModel()
-    let script = """
+    private var favoriteDesigns: [FavoriteDesign] = []
+    private var currentFavoriteDesign: FavoriteDesign?
+    private var template: TemplateFromJson?
+    private var webView: WKWebView!
+    private var viewModel = CardListViewModel()
+    private let script = """
         document.getElementById("create-button").addEventListener("click", function() {
             window.webkit.messageHandlers.\(Constants.Design.Event.select).postMessage("designSelected");
         });
@@ -43,11 +45,44 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         let request = URLRequest(url: url!)
         webView.load(request)
     }
+
+    func navigateToNextScreen() {
+        guard let templateCode = currentFavoriteDesign?.code else { return }
+        print(templateCode)
+        viewModel.fetchTemplate(with: templateCode)
+        if template != nil {
+            var isContainVariation = true
+            var isContainAddPhoto = true
+            print(template!.variationOptions.photoCount)
+            print(template!.variationOptions.colorCode)
+            print(template!.variationOptions.greetingType)
+            if !template!.variationOptions.photoCount.isEmpty &&
+                !template!.variationOptions.colorCode.isEmpty &&
+                !template!.variationOptions.greetingType.isEmpty {
+                isContainVariation = false
+            }
+            if template!.variationOptions.photoCount.isEmpty ||
+                template!.variationOptions.photoCount.count == 1 &&
+                template!.variationOptions.photoCount.contains(0) {
+                isContainAddPhoto = false
+            }
+            if isContainVariation && isContainAddPhoto {
+                performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+            } else if !isContainVariation && !isContainAddPhoto {
+                let VC  = DesignViewController.initFromNib()
+                navigationController?.pushViewController(VC, animated: true)
+            } else if isContainVariation && !isContainAddPhoto{
+                performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+            } else if !isContainVariation && isContainAddPhoto {
+                let VC  = PhotoSelectViewController.initFromNib()
+                navigationController?.pushViewController(VC, animated: true)
+            }
+        }
+    }
 }
 
 extension CardListViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print(message.name)
         switch message.name {
         case Constants.Design.Event.add:
             if let favoriteDesign = getFavoriteDesign(from: message.body) {
@@ -61,13 +96,14 @@ extension CardListViewController: WKScriptMessageHandler {
             }
         case Constants.Design.Event.check:
             if let favoriteDesign = getFavoriteDesign(from: message.body) {
+                currentFavoriteDesign = favoriteDesign
                 webView.evaluateJavaScript("changeFaved(false);")
                 if isFavoriteDesign(item: favoriteDesign){
                     webView.evaluateJavaScript("changeFaved(true);")
                 }
             }
         case Constants.Design.Event.select:
-            performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+            navigateToNextScreen()
         default:
             print("Unhandled Message")
         }
@@ -117,7 +153,15 @@ extension CardListViewController: WKScriptMessageHandler {
 }
 
 extension CardListViewController: CardListViewModelEvent {
-    func didUpdateFavoriteDesigns(_ cardListViewModel: CardListViewModel, favoriteDesignArray: [FavoriteDesign]) {
-        favoriteDesigns.append(contentsOf: favoriteDesignArray)
+    func didUpdateFavoriteDesigns(_ cardListViewModel: CardListViewModel, favoriteDesigns: [FavoriteDesign]) {
+        self.favoriteDesigns.append(contentsOf: favoriteDesigns)
+    }
+
+    func didUpdateTemplates(_ cardListViewModel: CardListViewModel, template: TemplateFromJson) {
+        self.template = template
+    }
+
+    func didFailWithError(error: ​ResponseError​) {
+        print(error)
     }
 }
