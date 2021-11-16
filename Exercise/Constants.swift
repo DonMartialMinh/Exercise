@@ -46,6 +46,4 @@ public struct Constants {
     static let hubLoading = "Loading"
     static let savedCategoryTitle = "Saved"
     static let favoriteDesignskey = "favDesignArray"
-    static let goToVariationScreenSegue = "GoToVariationScreen"
-
 }

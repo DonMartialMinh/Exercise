@@ -112,12 +112,14 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
                     isContainAddPhoto = false
                 }
                 if isContainVariation && isContainAddPhoto {
-                    self.performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+                    let VC = VariationViewController.initFromNib()
+                    self.navigationController?.pushViewController(VC, animated: true)
                 } else if !isContainVariation && !isContainAddPhoto {
-                    let VC  = DesignViewController.initFromNib()
+                    let VC = DesignViewController.initFromNib()
                     self.navigationController?.pushViewController(VC, animated: true)
                 } else if isContainVariation && !isContainAddPhoto{
-                    self.performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+                    let VC = VariationViewController.initFromNib()
+                    self.navigationController?.pushViewController(VC, animated: true)
                 } else if !isContainVariation && isContainAddPhoto {
                     let VC  = PhotoSelectViewController.initFromNib()
                     self.navigationController?.pushViewController(VC, animated: true)

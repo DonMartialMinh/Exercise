@@ -1,18 +1,3 @@
 
-/* Class = "UILabel"; text = "カラーを選ぶ"; ObjectID = "6bm-jy-LOQ"; */
-"6bm-jy-LOQ.text" = "Chọn màu sắc";
-
-/* Class = "UIBarButtonItem"; title = "次へ"; ObjectID = "PTD-jN-E6B"; */
-"PTD-jN-E6B.title" = "Tiếp theo";
-
-/* Class = "UILabel"; text = "賀詞を選ぶ"; ObjectID = "RkK-CP-yIq"; */
-"RkK-CP-yIq.text" = "Chọn lời chào";
-
-/* Class = "UIBarButtonItem"; title = "戻る"; ObjectID = "dSw-D9-er8"; */
-"dSw-D9-er8.title" = "Trở lại";
-
-/* Class = "UINavigationItem"; title = "バリエーションを選択"; ObjectID = "mIo-Ft-Vff"; */
-"mIo-Ft-Vff.title" = "Chọn biến thể";
-
-/* Class = "UILabel"; text = "写真枚数を選ぶ"; ObjectID = "uuk-0a-Q9k"; */
-"uuk-0a-Q9k.text" = "Chọn ảnh";
+/* Class = "UINavigationItem"; title = "New Year's card design list"; ObjectID = "f7H-Vl-Zf4"; */
+"f7H-Vl-Zf4.title" = "Danh sách thiết kế thiệp năm mới";

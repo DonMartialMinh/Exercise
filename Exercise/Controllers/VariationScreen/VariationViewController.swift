@@ -1,8 +1,8 @@
 //
-//  MainViewController.swift
+//  VariationViewController.swift
 //  Exercise
 //
-//  Created by Vo Minh Don on 10/11/21.
+//  Created by Vo Minh Don on 11/16/21.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ class VariationViewController: BaseViewController {
 
     // MARK: - SetUp
     func setup() {
+        navigationItem.title = Constants.NavigationTitle.variation.localized
         variationProgressView.setState(.variation)
         pictureFrameView.setColor(.purple)
     }
