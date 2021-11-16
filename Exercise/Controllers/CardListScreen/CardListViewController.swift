@@ -7,11 +7,11 @@
 
 import UIKit
 import WebKit
+import SVProgressHUD
 
 class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     private var favoriteDesigns: [FavoriteDesign] = []
     private var currentFavoriteDesign: FavoriteDesign?
-    private var template: TemplateFromJson?
     private var webView: WKWebView!
     private var viewModel = CardListViewModel()
     private let script = """
@@ -20,6 +20,7 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         });
     """
 
+    // MARK: - LoadView
     override func loadView() {
         super.loadView()
         let webConfiguration = WKWebViewConfiguration()
@@ -38,6 +39,7 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         viewModel.delegate = self
     }
 
+    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.loadFavoriteDesigns()
@@ -46,36 +48,80 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         webView.load(request)
     }
 
+    // MARK: - Data Manipulation
+    private func getFavoriteDesign(from data: Any ) -> FavoriteDesign? {
+        if let dict = data as? [String: Any] {
+            if let code = dict[Constants.Design.Properties.code] as? String,
+               let colorCode = dict[Constants.Design.Properties.colorCode] as? String,
+               let greetingType = dict[Constants.Design.Properties.greetingType] as? Int,
+               let photoCount = dict[Constants.Design.Properties.photoCount] as? Int {
+                let favoriteDesign = FavoriteDesign(
+                    code: code,
+                    colorCode: colorCode,
+                    greetingType: greetingType,
+                    photoCount: photoCount
+                )
+                return favoriteDesign
+            }
+        }
+        return nil
+    }
+
+    private func addFavoriteDesign(item: FavoriteDesign) {
+        favoriteDesigns.append(item)
+        viewModel.saveFavoriteDesign(favDesignArray: favoriteDesigns)
+    }
+
+    private func deleteFavoriteDesign(item: FavoriteDesign) {
+        favoriteDesigns = favoriteDesigns.filter({ (favoriteDesign) in
+            favoriteDesign.code != item.code ||
+                favoriteDesign.colorCode != item.colorCode ||
+                favoriteDesign.greetingType != item.greetingType ||
+                favoriteDesign.photoCount != item.photoCount
+        })
+        viewModel.saveFavoriteDesign(favDesignArray: favoriteDesigns)
+    }
+
+    private func isFavoriteDesign(item: FavoriteDesign) -> Bool {
+        return favoriteDesigns.contains(where: { (favoriteDesign) -> Bool in
+            favoriteDesign.code == item.code &&
+                favoriteDesign.colorCode == item.colorCode &&
+                favoriteDesign.greetingType == item.greetingType &&
+                favoriteDesign.photoCount == item.photoCount
+        })
+    }
+
+    // MARK: - Navigation
     func navigateToNextScreen() {
+        SVProgressHUD.show(withStatus: Constants.hubLoading.localized)
         guard let templateCode = currentFavoriteDesign?.code else { return }
-        print(templateCode)
-        viewModel.fetchTemplate(with: templateCode)
-        if template != nil {
-            var isContainVariation = true
-            var isContainAddPhoto = true
-            print(template!.variationOptions.photoCount)
-            print(template!.variationOptions.colorCode)
-            print(template!.variationOptions.greetingType)
-            if !template!.variationOptions.photoCount.isEmpty &&
-                !template!.variationOptions.colorCode.isEmpty &&
-                !template!.variationOptions.greetingType.isEmpty {
-                isContainVariation = false
-            }
-            if template!.variationOptions.photoCount.isEmpty ||
-                template!.variationOptions.photoCount.count == 1 &&
-                template!.variationOptions.photoCount.contains(0) {
-                isContainAddPhoto = false
-            }
-            if isContainVariation && isContainAddPhoto {
-                performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
-            } else if !isContainVariation && !isContainAddPhoto {
-                let VC  = DesignViewController.initFromNib()
-                navigationController?.pushViewController(VC, animated: true)
-            } else if isContainVariation && !isContainAddPhoto{
-                performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
-            } else if !isContainVariation && isContainAddPhoto {
-                let VC  = PhotoSelectViewController.initFromNib()
-                navigationController?.pushViewController(VC, animated: true)
+        viewModel.fetchTemplate(with: templateCode) { [weak self] template in
+            guard let self = self else { return }
+            SVProgressHUD.dismiss()
+            if template != nil {
+                var isContainVariation = true
+                var isContainAddPhoto = true
+                if !template!.variationOptions.photoCount.isEmpty &&
+                    !template!.variationOptions.colorCode.isEmpty &&
+                    !template!.variationOptions.greetingType.isEmpty {
+                    isContainVariation = false
+                }
+                if template!.variationOptions.photoCount.isEmpty ||
+                    template!.variationOptions.photoCount.count == 1 &&
+                    template!.variationOptions.photoCount.contains(0) {
+                    isContainAddPhoto = false
+                }
+                if isContainVariation && isContainAddPhoto {
+                    self.performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+                } else if !isContainVariation && !isContainAddPhoto {
+                    let VC  = DesignViewController.initFromNib()
+                    self.navigationController?.pushViewController(VC, animated: true)
+                } else if isContainVariation && !isContainAddPhoto{
+                    self.performSegue(withIdentifier: Constants.goToVariationScreenSegue, sender: self)
+                } else if !isContainVariation && isContainAddPhoto {
+                    let VC  = PhotoSelectViewController.initFromNib()
+                    self.navigationController?.pushViewController(VC, animated: true)
+                }
             }
         }
     }
@@ -108,48 +154,6 @@ extension CardListViewController: WKScriptMessageHandler {
             print("Unhandled Message")
         }
     }
-
-    func getFavoriteDesign(from data: Any ) -> FavoriteDesign? {
-        if let dict = data as? [String: Any] {
-            if let code = dict[Constants.Design.Properties.code] as? String,
-               let colorCode = dict[Constants.Design.Properties.colorCode] as? String,
-               let greetingType = dict[Constants.Design.Properties.greetingType] as? Int,
-               let photoCount = dict[Constants.Design.Properties.photoCount] as? Int {
-                let favoriteDesign = FavoriteDesign(
-                    code: code,
-                    colorCode: colorCode,
-                    greetingType: greetingType,
-                    photoCount: photoCount
-                )
-                return favoriteDesign
-            }
-        }
-        return nil
-    }
-
-    func addFavoriteDesign(item: FavoriteDesign) {
-        favoriteDesigns.append(item)
-        viewModel.saveFavoriteDesign(favDesignArray: favoriteDesigns)
-    }
-
-    func deleteFavoriteDesign(item: FavoriteDesign) {
-        favoriteDesigns = favoriteDesigns.filter({ (favoriteDesign) in
-            favoriteDesign.code != item.code ||
-                favoriteDesign.colorCode != item.colorCode ||
-                favoriteDesign.greetingType != item.greetingType ||
-                favoriteDesign.photoCount != item.photoCount
-        })
-        viewModel.saveFavoriteDesign(favDesignArray: favoriteDesigns)
-    }
-
-    func isFavoriteDesign(item: FavoriteDesign) -> Bool {
-        return favoriteDesigns.contains(where: { (favoriteDesign) -> Bool in
-            favoriteDesign.code == item.code &&
-                favoriteDesign.colorCode == item.colorCode &&
-                favoriteDesign.greetingType == item.greetingType &&
-                favoriteDesign.photoCount == item.photoCount
-        })
-    }
 }
 
 extension CardListViewController: CardListViewModelEvent {
@@ -157,11 +161,10 @@ extension CardListViewController: CardListViewModelEvent {
         self.favoriteDesigns.append(contentsOf: favoriteDesigns)
     }
 
-    func didUpdateTemplates(_ cardListViewModel: CardListViewModel, template: TemplateFromJson) {
-        self.template = template
-    }
-
-    func didFailWithError(error: ​ResponseError​) {
-        print(error)
+    func didFailWithError(error: Error) {
+        let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cancelAction)
+        self.present(ac, animated: true, completion: nil)
     }
 }

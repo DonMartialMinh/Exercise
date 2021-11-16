@@ -10,8 +10,7 @@ import RealmSwift
 
 protocol CardListViewModelEvent: class {
     func didUpdateFavoriteDesigns(_ cardListViewModel: CardListViewModel, favoriteDesigns: [FavoriteDesign])
-    func didUpdateTemplates(_ cardListViewModel: CardListViewModel, template: TemplateFromJson)
-    func didFailWithError(error: ​ResponseError​)
+    func didFailWithError(error: Error)
 }
 
 struct CardListViewModel {
@@ -26,10 +25,10 @@ struct CardListViewModel {
                 let favoriteDesigns = try decoder.decode([FavoriteDesign].self, from: data)
                 self.delegate?.didUpdateFavoriteDesigns(self, favoriteDesigns: favoriteDesigns)
             } catch {
-                print("Unable to Decode Array of Favorite Design (\(error))")
+                self.delegate?.didFailWithError(error: error)
             }
         } else {
-            print("Error loading favorite designs")
+            print("Error loading favorite designs from UserDefault")
         }
     }
 
@@ -39,18 +38,59 @@ struct CardListViewModel {
             let data = try encoder.encode(favDesignArray)
             userDefault.set(data, forKey: Constants.favoriteDesignskey)
         } catch {
-            print("Unable to Encode Array of Favorite Design \(error)")
+            self.delegate?.didFailWithError(error: error)
         }
     }
 
-    func fetchTemplate(with code: String) {
+    func fetchTemplate(with code: String, completion: @escaping (TemplateFromJson?)->()) {
         APIManager.shared.fetchTemplates(code: code) { result in
             switch result {
             case .success(let template):
-                self.delegate?.didUpdateTemplates(self, template: template!.data[0])
+                saveTemplate(template: template!.data[0])
+                completion(template!.data[0])
             case .failure(let error):
                 self.delegate?.didFailWithError(error: error)
             }
         }
+    }
+
+    func saveTemplate(template: TemplateFromJson) {
+        let variationOption = VariationOptions()
+        variationOption.colorCode.append(objectsIn: template.variationOptions.colorCode)
+        variationOption.photoCount.append(objectsIn: template.variationOptions.photoCount)
+        variationOption.greetingType.append(objectsIn: template.variationOptions.greetingType)
+        variationOption.postcardTypeId.append(objectsIn: template.variationOptions.postcardTypeId)
+        let templateModel = Template()
+        templateModel.code = template.code
+        templateModel.variationOptions = variationOption
+        if !checkDuplicated(template: templateModel) {
+            do {
+                try realm.write({
+                    realm.add(templateModel)
+                })
+            } catch {
+                self.delegate?.didFailWithError(error: error)
+            }
+        }
+    }
+
+    func deleteTemplate(template: Template) {
+        do {
+            try realm.write({
+                realm.delete(template)
+            })
+        } catch {
+            self.delegate?.didFailWithError(error: error)
+        }
+    }
+
+    func checkDuplicated(template: Template) -> Bool {
+        let templates = realm.objects(Template.self)
+        for item in templates {
+            if item.code == template.code {
+                return true
+            }
+        }
+        return false
     }
 }
