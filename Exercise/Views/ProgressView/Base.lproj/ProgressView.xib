@@ -17,6 +17,9 @@
                 <outlet property="lineStageConfirmView" destination="zG8-9U-Gtb" id="Fvf-If-76S"/>
                 <outlet property="lineStageDesignView" destination="w9k-BR-8WA" id="X8L-81-2vN"/>
                 <outlet property="lineStagePhotoSelectView" destination="8sQ-Zn-6Hk" id="hbM-2d-9aX"/>
+                <outlet property="outerLineStageConfirmView" destination="Hx2-rg-f3T" id="qhw-c4-N3E"/>
+                <outlet property="outerLineStageDesignView" destination="RwM-6x-Sum" id="ZdQ-7a-xNQ"/>
+                <outlet property="outerLineStageSelectView" destination="fVs-H5-yBY" id="lgT-Ys-lj0"/>
                 <outlet property="photoSelectCustomView" destination="32u-Qo-fgJ" id="5Le-A9-blH"/>
                 <outlet property="photoSelectLabel" destination="FcL-xU-69l" id="PnE-05-hP7"/>
                 <outlet property="variationCustomView" destination="ReX-2h-LOR" id="fnR-9r-bQy"/>
@@ -32,7 +35,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="315" height="51"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YRG-9h-wcv">
-                            <rect key="frame" x="58.5" y="10" width="198" height="10"/>
+                            <rect key="frame" x="56.5" y="10" width="202" height="10"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReX-2h-LOR" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
@@ -51,10 +54,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVs-H5-yBY">
-                                    <rect key="frame" x="12" y="0.0" width="48.5" height="10"/>
+                                    <rect key="frame" x="12" y="0.0" width="50" height="10"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sQ-Zn-6Hk">
-                                            <rect key="frame" x="0.0" y="4.5" width="48.5" height="1"/>
+                                            <rect key="frame" x="0.0" y="4.5" width="50" height="1"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="1oV-KU-2Uf"/>
@@ -69,7 +72,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32u-Qo-fgJ" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
-                                    <rect key="frame" x="62.5" y="0.0" width="10" height="10"/>
+                                    <rect key="frame" x="64" y="0.0" width="10" height="10"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="6NU-wb-MUX"/>
@@ -85,10 +88,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwM-6x-Sum">
-                                    <rect key="frame" x="74.5" y="0.0" width="49" height="10"/>
+                                    <rect key="frame" x="76" y="0.0" width="50" height="10"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9k-BR-8WA">
-                                            <rect key="frame" x="0.0" y="4.5" width="49" height="1"/>
+                                            <rect key="frame" x="0.0" y="4.5" width="50" height="1"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="sad-Gd-mhi"/>
@@ -103,7 +106,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLd-q9-cZU" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
-                                    <rect key="frame" x="125.5" y="0.0" width="10" height="10"/>
+                                    <rect key="frame" x="128" y="0.0" width="10" height="10"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="10" id="arG-UB-Uun"/>
@@ -119,10 +122,10 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-rg-f3T">
-                                    <rect key="frame" x="137.5" y="0.0" width="48.5" height="10"/>
+                                    <rect key="frame" x="140" y="0.0" width="50" height="10"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zG8-9U-Gtb">
-                                            <rect key="frame" x="0.0" y="4.5" width="48.5" height="1"/>
+                                            <rect key="frame" x="0.0" y="4.5" width="50" height="1"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Vpk-B9-aW1"/>
@@ -138,7 +141,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFc-kN-SHQ" customClass="CustomView" customModule="Exercise" customModuleProvider="target">
-                                    <rect key="frame" x="188" y="0.0" width="10" height="10"/>
+                                    <rect key="frame" x="192" y="0.0" width="10" height="10"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="10" id="gpm-el-NPU"/>
@@ -157,29 +160,28 @@
                             <constraints>
                                 <constraint firstItem="RwM-6x-Sum" firstAttribute="width" secondItem="fVs-H5-yBY" secondAttribute="width" id="JX5-G2-50E"/>
                                 <constraint firstItem="Hx2-rg-f3T" firstAttribute="width" secondItem="fVs-H5-yBY" secondAttribute="width" id="Uue-nk-zpS"/>
-                                <constraint firstAttribute="height" constant="10" id="xVc-7t-wIl"/>
                             </constraints>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a variation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9c-it-vYK">
-                            <rect key="frame" x="26.5" y="22" width="73.5" height="10"/>
+                            <rect key="frame" x="25" y="22" width="73.5" height="10"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo selection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcL-xU-69l">
-                            <rect key="frame" x="93" y="22" width="66" height="10"/>
+                            <rect key="frame" x="92.5" y="22" width="66" height="10"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mis-dB-Ewk">
-                            <rect key="frame" x="174" y="22" width="29.5" height="10"/>
+                            <rect key="frame" x="175" y="22" width="29.5" height="10"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czX-kC-wMX">
-                            <rect key="frame" x="224" y="22" width="55.5" height="10"/>
+                            <rect key="frame" x="226" y="22" width="55.5" height="10"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -200,7 +202,7 @@
                         <constraint firstAttribute="bottom" secondItem="k9c-it-vYK" secondAttribute="bottom" constant="19" id="gwZ-6b-3TM"/>
                         <constraint firstItem="czX-kC-wMX" firstAttribute="centerX" secondItem="KFc-kN-SHQ" secondAttribute="centerX" id="iD3-RW-Dcu"/>
                         <constraint firstItem="k9c-it-vYK" firstAttribute="top" secondItem="YRG-9h-wcv" secondAttribute="bottom" constant="2" id="qZt-zz-JlM"/>
-                        <constraint firstItem="YRG-9h-wcv" firstAttribute="width" secondItem="WnS-De-1k0" secondAttribute="width" multiplier="0.63" id="sQE-LB-pb3"/>
+                        <constraint firstItem="fVs-H5-yBY" firstAttribute="width" secondItem="WnS-De-1k0" secondAttribute="width" multiplier="0.15873" id="qib-b4-tbp"/>
                         <constraint firstItem="czX-kC-wMX" firstAttribute="top" secondItem="YRG-9h-wcv" secondAttribute="bottom" constant="2" id="yhx-19-lOc"/>
                     </constraints>
                 </view>

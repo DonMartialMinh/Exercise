@@ -99,29 +99,30 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
             guard let self = self else { return }
             SVProgressHUD.dismiss()
             if template != nil {
-                var isContainVariation = true
-                var isContainAddPhoto = true
+                var displayScreen: [String:Bool] = [:]
+                displayScreen[VariationViewController.classId] = true
+                displayScreen[PhotoSelectViewController.classId] = true
                 if !template!.variationOptions.photoCount.isEmpty &&
                     !template!.variationOptions.colorCode.isEmpty &&
                     !template!.variationOptions.greetingType.isEmpty {
-                    isContainVariation = false
+                    displayScreen[VariationViewController.classId] = false
                 }
                 if template!.variationOptions.photoCount.isEmpty ||
                     template!.variationOptions.photoCount.count == 1 &&
                     template!.variationOptions.photoCount.contains(0) {
-                    isContainAddPhoto = false
+                    displayScreen[PhotoSelectViewController.classId] = false
                 }
-                if isContainVariation && isContainAddPhoto {
+                if displayScreen[VariationViewController.classId] == true {
                     let VC = VariationViewController.initFromNib()
+                    VC.displayScreens = displayScreen
                     self.navigationController?.pushViewController(VC, animated: true)
-                } else if !isContainVariation && !isContainAddPhoto {
-                    let VC = DesignViewController.initFromNib()
-                    self.navigationController?.pushViewController(VC, animated: true)
-                } else if isContainVariation && !isContainAddPhoto{
-                    let VC = VariationViewController.initFromNib()
-                    self.navigationController?.pushViewController(VC, animated: true)
-                } else if !isContainVariation && isContainAddPhoto {
+                } else if displayScreen[PhotoSelectViewController.classId] == true {
                     let VC  = PhotoSelectViewController.initFromNib()
+                    VC.displayScreens = displayScreen
+                    self.navigationController?.pushViewController(VC, animated: true)
+                } else {
+                    let VC = DesignViewController.initFromNib()
+                    VC.displayScreens = displayScreen
                     self.navigationController?.pushViewController(VC, animated: true)
                 }
             }

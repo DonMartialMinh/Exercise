@@ -8,6 +8,11 @@
 import UIKit
 
 class ProgressView: NibView {
+    var displayScreens: [String:Bool]? {
+        didSet {
+            setProgressDisplay()
+        }
+    }
     // MARK: - IBOutlet
     @IBOutlet weak var variationCustomView: CustomView!
     @IBOutlet weak var photoSelectCustomView: CustomView!
@@ -20,7 +25,10 @@ class ProgressView: NibView {
     @IBOutlet weak var lineStagePhotoSelectView: UIView!
     @IBOutlet weak var lineStageDesignView: UIView!
     @IBOutlet weak var lineStageConfirmView: UIView!
-
+    @IBOutlet weak var outerLineStageSelectView: UIView!
+    @IBOutlet weak var outerLineStageDesignView: UIView!
+    @IBOutlet weak var outerLineStageConfirmView: UIView!
+    
     // MARK: - SetState
     func setState (_ state: ProgressState) {
         switch state {
@@ -60,6 +68,21 @@ class ProgressView: NibView {
             lineStageConfirmView.backgroundColor = UIColor.red
             confirmCustomView.color = UIColor.red
             confirmLabel.textColor = UIColor.black
+        }
+    }
+
+    func setProgressDisplay() {
+        if displayScreens![VariationViewController.classId] == false {
+            variationCustomView.isHidden = true
+            variationLabel.isHidden = true
+            lineStagePhotoSelectView.isHidden = true
+            outerLineStageSelectView.isHidden = true
+        }
+        if displayScreens![PhotoSelectViewController.classId] == false {
+            photoSelectCustomView.isHidden = true
+            photoSelectLabel.isHidden = true
+            lineStageDesignView.isHidden = true
+            outerLineStageDesignView.isHidden = true
         }
     }
 }

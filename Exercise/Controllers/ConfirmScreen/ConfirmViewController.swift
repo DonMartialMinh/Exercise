@@ -8,6 +8,7 @@
 import UIKit
 
 class ConfirmViewController: BaseViewController {
+    var displayScreens: [String:Bool] = [:]
     // MARK: - IBOutlet
     @IBOutlet weak var confirmProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
@@ -15,10 +16,15 @@ class ConfirmViewController: BaseViewController {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmProgressView.setState(.confirm)
+        setProgressView()
         pictureFrameView.setColor(.lightGreen)
         navigationItem.title = Constants.NavigationTitle.confirm.localized
         // Do any additional setup after loading the view.
+    }
+
+    func setProgressView() {
+        confirmProgressView.setState(.confirm)
+        confirmProgressView.displayScreens = displayScreens
     }
 
     // MARK: - ConfigureNavigationBar

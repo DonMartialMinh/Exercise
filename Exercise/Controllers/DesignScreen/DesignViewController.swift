@@ -8,6 +8,7 @@
 import UIKit
 
 class DesignViewController: BaseViewController {
+    var displayScreens: [String:Bool] = [:]
     // MARK: - IBOutlet
     @IBOutlet weak var designProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
@@ -15,14 +16,20 @@ class DesignViewController: BaseViewController {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        designProgressView.setState(.design)
+        setProgressView()
         pictureFrameView.setColor(.purple)
         navigationItem.title = Constants.NavigationTitle.design.localized
+    }
+
+    func setProgressView(){
+        designProgressView.setState(.design)
+        designProgressView.displayScreens = displayScreens
     }
 
     // MARK: - Button Clicked
     override func nextButtonClicked(_ sender: UIBarButtonItem) {
         let confirmVC = ConfirmViewController.initFromNib()
+        confirmVC.displayScreens = displayScreens
         navigationController?.pushViewController(confirmVC, animated: true)
     }
 

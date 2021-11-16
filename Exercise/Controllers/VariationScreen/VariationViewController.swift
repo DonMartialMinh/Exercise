@@ -8,6 +8,7 @@
 import UIKit
 
 class VariationViewController: BaseViewController {
+    var displayScreens: [String:Bool] = [:]
     // MARK: - IBOutlet
     @IBOutlet weak var variationProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
@@ -20,9 +21,14 @@ class VariationViewController: BaseViewController {
 
     // MARK: - SetUp
     func setup() {
+        setProgressView()
         navigationItem.title = Constants.NavigationTitle.variation.localized
-        variationProgressView.setState(.variation)
         pictureFrameView.setColor(.purple)
+    }
+    
+    func setProgressView(){
+        variationProgressView.displayScreens = displayScreens
+        variationProgressView.setState(.variation)
     }
 
     override func configureNavigationBar() {
@@ -33,7 +39,15 @@ class VariationViewController: BaseViewController {
 
     // MARK: - ButtonClicked
     override func nextButtonClicked(_ sender: UIBarButtonItem) {
-        let photoSelectVC = PhotoSelectViewController.initFromNib()
-        navigationController?.pushViewController(photoSelectVC, animated: true)
+        if displayScreens[PhotoSelectViewController.classId] == true {
+            let photoSelectVC = PhotoSelectViewController.initFromNib()
+            photoSelectVC.displayScreens = displayScreens
+            navigationController?.pushViewController(photoSelectVC, animated: true)
+        } else {
+            let designVC = DesignViewController.initFromNib()
+            designVC.displayScreens = displayScreens
+            navigationController?.pushViewController(designVC, animated: true)
+        }
+        
     }
 }

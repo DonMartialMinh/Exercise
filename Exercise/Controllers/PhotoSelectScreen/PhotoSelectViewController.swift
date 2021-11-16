@@ -9,6 +9,7 @@ import UIKit
 import Photos
 
 class PhotoSelectViewController: BaseViewController {
+    var displayScreens: [String:Bool] = [:]
     // MARK: - IBOutlet
     @IBOutlet weak var loadedImageView: UIImageView!
     @IBOutlet weak var photoSelectProgressView: ProgressView!
@@ -17,14 +18,20 @@ class PhotoSelectViewController: BaseViewController {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoSelectProgressView.setState(.photoSelect)
+        setProgressView()
         pictureFrameView.setColor(.purple)
         navigationItem.title = Constants.NavigationTitle.photoSelect.localized
+    }
+
+    func setProgressView(){
+        photoSelectProgressView.displayScreens = displayScreens
+        photoSelectProgressView.setState(.photoSelect)
     }
 
     // MARK: - ButtonClicked
     override func nextButtonClicked(_ sender: UIBarButtonItem) {
         let designVC  = DesignViewController.initFromNib()
+        designVC.displayScreens = displayScreens
         navigationController?.pushViewController(designVC, animated: true)
     }
 
