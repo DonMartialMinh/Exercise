@@ -36,12 +36,12 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         webView.navigationDelegate = self
         webView.uiDelegate = self
         view = webView
-        viewModel.delegate = self
     }
 
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         viewModel.loadFavoriteDesigns()
         let url = URL(string: "https://shimapri:s2ima8r1@www6.shimaumaprint.com/webview/nenga/design?use_type=n")
         let request = URLRequest(url: url!)
@@ -128,6 +128,11 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
             }
         }
     }
+
+    // MARK: - Change Favorite
+    func changeFavorite(_ favorite: Bool) -> String {
+        return "changeFaved(\(favorite));"
+    }
 }
 
 extension CardListViewController: WKScriptMessageHandler {
@@ -136,19 +141,19 @@ extension CardListViewController: WKScriptMessageHandler {
         case Constants.Design.Event.add:
             if let favoriteDesign = getFavoriteDesign(from: message.body) {
                 addFavoriteDesign(item: favoriteDesign)
-                webView.evaluateJavaScript("changeFaved(true);")
+                webView.evaluateJavaScript(changeFavorite(true))
             }
         case Constants.Design.Event.delete:
             if let favoriteDesign = getFavoriteDesign(from: message.body) {
                 deleteFavoriteDesign(item: favoriteDesign)
-                webView.evaluateJavaScript("changeFaved(false);")
+                webView.evaluateJavaScript(changeFavorite(false))
             }
         case Constants.Design.Event.check:
             if let favoriteDesign = getFavoriteDesign(from: message.body) {
                 currentFavoriteDesign = favoriteDesign
-                webView.evaluateJavaScript("changeFaved(false);")
+                webView.evaluateJavaScript(changeFavorite(false))
                 if isFavoriteDesign(item: favoriteDesign){
-                    webView.evaluateJavaScript("changeFaved(true);")
+                    webView.evaluateJavaScript(changeFavorite(true))
                 }
             }
         case Constants.Design.Event.select:
