@@ -14,10 +14,10 @@
 		830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E9272A3CC30089F876 /* PhotoViewModel.swift */; };
 		830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */; };
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
+		8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331C87D2738B94D008234BE /* CardListViewController.swift */; };
 		835102D92718174000CF1806 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102D72718174000CF1806 /* LibraryViewController.swift */; };
 		835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102EB27181A3000CF1806 /* ImageCollectionViewCell.swift */; };
 		835102EE27181A3000CF1806 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835102EC27181A3000CF1806 /* ImageCollectionViewCell.xib */; };
-		83644201271498A300FED975 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83644200271498A300FED975 /* VariationViewController.swift */; };
 		8364420B2715869600FED975 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420A2715869600FED975 /* ProgressView.swift */; };
 		8364420E27166DBA00FED975 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420D27166DBA00FED975 /* NibView.swift */; };
 		836D8F1127294A7C0086E481 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8F1027294A7C0086E481 /* State.swift */; };
@@ -29,6 +29,14 @@
 		8374F80F2733B054002BF4DE /* APIManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F80E2733B054002BF4DE /* APIManagerExtensions.swift */; };
 		8374F8122733B08F002BF4DE /* StatusResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8112733B08F002BF4DE /* StatusResponse.swift */; };
 		8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */; };
+		8381DA42273B6F130059B337 /* FavoriteDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA41273B6F130059B337 /* FavoriteDesign.swift */; };
+		8381DA45273CE9920059B337 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA44273CE9920059B337 /* CardListViewModel.swift */; };
+		8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA472741FF550059B337 /* TemplateFromJson.swift */; };
+		8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA4D27420C9E0059B337 /* TemplateAPI.swift */; };
+		8381DA51274212B50059B337 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA50274212B50059B337 /* Template.swift */; };
+		8381DA54274213A20059B337 /* VariationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA53274213A20059B337 /* VariationOptions.swift */; };
+		8381DA5C274359D70059B337 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA5A274359D70059B337 /* VariationViewController.swift */; };
+		8381DA6327435F070059B337 /* VariationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8381DA6527435F070059B337 /* VariationViewController.xib */; };
 		8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */; };
 		8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */; };
 		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
@@ -74,7 +82,7 @@
 		830786E9272A3CC30089F876 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
 		830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		835102C92717C78800CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		8331C87D2738B94D008234BE /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		835102CA2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressView.strings; sourceTree = "<group>"; };
 		835102CB2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
 		835102CC2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/DesignViewController.strings; sourceTree = "<group>"; };
@@ -85,7 +93,6 @@
 		835102D72718174000CF1806 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		835102EB27181A3000CF1806 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		835102EC27181A3000CF1806 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
-		83644200271498A300FED975 /* VariationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationViewController.swift; sourceTree = "<group>"; };
 		8364420A2715869600FED975 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8364420D27166DBA00FED975 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		836D8F1027294A7C0086E481 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -95,6 +102,18 @@
 		8374F80E2733B054002BF4DE /* APIManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerExtensions.swift; sourceTree = "<group>"; };
 		8374F8112733B08F002BF4DE /* StatusResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusResponse.swift; sourceTree = "<group>"; };
 		8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidRequestError.swift; sourceTree = "<group>"; };
+		8381DA41273B6F130059B337 /* FavoriteDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDesign.swift; sourceTree = "<group>"; };
+		8381DA44273CE9920059B337 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		8381DA472741FF550059B337 /* TemplateFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFromJson.swift; sourceTree = "<group>"; };
+		8381DA4D27420C9E0059B337 /* TemplateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAPI.swift; sourceTree = "<group>"; };
+		8381DA50274212B50059B337 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		8381DA53274213A20059B337 /* VariationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationOptions.swift; sourceTree = "<group>"; };
+		8381DA5A274359D70059B337 /* VariationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationViewController.swift; sourceTree = "<group>"; };
+		8381DA6027435ED20059B337 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		8381DA6227435ED40059B337 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		8381DA6427435F070059B337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VariationViewController.xib; sourceTree = "<group>"; };
+		8381DA6727435F090059B337 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/VariationViewController.strings; sourceTree = "<group>"; };
+		8381DA6927435F0B0059B337 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/VariationViewController.strings; sourceTree = "<group>"; };
 		8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
@@ -121,7 +140,6 @@
 		83C2BD62271A8A31000BAE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83C2BD65271A8A36000BAE24 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		83C2BD66271A8A37000BAE24 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		83D799452716DD98003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		83D799462716DD98003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		83D7994F2716E3A3003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83D799562716EA6D003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ProgressView.xib; sourceTree = "<group>"; };
@@ -212,6 +230,24 @@
 			path = ConfirmScreen;
 			sourceTree = "<group>";
 		};
+		8331C87C2738B92D008234BE /* CardListScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8331C87D2738B94D008234BE /* CardListViewController.swift */,
+			);
+			path = CardListScreen;
+			sourceTree = "<group>";
+		};
+		834FCE102745E75500C55D5B /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				83EA83922720179C00F282AE /* APIManager.swift */,
+				83EA838F271FF91800F282AE /* StampAPI.swift */,
+				8381DA4D27420C9E0059B337 /* TemplateAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		835102D62718171F00CF1806 /* LibraryScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +278,8 @@
 		836D8F0E2729454F0086E481 /* VariationScreen */ = {
 			isa = PBXGroup;
 			children = (
-				83644200271498A300FED975 /* VariationViewController.swift */,
+				8381DA5A274359D70059B337 /* VariationViewController.swift */,
+				8381DA6527435F070059B337 /* VariationViewController.xib */,
 			);
 			path = VariationScreen;
 			sourceTree = "<group>";
@@ -253,6 +290,7 @@
 				836D8F15272952ED0086E481 /* CategoryViewModel.swift */,
 				836D8F1827295A5D0086E481 /* StampViewModel.swift */,
 				830786E9272A3CC30089F876 /* PhotoViewModel.swift */,
+				8381DA44273CE9920059B337 /* CardListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,12 +304,22 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		8381DA4A274201720059B337 /* JsonModels */ = {
+			isa = PBXGroup;
+			children = (
+				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
+				8388373E272658BA00291F38 /* CategoryModel.swift */,
+				83EA83982720210B00F282AE /* StampFromJson.swift */,
+				8381DA472741FF550059B337 /* TemplateFromJson.swift */,
+			);
+			path = JsonModels;
+			sourceTree = "<group>";
+		};
 		8388373427251B1800291F38 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				834FCE102745E75500C55D5B /* APIs */,
 				8374F8172733B26D002BF4DE /* Errors */,
-				83EA83922720179C00F282AE /* APIManager.swift */,
-				83EA838F271FF91800F282AE /* StampAPI.swift */,
 				83EA838C271FF42000F282AE /* TargetType.swift */,
 				8374F8112733B08F002BF4DE /* StatusResponse.swift */,
 			);
@@ -370,10 +418,11 @@
 			isa = PBXGroup;
 			children = (
 				83038D2A271E5DAF00080502 /* BaseViewController.swift */,
+				8331C87C2738B92D008234BE /* CardListScreen */,
+				830B8A832712DBC10053B419 /* ConfirmScreen */,
+				830B8A822712DBA80053B419 /* DesignScreen */,
 				836D8F0E2729454F0086E481 /* VariationScreen */,
 				830B8A812712DB980053B419 /* PhotoSelectScreen */,
-				830B8A822712DBA80053B419 /* DesignScreen */,
-				830B8A832712DBC10053B419 /* ConfirmScreen */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -393,11 +442,12 @@
 		83EA8387271FEF6100F282AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
-				83EA83982720210B00F282AE /* StampFromJson.swift */,
-				8388373E272658BA00291F38 /* CategoryModel.swift */,
+				8381DA4A274201720059B337 /* JsonModels */,
+				8381DA41273B6F130059B337 /* FavoriteDesign.swift */,
 				836D8F1027294A7C0086E481 /* State.swift */,
 				8374F80A2733AC54002BF4DE /* Stamp.swift */,
+				8381DA50274212B50059B337 /* Template.swift */,
+				8381DA53274213A20059B337 /* VariationOptions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,6 +531,7 @@
 				83D799512716EA36003CA963 /* ProgressView.xib in Resources */,
 				83EA839C27207A9700F282AE /* StampCollectionViewController.xib in Resources */,
 				83AC47EE270D2FE9001EDFE1 /* LaunchScreen.storyboard in Resources */,
+				8381DA6327435F070059B337 /* VariationViewController.xib in Resources */,
 				83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */,
 				83AC47EB270D2FE9001EDFE1 /* Assets.xcassets in Resources */,
 				835102EE27181A3000CF1806 /* ImageCollectionViewCell.xib in Resources */,
@@ -549,7 +600,10 @@
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
 				830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */,
 				830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */,
+				8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */,
+				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
+				8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */,
 				8374F80B2733AC54002BF4DE /* Stamp.swift in Sources */,
 				836D8F1127294A7C0086E481 /* State.swift in Sources */,
 				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,
@@ -560,16 +614,18 @@
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
 				8374F8122733B08F002BF4DE /* StatusResponse.swift in Sources */,
 				8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */,
-				83644201271498A300FED975 /* VariationViewController.swift in Sources */,
 				8388374D2727F76D00291F38 /* StampViewController.swift in Sources */,
+				8381DA42273B6F130059B337 /* FavoriteDesign.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
 				83EA8389271FF37E00F282AE /* ResponseError.swift in Sources */,
 				83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */,
 				8374F80F2733B054002BF4DE /* APIManagerExtensions.swift in Sources */,
 				83AC486C270EA5EB001EDFE1 /* CustomView.swift in Sources */,
+				8381DA45273CE9920059B337 /* CardListViewModel.swift in Sources */,
 				83AC47E4270D2FE8001EDFE1 /* SceneDelegate.swift in Sources */,
 				83AC4866270D9BA7001EDFE1 /* ConfirmViewController.swift in Sources */,
 				83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */,
+				8381DA51274212B50059B337 /* Template.swift in Sources */,
 				8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
 				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
@@ -580,8 +636,10 @@
 				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
 				835102D92718174000CF1806 /* LibraryViewController.swift in Sources */,
 				838837522727F8DE00291F38 /* CategoryViewController.swift in Sources */,
+				8381DA5C274359D70059B337 /* VariationViewController.swift in Sources */,
 				83038D20271E5B0000080502 /* StringExtensions.swift in Sources */,
 				83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */,
+				8381DA54274213A20059B337 /* VariationOptions.swift in Sources */,
 				83EA838D271FF42000F282AE /* TargetType.swift in Sources */,
 				830B8A872712DC0F0053B419 /* Constants.swift in Sources */,
 			);
@@ -590,12 +648,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		8381DA6527435F070059B337 /* VariationViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8381DA6427435F070059B337 /* Base */,
+				8381DA6727435F090059B337 /* ja */,
+				8381DA6927435F0B0059B337 /* vi */,
+			);
+			name = VariationViewController.xib;
+			sourceTree = "<group>";
+		};
 		83AC47E7270D2FE8001EDFE1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				83AC47E8270D2FE8001EDFE1 /* Base */,
-				83D799452716DD98003CA963 /* vi */,
-				835102C92717C78800CF1806 /* ja */,
+				8381DA6027435ED20059B337 /* ja */,
+				8381DA6227435ED40059B337 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

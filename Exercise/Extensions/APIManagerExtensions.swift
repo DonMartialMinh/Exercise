@@ -29,4 +29,15 @@ extension APIManager {
             }
         }
     }
+
+    func fetchTemplates (code: String, completionHandler: @escaping (_ result: Result<BaseResponseModel<TemplateFromJson>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: TemplateAPI.template(code), params: TemplateAPI.template(code).params) { (result: Result<BaseResponseModel<TemplateFromJson>?, ​ResponseError​>) in
+            switch result {
+            case .success(let results):
+                completionHandler(.success(results))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        }
+    }
 }
