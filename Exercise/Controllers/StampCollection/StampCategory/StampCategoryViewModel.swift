@@ -19,8 +19,9 @@ struct StampCategoryViewModel {
     func fetchCategories() {
         APIManager.shared.fetchCategories { result in
             switch result {
-            case .success(let categories):
-                delegate?.didUpdateCategory(self, categories!.data)
+            case .success(let data):
+                guard let categories = data?.data else { return }
+                delegate?.didUpdateCategory(self, categories)
             case .failure(let error):
                 delegate?.didFailWithError(error: error)
             }

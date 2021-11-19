@@ -14,7 +14,7 @@ class StampViewController: UIViewController {
     private var stamps: Results<Stamp>?
     private var viewModel = StampViewModel()
     private var type: ItemType = .stamps
-    private var selectedIndex: IndexPath? = nil
+    private var selectedIndex: IndexPath?
     private enum ItemType {
         case stamps
         case stampsFromJson

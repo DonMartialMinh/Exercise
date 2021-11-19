@@ -26,8 +26,9 @@ struct StampViewModel {
         } else {
             APIManager.shared.fetchStamps(id: id) { result in
                 switch result {
-                case .success(let stamps):
-                    delegate?.didUpdateStampFromJson(self, stamps!.data)
+                case .success(let data):
+                    guard let stamps = data?.data else { return }
+                    delegate?.didUpdateStampFromJson(self, stamps)
                 case .failure(let error):
                     delegate?.didFailWithError(error: error)
                 }

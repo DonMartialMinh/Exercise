@@ -45,9 +45,10 @@ struct CardListViewModel {
     func fetchTemplate(with code: String, completion: @escaping (TemplateFromJson?)->()) {
         APIManager.shared.fetchTemplates(code: code) { result in
             switch result {
-            case .success(let template):
-                saveTemplate(template: template!.data[0])
-                completion(template!.data[0])
+            case .success(let data):
+                guard let templates = data?.data.first else { return }
+                saveTemplate(template: templates)
+                completion(templates)
             case .failure(let error):
                 self.delegate?.didFailWithError(error: error)
             }
