@@ -12,7 +12,7 @@ class StampCollectionViewController: UIViewController {
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var stampView: UIView!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -20,7 +20,7 @@ class StampCollectionViewController: UIViewController {
 
     // MARK: - SetUp
     func setUp() {
-        let categoryViewController = CategoryViewController()
+        let categoryViewController = StampCategoryViewController()
         let stampViewController = StampViewController()
         categoryViewController.delegate = stampViewController
         addChild(categoryViewController)

@@ -11,10 +11,3 @@ enum CellState {
     case selected
     case normal
 }
-
-enum ProgressState {
-    case variation
-    case photoSelect
-    case design
-    case confirm
-}

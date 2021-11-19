@@ -9,22 +9,21 @@ import UIKit
 import SVProgressHUD
 import RealmSwift
 
-enum ItemType {
-    case stamps
-    case stampsFromJson
-}
-
 class StampViewController: UIViewController {
     private var stampsFromJson: [StampFromJson] = []
     private var stamps: Results<Stamp>?
     private var viewModel = StampViewModel()
     private var type: ItemType = .stamps
     private var selectedIndex: IndexPath? = nil
+    private enum ItemType {
+        case stamps
+        case stampsFromJson
+    }
 
     // MARK: - IBOutlet
     @IBOutlet weak var stampCollectionView: UICollectionView!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         stampCollectionView.register(ImageCollectionViewCell.loadNib(), forCellWithReuseIdentifier: Constants.imageCellIdentifier)
@@ -34,7 +33,6 @@ class StampViewController: UIViewController {
         viewModel.delegate = self
     }
 
-    // MARK: - ViewWillTransition
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         guard let flowLayout = stampCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
@@ -103,10 +101,11 @@ extension StampViewController: UICollectionViewDelegate {
             stamp.name = stampsFromJson[indexPath.row].compositionImageFilename
             stamp.thumbnailImageUrl = stampsFromJson[indexPath.row].thumbnailImageUrl
             viewModel.saveStamp(stamp: stamp)
+            collectionView.reloadData()
         case .stamps:
+            collectionView.reloadData()
             return
         }
-        collectionView.reloadData()
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -116,8 +115,8 @@ extension StampViewController: UICollectionViewDelegate {
 }
 
 // MARK: - CategoryCollectionViewDelegate
-extension StampViewController: CategoryViewControllerDelegate {
-    func fetchStamp(_ categoryViewController: CategoryViewController, _ id: Int) {
+extension StampViewController: StampCategoryViewControllerDelegate {
+    func fetchStamp(_ categoryViewController: StampCategoryViewController, _ id: Int) {
         if selectedIndex != nil {
             stampCollectionView.deselectItem(at: selectedIndex!, animated: false)
             selectedIndex = nil

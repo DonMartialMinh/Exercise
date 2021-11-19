@@ -13,6 +13,13 @@ class ProgressView: NibView {
             setProgressDisplay()
         }
     }
+    enum ProgressState {
+        case variation
+        case photoSelect
+        case design
+        case confirm
+    }
+
     // MARK: - IBOutlet
     @IBOutlet weak var variationCustomView: CustomView!
     @IBOutlet weak var photoSelectCustomView: CustomView!

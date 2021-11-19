@@ -5,7 +5,7 @@
 //  Created by Vo Minh Don on 10/19/21.
 //
 
-import Foundation
+import UIKit
 import Photos
 import Alamofire
 

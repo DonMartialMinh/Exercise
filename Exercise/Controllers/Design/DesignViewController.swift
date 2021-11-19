@@ -13,7 +13,7 @@ class DesignViewController: BaseViewController {
     @IBOutlet weak var designProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setProgressView()

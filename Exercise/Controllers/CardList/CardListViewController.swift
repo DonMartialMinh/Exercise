@@ -20,7 +20,7 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         });
     """
 
-    // MARK: - LoadView
+    // MARK: - View LifeCycle
     override func loadView() {
         super.loadView()
         let webConfiguration = WKWebViewConfiguration()
@@ -38,7 +38,6 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         view = webView
     }
 
-    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -129,7 +128,7 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         }
     }
 
-    // MARK: - Change Favorite
+    ///Change favorite icon when user click in web view
     func changeFavorite(_ favorite: Bool) -> String {
         return "changeFaved(\(favorite));"
     }

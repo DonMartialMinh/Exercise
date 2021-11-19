@@ -13,7 +13,7 @@ class ConfirmViewController: BaseViewController {
     @IBOutlet weak var confirmProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setProgressView()

@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol CategoryViewModelEvents: class {
-    func didUpdateCategory(_ categoryViewModel: CategoryViewModel, _ categories: [Category])
+protocol StampCategoryViewModelEvents: class {
+    func didUpdateCategory(_ stampCategoryViewModel: StampCategoryViewModel, _ categories: [Category])
     func didFailWithError(error: ​ResponseError​)
 }
 
-struct CategoryViewModel {
-    weak var delegate: CategoryViewModelEvents?
+struct StampCategoryViewModel {
+    weak var delegate: StampCategoryViewModelEvents?
 
     // MARK: - Method
     func fetchCategories() {

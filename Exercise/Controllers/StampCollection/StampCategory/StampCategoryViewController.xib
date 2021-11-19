@@ -7,9 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryViewController" customModule="Exercise" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StampCategoryViewController" customModule="Exercise" customModuleProvider="target">
             <connections>
-                <outlet property="categoryCollectionView" destination="6bn-I9-KMJ" id="fCc-z7-IOa"/>
+                <outlet property="stampCategoryCollectionView" destination="6bn-I9-KMJ" id="rkc-Xr-0Le"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

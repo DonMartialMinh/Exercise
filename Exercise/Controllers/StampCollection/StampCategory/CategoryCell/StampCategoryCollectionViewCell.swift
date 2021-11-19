@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryCollectionViewCell: UICollectionViewCell {
+class StampCategoryCollectionViewCell: UICollectionViewCell {
     // MARK: - IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backView: UIView!

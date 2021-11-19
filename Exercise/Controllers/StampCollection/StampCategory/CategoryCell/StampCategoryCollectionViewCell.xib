@@ -9,14 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Exercise" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StampCategoryCell" id="gTV-IL-0wX" customClass="StampCategoryCollectionViewCell" customModule="Exercise" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="207" height="117"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="207" height="117"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-r9-PiP">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-r9-PiP" userLabel="backView">
                         <rect key="frame" x="0.0" y="0.0" width="207" height="107"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30i-Hc-9XF">
@@ -53,9 +53,9 @@
             </constraints>
             <size key="customSize" width="207" height="117"/>
             <connections>
-                <outlet property="backView" destination="QJv-r9-PiP" id="aiq-Ba-tau"/>
-                <outlet property="titleLabel" destination="30i-Hc-9XF" id="0Kf-Lt-fuF"/>
-                <outlet property="triangleImageView" destination="8bB-5g-gST" id="tOg-LC-Y3Z"/>
+                <outlet property="backView" destination="QJv-r9-PiP" id="0Fw-y1-7zE"/>
+                <outlet property="titleLabel" destination="30i-Hc-9XF" id="nip-m5-l54"/>
+                <outlet property="triangleImageView" destination="8bB-5g-gST" id="kEf-k8-QLP"/>
             </connections>
             <point key="canvasLocation" x="-229.6875" y="36.443661971830984"/>
         </collectionViewCell>

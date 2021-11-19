@@ -15,13 +15,13 @@ protocol LibraryViewControllerDelegate: class {
 class LibraryViewController: UIViewController {
     private var allPhotos = PHFetchResult<PHAsset>()
     private var selectedIndex: IndexPath? = nil
-    private var viewModel = PhotoViewModel()
+    private var viewModel = LibraryViewModel()
     weak var delegate: LibraryViewControllerDelegate?
 
     // MARK: - IBOutlet
     @IBOutlet weak var libraryCollectionView: UICollectionView!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryCollectionView.delegate = self
@@ -32,13 +32,11 @@ class LibraryViewController: UIViewController {
         viewModel.delegate = self
     }
 
-    // MARK: - ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.fetchPhotos()
     }
 
-    // MARK: - ViewWillTransition
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         guard let flowLayout = libraryCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
@@ -162,8 +160,8 @@ extension LibraryViewController: PHPhotoLibraryChangeObserver {
 }
 
 // MARK: - PhotoViewModelEvents
-extension LibraryViewController: PhotoViewModelEvents {
-    func didUpdatePhoto(_ photoViewModel: PhotoViewModel, _ photos: PHFetchResult<PHAsset>) {
+extension LibraryViewController: LibraryViewModelEvents {
+    func didUpdatePhoto(_ photoViewModel: LibraryViewModel, _ photos: PHFetchResult<PHAsset>) {
         allPhotos = photos
     }
 }

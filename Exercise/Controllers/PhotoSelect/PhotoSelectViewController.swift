@@ -15,7 +15,7 @@ class PhotoSelectViewController: BaseViewController {
     @IBOutlet weak var photoSelectProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setProgressView()
