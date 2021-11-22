@@ -9,7 +9,7 @@ import UIKit
 import Photos
 
 class PhotoSelectViewController: BaseViewController {
-    var displayScreens: [String:Bool] = [:]
+    var template: Template?
     // MARK: - IBOutlet
     @IBOutlet weak var loadedImageView: UIImageView!
     @IBOutlet weak var photoSelectProgressView: ProgressView!
@@ -24,14 +24,14 @@ class PhotoSelectViewController: BaseViewController {
     }
 
     func setProgressView(){
-        photoSelectProgressView.displayScreens = displayScreens
+        photoSelectProgressView.template = template
         photoSelectProgressView.setState(.photoSelect)
     }
 
     // MARK: - ButtonClicked
     override func nextButtonClicked(_ sender: UIBarButtonItem) {
         let designVC  = DesignViewController.initFromNib()
-        designVC.displayScreens = displayScreens
+        designVC.template = template
         navigationController?.pushViewController(designVC, animated: true)
     }
 

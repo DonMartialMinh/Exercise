@@ -12,8 +12,8 @@ protocol StampCategoryViewControllerDelegate: class {
 }
 
 class StampCategoryViewController: UIViewController {
-    private var categories: [Category] = [
-        Category(id: 1, name: Constants.savedCategoryTitle.localized)
+    private var categories: [StampCategory] = [
+        StampCategory(id: 1, name: Constants.savedCategoryTitle.localized)
     ]
     private var selectedCategory: IndexPath? = nil
     private var viewModel = StampCategoryViewModel()
@@ -101,7 +101,7 @@ extension StampCategoryViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - CategoryViewModelEvents
 extension StampCategoryViewController: StampCategoryViewModelEvents {
-    func didUpdateCategory(_ stampCategoryViewModel: StampCategoryViewModel, _ categories: [Category]) {
+    func didUpdateCategory(_ stampCategoryViewModel: StampCategoryViewModel, _ categories: [StampCategory]) {
         self.categories.append(contentsOf: categories)
         DispatchQueue.main.async {
             self.stampCategoryCollectionView.reloadData()

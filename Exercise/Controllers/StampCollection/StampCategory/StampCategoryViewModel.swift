@@ -8,7 +8,7 @@
 import Foundation
 
 protocol StampCategoryViewModelEvents: class {
-    func didUpdateCategory(_ stampCategoryViewModel: StampCategoryViewModel, _ categories: [Category])
+    func didUpdateCategory(_ stampCategoryViewModel: StampCategoryViewModel, _ categories: [StampCategory])
     func didFailWithError(error: ​ResponseError​)
 }
 

@@ -42,15 +42,15 @@ struct CardListViewModel {
         }
     }
 
-    func fetchTemplate(with code: String, completion: @escaping (Template?)->()) {
+    func fetchTemplate(with code: String, completion: @escaping (_ result: Result<Template?, Error>)->()) {
         APIManager.shared.fetchTemplates(code: code) { result in
             switch result {
             case .success(let data):
                 guard let templates = data?.data.first else { return }
                 realm.save(item: templates)
-                completion(templates)
+                completion(.success(templates))
             case .failure(let error):
-                self.delegate?.didFailWithError(error: error)
+                completion(.failure(error))
             }
         }
     }

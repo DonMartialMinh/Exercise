@@ -12,7 +12,7 @@
 		83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D26271E5B4900080502 /* UIColorExtensions.swift */; };
 		83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D2A271E5DAF00080502 /* BaseViewController.swift */; };
 		830786EA272A3CC30089F876 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E9272A3CC30089F876 /* LibraryViewModel.swift */; };
-		830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */; };
+		830AAAE7272FF2BA0022CA42 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAAE6272FF2BA0022CA42 /* BaseResponse.swift */; };
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
 		8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331C87D2738B94D008234BE /* CardListViewController.swift */; };
 		835102D92718174000CF1806 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102D72718174000CF1806 /* LibraryViewController.swift */; };
@@ -38,7 +38,7 @@
 		8381DA6327435F070059B337 /* VariationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8381DA6527435F070059B337 /* VariationViewController.xib */; };
 		8388373B27264FB000291F38 /* StampCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* StampCategoryCollectionViewCell.swift */; };
 		8388373C27264FB000291F38 /* StampCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* StampCategoryCollectionViewCell.xib */; };
-		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
+		8388373F272658BA00291F38 /* StampCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* StampCategory.swift */; };
 		8388374D2727F76D00291F38 /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388374B2727F76D00291F38 /* StampViewController.swift */; };
 		8388374E2727F76D00291F38 /* StampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388374C2727F76D00291F38 /* StampViewController.xib */; };
 		838837522727F8DE00291F38 /* StampCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838837502727F8DE00291F38 /* StampCategoryViewController.swift */; };
@@ -79,7 +79,7 @@
 		83038D26271E5B4900080502 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		83038D2A271E5DAF00080502 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		830786E9272A3CC30089F876 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
-		830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
+		830AAAE6272FF2BA0022CA42 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8331C87D2738B94D008234BE /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		835102CA2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressView.strings; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		8381DA6927435F0B0059B337 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/VariationViewController.strings; sourceTree = "<group>"; };
 		8388373927264FB000291F38 /* StampCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8388373A27264FB000291F38 /* StampCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
-		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		8388373E272658BA00291F38 /* StampCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategory.swift; sourceTree = "<group>"; };
 		8388374B2727F76D00291F38 /* StampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
 		8388374C2727F76D00291F38 /* StampViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampViewController.xib; sourceTree = "<group>"; };
 		838837502727F8DE00291F38 /* StampCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategoryViewController.swift; sourceTree = "<group>"; };
@@ -291,15 +291,6 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
-		8381DA4A274201720059B337 /* JsonModels */ = {
-			isa = PBXGroup;
-			children = (
-				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
-				8388373E272658BA00291F38 /* CategoryModel.swift */,
-			);
-			path = JsonModels;
-			sourceTree = "<group>";
-		};
 		8388373427251B1800291F38 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +422,8 @@
 		83EA8387271FEF6100F282AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8381DA4A274201720059B337 /* JsonModels */,
+				830AAAE6272FF2BA0022CA42 /* BaseResponse.swift */,
+				8388373E272658BA00291F38 /* StampCategory.swift */,
 				8381DA41273B6F130059B337 /* FavoriteDesign.swift */,
 				836D8F1027294A7C0086E481 /* State.swift */,
 				8374F80A2733AC54002BF4DE /* Stamp.swift */,
@@ -587,7 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
-				830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */,
+				830AAAE7272FF2BA0022CA42 /* BaseResponse.swift in Sources */,
 				830786EA272A3CC30089F876 /* LibraryViewModel.swift in Sources */,
 				83DBDEF2274B26670053B015 /* RealmCRUD.swift in Sources */,
 				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
@@ -617,7 +609,7 @@
 				8381DA51274212B50059B337 /* Template.swift in Sources */,
 				8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
-				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
+				8388373F272658BA00291F38 /* StampCategory.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,
 				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,
 				8364420B2715869600FED975 /* ProgressView.swift in Sources */,

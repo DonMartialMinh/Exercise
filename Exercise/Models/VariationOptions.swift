@@ -9,10 +9,15 @@ import Foundation
 import RealmSwift
 
 class VariationOptions: Object, Codable {
+    @objc dynamic var id = UUID().uuidString
     var colorCode = List<String>()
     var photoCount = List<Int>()
     var postcardTypeId = List<Int>()
     var greetingType = List<Int>()
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 
     enum CodingKeys: String, CodingKey {
         case colorCode = "color_code"

@@ -8,7 +8,7 @@
 import UIKit
 
 class DesignViewController: BaseViewController {
-    var displayScreens: [String:Bool] = [:]
+    var template: Template?
     // MARK: - IBOutlet
     @IBOutlet weak var designProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
@@ -23,13 +23,13 @@ class DesignViewController: BaseViewController {
 
     func setProgressView(){
         designProgressView.setState(.design)
-        designProgressView.displayScreens = displayScreens
+        designProgressView.template = template
     }
 
     // MARK: - Button Clicked
     override func nextButtonClicked(_ sender: UIBarButtonItem) {
         let confirmVC = ConfirmViewController.initFromNib()
-        confirmVC.displayScreens = displayScreens
+        confirmVC.template = template
         navigationController?.pushViewController(confirmVC, animated: true)
     }
 

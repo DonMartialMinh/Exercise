@@ -19,8 +19,8 @@ extension APIManager {
         }
     }
 
-    func fetchCategories (completionHandler: @escaping (_ result: Result<BaseResponseModel<Category>?, ​ResponseError​>)->()) {
-        APIManager.shared.call(type: StampAPI.categories, params: StampAPI.categories.params) { (result: Result<BaseResponseModel<Category>?, ​ResponseError​>) in
+    func fetchCategories (completionHandler: @escaping (_ result: Result<BaseResponseModel<StampCategory>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: StampAPI.categories, params: StampAPI.categories.params) { (result: Result<BaseResponseModel<StampCategory>?, ​ResponseError​>) in
             switch result {
             case .success(let results):
                 completionHandler(.success(results))

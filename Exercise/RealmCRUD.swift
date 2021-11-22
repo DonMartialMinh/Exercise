@@ -12,14 +12,14 @@ struct RealmCRUD {
     static let shared = RealmCRUD()
     let realm = try! Realm()
     private init() {}
-    
+
     func save(item: Object) {
         do {
             try realm.write({
-                realm.add(item)
+                realm.add(item, update: .modified)
             })
         } catch {
-            print(error)
+            print("Error saving item \(error)")
         }
     }
 
@@ -29,7 +29,7 @@ struct RealmCRUD {
                 realm.delete(item)
             })
         } catch {
-            print(error)
+            print("Error delete item \(error)")
         }
     }
 }

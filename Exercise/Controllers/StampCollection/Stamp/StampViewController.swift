@@ -98,10 +98,7 @@ extension StampViewController: UICollectionViewDelegate {
         selectedIndex = indexPath
         switch type {
         case .stampsFromJson:
-            let stamp = Stamp()
-            stamp.name = stampsFromJson[indexPath.row].name
-            stamp.thumbnailImageUrl = stampsFromJson[indexPath.row].thumbnailImageUrl
-            realm.save(item: stamp)
+            realm.save(item: stampsFromJson[indexPath.row])
             collectionView.reloadData()
         case .stamps:
             collectionView.reloadData()
