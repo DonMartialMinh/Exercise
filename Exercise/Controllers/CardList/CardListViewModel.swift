@@ -14,7 +14,7 @@ protocol CardListViewModelEvent: class {
 }
 
 struct CardListViewModel {
-    let realm = try! Realm()
+    let realm = RealmCRUD.shared
     let userDefault = UserDefaults.standard
     weak var delegate: CardListViewModelEvent?
 
@@ -42,56 +42,16 @@ struct CardListViewModel {
         }
     }
 
-    func fetchTemplate(with code: String, completion: @escaping (TemplateFromJson?)->()) {
+    func fetchTemplate(with code: String, completion: @escaping (Template?)->()) {
         APIManager.shared.fetchTemplates(code: code) { result in
             switch result {
             case .success(let data):
                 guard let templates = data?.data.first else { return }
-                saveTemplate(template: templates)
+                realm.save(item: templates)
                 completion(templates)
             case .failure(let error):
                 self.delegate?.didFailWithError(error: error)
             }
         }
-    }
-
-    func saveTemplate(template: TemplateFromJson) {
-        let variationOption = VariationOptions()
-        variationOption.colorCode.append(objectsIn: template.variationOptions.colorCode)
-        variationOption.photoCount.append(objectsIn: template.variationOptions.photoCount)
-        variationOption.greetingType.append(objectsIn: template.variationOptions.greetingType)
-        variationOption.postcardTypeId.append(objectsIn: template.variationOptions.postcardTypeId)
-        let templateModel = Template()
-        templateModel.code = template.code
-        templateModel.variationOptions = variationOption
-        if !checkDuplicated(template: templateModel) {
-            do {
-                try realm.write({
-                    realm.add(templateModel)
-                })
-            } catch {
-                self.delegate?.didFailWithError(error: error)
-            }
-        }
-    }
-
-    func deleteTemplate(template: Template) {
-        do {
-            try realm.write({
-                realm.delete(template)
-            })
-        } catch {
-            self.delegate?.didFailWithError(error: error)
-        }
-    }
-
-    func checkDuplicated(template: Template) -> Bool {
-        let templates = realm.objects(Template.self)
-        for item in templates {
-            if item.code == template.code {
-                return true
-            }
-        }
-        return false
     }
 }

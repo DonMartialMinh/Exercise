@@ -8,8 +8,8 @@
 import Foundation
 
 extension APIManager {
-    func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<BaseResponseModel<StampFromJson>?, ​ResponseError​>)->()) {
-        APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<BaseResponseModel<StampFromJson>?, ​ResponseError​>) in
+    func fetchStamps (id: Int, completionHandler: @escaping (_ result: Result<BaseResponseModel<Stamp>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: StampAPI.stamps(id), params: StampAPI.stamps(id).params) { (result: Result<BaseResponseModel<Stamp>?, ​ResponseError​>) in
             switch result {
             case .success(let results):
                 completionHandler(.success(results))
@@ -30,8 +30,8 @@ extension APIManager {
         }
     }
 
-    func fetchTemplates (code: String, completionHandler: @escaping (_ result: Result<BaseResponseModel<TemplateFromJson>?, ​ResponseError​>)->()) {
-        APIManager.shared.call(type: TemplateAPI.template(code), params: TemplateAPI.template(code).params) { (result: Result<BaseResponseModel<TemplateFromJson>?, ​ResponseError​>) in
+    func fetchTemplates (code: String, completionHandler: @escaping (_ result: Result<BaseResponseModel<Template>?, ​ResponseError​>)->()) {
+        APIManager.shared.call(type: TemplateAPI.template(code), params: TemplateAPI.template(code).params) { (result: Result<BaseResponseModel<Template>?, ​ResponseError​>) in
             switch result {
             case .success(let results):
                 completionHandler(.success(results))

@@ -8,9 +8,16 @@
 import Foundation
 import RealmSwift
 
-class VariationOptions: Object {
-    let colorCode = List<String>()
-    let photoCount = List<Int>()
-    let postcardTypeId = List<Int>()
-    let greetingType = List<Int>()
+class VariationOptions: Object, Codable {
+    var colorCode = List<String>()
+    var photoCount = List<Int>()
+    var postcardTypeId = List<Int>()
+    var greetingType = List<Int>()
+
+    enum CodingKeys: String, CodingKey {
+        case colorCode = "color_code"
+        case photoCount = "photo_count"
+        case postcardTypeId = "postcard_type_id"
+        case greetingType = "greeting_type"
+    }
 }

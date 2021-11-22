@@ -8,7 +8,12 @@
 import Foundation
 import RealmSwift
 
-class Template: Object {
+class Template: Object, Codable {
     @objc dynamic var code: String = ""
     @objc dynamic var variationOptions: VariationOptions?
+    
+    enum CodingKeys: String, CodingKey {
+        case code = "code"
+        case variationOptions = "variation_options"
+    }
 }

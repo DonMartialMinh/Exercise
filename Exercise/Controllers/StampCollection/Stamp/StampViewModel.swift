@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 protocol StampViewModelEvents: class {
-    func didUpdateStampFromJson(_ stampViewModel: StampViewModel, _ stamps: [StampFromJson])
+    func didUpdateStampFromJson(_ stampViewModel: StampViewModel, _ stamps: [Stamp])
     func didUpdateStamp(_ stampViewModel: StampViewModel, _ stamps: Results<Stamp>)
     func didFailWithError(error: ​ResponseError​)
 }
@@ -34,37 +34,5 @@ struct StampViewModel {
                 }
             }
         }
-    }
-
-    func saveStamp(stamp: Stamp) {
-        if !checkDuplicated(stamp: stamp) {
-            do {
-                try realm.write({
-                    realm.add(stamp)
-                })
-            } catch {
-                print("Error saving stamp: \(error)")
-            }
-        }
-    }
-
-    func deleteStamp(stamp: Stamp) {
-        do {
-            try realm.write({
-                realm.delete(stamp)
-            })
-        } catch {
-            print("Error deleting stamp: \(error)")
-        }
-    }
-
-    func checkDuplicated(stamp: Stamp) -> Bool {
-        let stamps = realm.objects(Stamp.self)
-        for item in stamps {
-            if item.name == stamp.name {
-                return true
-            }
-        }
-        return false
     }
 }

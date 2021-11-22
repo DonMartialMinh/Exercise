@@ -10,11 +10,12 @@ import SVProgressHUD
 import RealmSwift
 
 class StampViewController: UIViewController {
-    private var stampsFromJson: [StampFromJson] = []
+    private var stampsFromJson: [Stamp] = []
     private var stamps: Results<Stamp>?
     private var viewModel = StampViewModel()
     private var type: ItemType = .stamps
     private var selectedIndex: IndexPath?
+    private let realm = RealmCRUD.shared
     private enum ItemType {
         case stamps
         case stampsFromJson
@@ -98,9 +99,9 @@ extension StampViewController: UICollectionViewDelegate {
         switch type {
         case .stampsFromJson:
             let stamp = Stamp()
-            stamp.name = stampsFromJson[indexPath.row].compositionImageFilename
+            stamp.name = stampsFromJson[indexPath.row].name
             stamp.thumbnailImageUrl = stampsFromJson[indexPath.row].thumbnailImageUrl
-            viewModel.saveStamp(stamp: stamp)
+            realm.save(item: stamp)
             collectionView.reloadData()
         case .stamps:
             collectionView.reloadData()
@@ -140,7 +141,7 @@ extension StampViewController: StampViewModelEvents {
         }
     }
 
-    func didUpdateStampFromJson(_ stampViewModel: StampViewModel, _ stamps: [StampFromJson]) {
+    func didUpdateStampFromJson(_ stampViewModel: StampViewModel, _ stamps: [Stamp]) {
         self.stampsFromJson.removeAll()
         self.stampsFromJson.append(contentsOf: stamps)
         DispatchQueue.main.async {

@@ -101,14 +101,14 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
                 var displayScreen: [String:Bool] = [:]
                 displayScreen[VariationViewController.classId] = true
                 displayScreen[PhotoSelectViewController.classId] = true
-                if !template!.variationOptions.photoCount.isEmpty &&
-                    !template!.variationOptions.colorCode.isEmpty &&
-                    !template!.variationOptions.greetingType.isEmpty {
+                if !template!.variationOptions!.photoCount.isEmpty &&
+                    !template!.variationOptions!.colorCode.isEmpty &&
+                    !template!.variationOptions!.greetingType.isEmpty {
                     displayScreen[VariationViewController.classId] = false
                 }
-                if template!.variationOptions.photoCount.isEmpty ||
-                    template!.variationOptions.photoCount.count == 1 &&
-                    template!.variationOptions.photoCount.contains(0) {
+                if template!.variationOptions!.photoCount.isEmpty ||
+                    template!.variationOptions!.photoCount.count == 1 &&
+                    template!.variationOptions!.photoCount.contains(0) {
                     displayScreen[PhotoSelectViewController.classId] = false
                 }
                 if displayScreen[VariationViewController.classId] == true {

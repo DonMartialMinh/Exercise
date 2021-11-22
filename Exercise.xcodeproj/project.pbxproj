@@ -31,7 +31,6 @@
 		8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */; };
 		8381DA42273B6F130059B337 /* FavoriteDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA41273B6F130059B337 /* FavoriteDesign.swift */; };
 		8381DA45273CE9920059B337 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA44273CE9920059B337 /* CardListViewModel.swift */; };
-		8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA472741FF550059B337 /* TemplateFromJson.swift */; };
 		8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA4D27420C9E0059B337 /* TemplateAPI.swift */; };
 		8381DA51274212B50059B337 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA50274212B50059B337 /* Template.swift */; };
 		8381DA54274213A20059B337 /* VariationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA53274213A20059B337 /* VariationOptions.swift */; };
@@ -62,6 +61,7 @@
 		83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */; };
 		83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995F2716EBE5003CA963 /* DesignViewController.xib */; };
 		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
+		83DBDEF2274B26670053B015 /* RealmCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBDEF1274B26670053B015 /* RealmCRUD.swift */; };
 		83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */; };
 		83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */; };
 		83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */; };
@@ -69,7 +69,6 @@
 		83EA838D271FF42000F282AE /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838C271FF42000F282AE /* TargetType.swift */; };
 		83EA8390271FF91800F282AE /* StampAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838F271FF91800F282AE /* StampAPI.swift */; };
 		83EA83932720179C00F282AE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83922720179C00F282AE /* APIManager.swift */; };
-		83EA83992720210B00F282AE /* StampFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83982720210B00F282AE /* StampFromJson.swift */; };
 		83EA839C27207A9700F282AE /* StampCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA839E27207A9700F282AE /* StampCollectionViewController.xib */; };
 		842747E2821906586ADCF7A8 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A52B82A74FB451BC9AABBC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
@@ -104,7 +103,6 @@
 		8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidRequestError.swift; sourceTree = "<group>"; };
 		8381DA41273B6F130059B337 /* FavoriteDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDesign.swift; sourceTree = "<group>"; };
 		8381DA44273CE9920059B337 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
-		8381DA472741FF550059B337 /* TemplateFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFromJson.swift; sourceTree = "<group>"; };
 		8381DA4D27420C9E0059B337 /* TemplateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAPI.swift; sourceTree = "<group>"; };
 		8381DA50274212B50059B337 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		8381DA53274213A20059B337 /* VariationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationOptions.swift; sourceTree = "<group>"; };
@@ -149,6 +147,7 @@
 		83D799652716EBFC003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmViewController.xib; sourceTree = "<group>"; };
 		83D799692716EBFE003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ConfirmViewController.strings; sourceTree = "<group>"; };
 		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
+		83DBDEF1274B26670053B015 /* RealmCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCRUD.swift; sourceTree = "<group>"; };
 		83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCollectionViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +155,6 @@
 		83EA838C271FF42000F282AE /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		83EA838F271FF91800F282AE /* StampAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampAPI.swift; sourceTree = "<group>"; };
 		83EA83922720179C00F282AE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		83EA83982720210B00F282AE /* StampFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampFromJson.swift; sourceTree = "<group>"; };
 		83EA839D27207A9700F282AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StampCollectionViewController.xib; sourceTree = "<group>"; };
 		83EA83A127207A9C00F282AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/StampCollectionViewController.strings; sourceTree = "<group>"; };
 		83EA83A327207A9F00F282AE /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/StampCollectionViewController.strings; sourceTree = "<group>"; };
@@ -298,8 +296,6 @@
 			children = (
 				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
 				8388373E272658BA00291F38 /* CategoryModel.swift */,
-				83EA83982720210B00F282AE /* StampFromJson.swift */,
-				8381DA472741FF550059B337 /* TemplateFromJson.swift */,
 			);
 			path = JsonModels;
 			sourceTree = "<group>";
@@ -383,6 +379,7 @@
 				83AC47F7270D3127001EDFE1 /* Controllers */,
 				83038D1E271E5A8E00080502 /* Extensions */,
 				830B8A862712DC0F0053B419 /* Constants.swift */,
+				83DBDEF1274B26670053B015 /* RealmCRUD.swift */,
 				83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */,
 				83AC47EC270D2FE9001EDFE1 /* LaunchScreen.storyboard */,
 				83AC47EF270D2FE9001EDFE1 /* Info.plist */,
@@ -592,7 +589,7 @@
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
 				830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */,
 				830786EA272A3CC30089F876 /* LibraryViewModel.swift in Sources */,
-				8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */,
+				83DBDEF2274B26670053B015 /* RealmCRUD.swift in Sources */,
 				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
 				8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */,
@@ -622,7 +619,6 @@
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
 				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,
-				83EA83992720210B00F282AE /* StampFromJson.swift in Sources */,
 				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,
 				8364420B2715869600FED975 /* ProgressView.swift in Sources */,
 				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
