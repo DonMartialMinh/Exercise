@@ -15,13 +15,12 @@ protocol StampViewModelEvents: class {
 }
 
 struct StampViewModel {
-    let realm = try! Realm()
     weak var delegate: StampViewModelEvents?
 
     // MARK: - Method
     func fetchStamps(with id: Int) {
         if id == 1 {
-            let stamps = realm.objects(Stamp.self)
+            guard let stamps = DataProvider().objects(Stamp.self) else { return }
             self.delegate?.didUpdateStamp(self, stamps)
         } else {
             APIManager.shared.fetchStamps(id: id) { result in

@@ -102,6 +102,7 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
                       let isVariation = template.isVariation(),
                       let isPhotoSelect = template.isPhotoSelect()
                 else { return }
+                DataProvider().add(template)
                 if isVariation {
                     let VC = VariationViewController.initFromNib()
                     VC.template = template

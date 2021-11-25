@@ -14,7 +14,6 @@ protocol CardListViewModelEvent: class {
 }
 
 struct CardListViewModel {
-    let realm = RealmCRUD.shared
     let userDefault = UserDefaults.standard
     weak var delegate: CardListViewModelEvent?
 
@@ -47,7 +46,6 @@ struct CardListViewModel {
             switch result {
             case .success(let data):
                 guard let templates = data?.data.first else { return }
-                realm.save(item: templates)
                 completion(.success(templates))
             case .failure(let error):
                 completion(.failure(error))

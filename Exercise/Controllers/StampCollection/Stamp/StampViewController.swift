@@ -15,7 +15,6 @@ class StampViewController: UIViewController {
     private var viewModel = StampViewModel()
     private var type: ItemType = .stamps
     private var selectedIndex: IndexPath?
-    private let realm = RealmCRUD.shared
     private enum ItemType {
         case stamps
         case stampsFromJson
@@ -98,7 +97,7 @@ extension StampViewController: UICollectionViewDelegate {
         selectedIndex = indexPath
         switch type {
         case .stampsFromJson:
-            realm.save(item: stampsFromJson[indexPath.row])
+            DataProvider().add(stampsFromJson[indexPath.row])
             collectionView.reloadData()
         case .stamps:
             collectionView.reloadData()

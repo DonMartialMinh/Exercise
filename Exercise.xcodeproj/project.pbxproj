@@ -61,7 +61,7 @@
 		83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */; };
 		83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995F2716EBE5003CA963 /* DesignViewController.xib */; };
 		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
-		83DBDEF2274B26670053B015 /* RealmCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBDEF1274B26670053B015 /* RealmCRUD.swift */; };
+		83DBDEF2274B26670053B015 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBDEF1274B26670053B015 /* DataProvider.swift */; };
 		83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */; };
 		83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */; };
 		83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */; };
@@ -147,7 +147,7 @@
 		83D799652716EBFC003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmViewController.xib; sourceTree = "<group>"; };
 		83D799692716EBFE003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ConfirmViewController.strings; sourceTree = "<group>"; };
 		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
-		83DBDEF1274B26670053B015 /* RealmCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmCRUD.swift; sourceTree = "<group>"; };
+		83DBDEF1274B26670053B015 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCollectionViewController.swift; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 				83AC47F7270D3127001EDFE1 /* Controllers */,
 				83038D1E271E5A8E00080502 /* Extensions */,
 				830B8A862712DC0F0053B419 /* Constants.swift */,
-				83DBDEF1274B26670053B015 /* RealmCRUD.swift */,
+				83DBDEF1274B26670053B015 /* DataProvider.swift */,
 				83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */,
 				83AC47EC270D2FE9001EDFE1 /* LaunchScreen.storyboard */,
 				83AC47EF270D2FE9001EDFE1 /* Info.plist */,
@@ -581,7 +581,7 @@
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
 				830AAAE7272FF2BA0022CA42 /* BaseResponse.swift in Sources */,
 				830786EA272A3CC30089F876 /* LibraryViewModel.swift in Sources */,
-				83DBDEF2274B26670053B015 /* RealmCRUD.swift in Sources */,
+				83DBDEF2274B26670053B015 /* DataProvider.swift in Sources */,
 				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
 				8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */,
