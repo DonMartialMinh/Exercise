@@ -8,12 +8,12 @@
 import Foundation
 import Photos
 
-protocol PhotoViewModelEvents: class {
-    func didUpdatePhoto(_ photoViewModel: PhotoViewModel,_ photos: PHFetchResult<PHAsset>)
+protocol LibraryViewModelEvents: class {
+    func didUpdatePhoto(_ photoViewModel: LibraryViewModel,_ photos: PHFetchResult<PHAsset>)
 }
 
-struct PhotoViewModel {
-    weak var delegate: PhotoViewModelEvents?
+struct LibraryViewModel {
+    weak var delegate: LibraryViewModelEvents?
 
     // MARK: - Method
     func fetchPhotos() {

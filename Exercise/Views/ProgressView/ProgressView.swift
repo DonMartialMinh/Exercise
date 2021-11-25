@@ -8,11 +8,18 @@
 import UIKit
 
 class ProgressView: NibView {
-    var displayScreens: [String:Bool]? {
+    var template: Template? {
         didSet {
             setProgressDisplay()
         }
     }
+    enum ProgressState {
+        case variation
+        case photoSelect
+        case design
+        case confirm
+    }
+
     // MARK: - IBOutlet
     @IBOutlet weak var variationCustomView: CustomView!
     @IBOutlet weak var photoSelectCustomView: CustomView!
@@ -72,13 +79,16 @@ class ProgressView: NibView {
     }
 
     func setProgressDisplay() {
-        if displayScreens![VariationViewController.classId] == false {
+        guard let isVariation = template?.isVariation(),
+              let isPhotoSelect = template?.isPhotoSelect()
+        else { return }
+        if isVariation == false {
             variationCustomView.isHidden = true
             variationLabel.isHidden = true
             lineStagePhotoSelectView.isHidden = true
             outerLineStageSelectView.isHidden = true
         }
-        if displayScreens![PhotoSelectViewController.classId] == false {
+        if isPhotoSelect == false {
             photoSelectCustomView.isHidden = true
             photoSelectLabel.isHidden = true
             lineStageDesignView.isHidden = true

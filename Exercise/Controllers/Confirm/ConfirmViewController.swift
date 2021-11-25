@@ -8,12 +8,12 @@
 import UIKit
 
 class ConfirmViewController: BaseViewController {
-    var displayScreens: [String:Bool] = [:]
+    var template: Template?
     // MARK: - IBOutlet
     @IBOutlet weak var confirmProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setProgressView()
@@ -24,7 +24,7 @@ class ConfirmViewController: BaseViewController {
 
     func setProgressView() {
         confirmProgressView.setState(.confirm)
-        confirmProgressView.displayScreens = displayScreens
+        confirmProgressView.template = template
     }
 
     // MARK: - ConfigureNavigationBar

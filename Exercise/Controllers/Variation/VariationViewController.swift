@@ -8,12 +8,12 @@
 import UIKit
 
 class VariationViewController: BaseViewController {
-    var displayScreens: [String:Bool] = [:]
+    var template: Template?
     // MARK: - IBOutlet
     @IBOutlet weak var variationProgressView: ProgressView!
     @IBOutlet weak var pictureFrameView: PictureFrame!
 
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -27,7 +27,7 @@ class VariationViewController: BaseViewController {
     }
     
     func setProgressView(){
-        variationProgressView.displayScreens = displayScreens
+        variationProgressView.template = template
         variationProgressView.setState(.variation)
     }
 
@@ -39,13 +39,16 @@ class VariationViewController: BaseViewController {
 
     // MARK: - ButtonClicked
     override func nextButtonClicked(_ sender: UIBarButtonItem) {
-        if displayScreens[PhotoSelectViewController.classId] == true {
+        guard let template = template,
+              let isPhotoSelect = template.isPhotoSelect()
+        else { return }
+        if isPhotoSelect {
             let photoSelectVC = PhotoSelectViewController.initFromNib()
-            photoSelectVC.displayScreens = displayScreens
+            photoSelectVC.template = template
             navigationController?.pushViewController(photoSelectVC, animated: true)
         } else {
             let designVC = DesignViewController.initFromNib()
-            designVC.displayScreens = displayScreens
+            designVC.template = template
             navigationController?.pushViewController(designVC, animated: true)
         }
         

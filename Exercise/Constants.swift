@@ -39,7 +39,7 @@ public struct Constants {
         }
     }
     static let imageCellIdentifier = "ImageCell"
-    static let categoryCellIdentifier = "CategoryCell"
+    static let stampCategoryCellIdentifier = "StampCategoryCell"
     static let backBarButtonTittle = "Back"
     static let nextBarButtonTitle = "Next"
     static let nextBarButtonEndTitle = "Proceed to order"

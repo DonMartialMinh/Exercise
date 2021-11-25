@@ -20,7 +20,7 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         });
     """
 
-    // MARK: - LoadView
+    // MARK: - View LifeCycle
     override func loadView() {
         super.loadView()
         let webConfiguration = WKWebViewConfiguration()
@@ -38,7 +38,6 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
         view = webView
     }
 
-    // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -50,21 +49,20 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
 
     // MARK: - Data Manipulation
     private func getFavoriteDesign(from data: Any ) -> FavoriteDesign? {
-        if let dict = data as? [String: Any] {
-            if let code = dict[Constants.Design.Properties.code] as? String,
-               let colorCode = dict[Constants.Design.Properties.colorCode] as? String,
-               let greetingType = dict[Constants.Design.Properties.greetingType] as? Int,
-               let photoCount = dict[Constants.Design.Properties.photoCount] as? Int {
-                let favoriteDesign = FavoriteDesign(
-                    code: code,
-                    colorCode: colorCode,
-                    greetingType: greetingType,
-                    photoCount: photoCount
-                )
-                return favoriteDesign
-            }
+        guard let dict = data as? [String: Any] else { return nil }
+        var favoriteDesign: FavoriteDesign?
+        if let code = dict[Constants.Design.Properties.code] as? String,
+           let colorCode = dict[Constants.Design.Properties.colorCode] as? String,
+           let greetingType = dict[Constants.Design.Properties.greetingType] as? Int,
+           let photoCount = dict[Constants.Design.Properties.photoCount] as? Int {
+            favoriteDesign = FavoriteDesign(
+                code: code,
+                colorCode: colorCode,
+                greetingType: greetingType,
+                photoCount: photoCount
+            )
         }
-        return nil
+        return favoriteDesign
     }
 
     private func addFavoriteDesign(item: FavoriteDesign) {
@@ -95,41 +93,36 @@ class CardListViewController: UIViewController, WKUIDelegate, WKNavigationDelega
     func navigateToNextScreen() {
         SVProgressHUD.show(withStatus: Constants.hubLoading.localized)
         guard let templateCode = currentFavoriteDesign?.code else { return }
-        viewModel.fetchTemplate(with: templateCode) { [weak self] template in
+        viewModel.fetchTemplate(with: templateCode) { [weak self] result in
             guard let self = self else { return }
             SVProgressHUD.dismiss()
-            if template != nil {
-                var displayScreen: [String:Bool] = [:]
-                displayScreen[VariationViewController.classId] = true
-                displayScreen[PhotoSelectViewController.classId] = true
-                if !template!.variationOptions.photoCount.isEmpty &&
-                    !template!.variationOptions.colorCode.isEmpty &&
-                    !template!.variationOptions.greetingType.isEmpty {
-                    displayScreen[VariationViewController.classId] = false
-                }
-                if template!.variationOptions.photoCount.isEmpty ||
-                    template!.variationOptions.photoCount.count == 1 &&
-                    template!.variationOptions.photoCount.contains(0) {
-                    displayScreen[PhotoSelectViewController.classId] = false
-                }
-                if displayScreen[VariationViewController.classId] == true {
+            switch result {
+            case .success(let data):
+                guard let template = data,
+                      let isVariation = template.isVariation(),
+                      let isPhotoSelect = template.isPhotoSelect()
+                else { return }
+                DataProvider().add(template)
+                if isVariation {
                     let VC = VariationViewController.initFromNib()
-                    VC.displayScreens = displayScreen
+                    VC.template = template
                     self.navigationController?.pushViewController(VC, animated: true)
-                } else if displayScreen[PhotoSelectViewController.classId] == true {
+                } else if isPhotoSelect {
                     let VC  = PhotoSelectViewController.initFromNib()
-                    VC.displayScreens = displayScreen
+                    VC.template = template
                     self.navigationController?.pushViewController(VC, animated: true)
                 } else {
                     let VC = DesignViewController.initFromNib()
-                    VC.displayScreens = displayScreen
+                    VC.template = template
                     self.navigationController?.pushViewController(VC, animated: true)
                 }
+            case .failure(let error):
+                self.didFailWithError(error: error)
             }
         }
     }
 
-    // MARK: - Change Favorite
+    ///Change favorite icon when user click in web view
     func changeFavorite(_ favorite: Bool) -> String {
         return "changeFaved(\(favorite));"
     }

@@ -11,8 +11,8 @@
 		83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */; };
 		83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D26271E5B4900080502 /* UIColorExtensions.swift */; };
 		83038D2B271E5DAF00080502 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83038D2A271E5DAF00080502 /* BaseViewController.swift */; };
-		830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E9272A3CC30089F876 /* PhotoViewModel.swift */; };
-		830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */; };
+		830786EA272A3CC30089F876 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830786E9272A3CC30089F876 /* LibraryViewModel.swift */; };
+		830AAAE7272FF2BA0022CA42 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAAE6272FF2BA0022CA42 /* BaseResponse.swift */; };
 		830B8A872712DC0F0053B419 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830B8A862712DC0F0053B419 /* Constants.swift */; };
 		8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331C87D2738B94D008234BE /* CardListViewController.swift */; };
 		835102D92718174000CF1806 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835102D72718174000CF1806 /* LibraryViewController.swift */; };
@@ -21,7 +21,7 @@
 		8364420B2715869600FED975 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420A2715869600FED975 /* ProgressView.swift */; };
 		8364420E27166DBA00FED975 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364420D27166DBA00FED975 /* NibView.swift */; };
 		836D8F1127294A7C0086E481 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8F1027294A7C0086E481 /* State.swift */; };
-		836D8F16272952ED0086E481 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8F15272952ED0086E481 /* CategoryViewModel.swift */; };
+		836D8F16272952ED0086E481 /* StampCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8F15272952ED0086E481 /* StampCategoryViewModel.swift */; };
 		836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D8F1827295A5D0086E481 /* StampViewModel.swift */; };
 		8374F80227339EC5002BF4DE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8374F80127339EC5002BF4DE /* Realm */; };
 		8374F80427339EC5002BF4DE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8374F80327339EC5002BF4DE /* RealmSwift */; };
@@ -31,19 +31,18 @@
 		8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */; };
 		8381DA42273B6F130059B337 /* FavoriteDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA41273B6F130059B337 /* FavoriteDesign.swift */; };
 		8381DA45273CE9920059B337 /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA44273CE9920059B337 /* CardListViewModel.swift */; };
-		8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA472741FF550059B337 /* TemplateFromJson.swift */; };
 		8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA4D27420C9E0059B337 /* TemplateAPI.swift */; };
 		8381DA51274212B50059B337 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA50274212B50059B337 /* Template.swift */; };
 		8381DA54274213A20059B337 /* VariationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA53274213A20059B337 /* VariationOptions.swift */; };
 		8381DA5C274359D70059B337 /* VariationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8381DA5A274359D70059B337 /* VariationViewController.swift */; };
 		8381DA6327435F070059B337 /* VariationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8381DA6527435F070059B337 /* VariationViewController.xib */; };
-		8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */; };
-		8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */; };
-		8388373F272658BA00291F38 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* CategoryModel.swift */; };
+		8388373B27264FB000291F38 /* StampCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373927264FB000291F38 /* StampCategoryCollectionViewCell.swift */; };
+		8388373C27264FB000291F38 /* StampCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388373A27264FB000291F38 /* StampCategoryCollectionViewCell.xib */; };
+		8388373F272658BA00291F38 /* StampCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388373E272658BA00291F38 /* StampCategory.swift */; };
 		8388374D2727F76D00291F38 /* StampViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8388374B2727F76D00291F38 /* StampViewController.swift */; };
 		8388374E2727F76D00291F38 /* StampViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8388374C2727F76D00291F38 /* StampViewController.xib */; };
-		838837522727F8DE00291F38 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838837502727F8DE00291F38 /* CategoryViewController.swift */; };
-		838837532727F8DE00291F38 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838837512727F8DE00291F38 /* CategoryViewController.xib */; };
+		838837522727F8DE00291F38 /* StampCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838837502727F8DE00291F38 /* StampCategoryViewController.swift */; };
+		838837532727F8DE00291F38 /* StampCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838837512727F8DE00291F38 /* StampCategoryViewController.xib */; };
 		83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A4815C271C1607007872E5 /* PictureFrame.swift */; };
 		83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A48161271C1C38007872E5 /* PictureFrame.xib */; };
 		83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AC47E1270D2FE8001EDFE1 /* AppDelegate.swift */; };
@@ -62,6 +61,7 @@
 		83D799582716EBC3003CA963 /* PhotoSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */; };
 		83D7995D2716EBE5003CA963 /* DesignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D7995F2716EBE5003CA963 /* DesignViewController.xib */; };
 		83D799642716EBFC003CA963 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D799662716EBFC003CA963 /* ConfirmViewController.xib */; };
+		83DBDEF2274B26670053B015 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DBDEF1274B26670053B015 /* DataProvider.swift */; };
 		83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */; };
 		83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */; };
 		83EA8384271FC0D400F282AE /* StampCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */; };
@@ -69,7 +69,6 @@
 		83EA838D271FF42000F282AE /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838C271FF42000F282AE /* TargetType.swift */; };
 		83EA8390271FF91800F282AE /* StampAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA838F271FF91800F282AE /* StampAPI.swift */; };
 		83EA83932720179C00F282AE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83922720179C00F282AE /* APIManager.swift */; };
-		83EA83992720210B00F282AE /* StampFromJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EA83982720210B00F282AE /* StampFromJson.swift */; };
 		83EA839C27207A9700F282AE /* StampCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83EA839E27207A9700F282AE /* StampCollectionViewController.xib */; };
 		842747E2821906586ADCF7A8 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A52B82A74FB451BC9AABBC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
@@ -79,8 +78,8 @@
 		83038D23271E5B2500080502 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		83038D26271E5B4900080502 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		83038D2A271E5DAF00080502 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		830786E9272A3CC30089F876 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
-		830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
+		830786E9272A3CC30089F876 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		830AAAE6272FF2BA0022CA42 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		830B8A862712DC0F0053B419 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8331C87D2738B94D008234BE /* CardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewController.swift; sourceTree = "<group>"; };
 		835102CA2717C78900CF1806 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/ProgressView.strings; sourceTree = "<group>"; };
@@ -96,7 +95,7 @@
 		8364420A2715869600FED975 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		8364420D27166DBA00FED975 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		836D8F1027294A7C0086E481 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		836D8F15272952ED0086E481 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		836D8F15272952ED0086E481 /* StampCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategoryViewModel.swift; sourceTree = "<group>"; };
 		836D8F1827295A5D0086E481 /* StampViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewModel.swift; sourceTree = "<group>"; };
 		8374F80A2733AC54002BF4DE /* Stamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stamp.swift; sourceTree = "<group>"; };
 		8374F80E2733B054002BF4DE /* APIManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerExtensions.swift; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 		8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidRequestError.swift; sourceTree = "<group>"; };
 		8381DA41273B6F130059B337 /* FavoriteDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDesign.swift; sourceTree = "<group>"; };
 		8381DA44273CE9920059B337 /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
-		8381DA472741FF550059B337 /* TemplateFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFromJson.swift; sourceTree = "<group>"; };
 		8381DA4D27420C9E0059B337 /* TemplateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateAPI.swift; sourceTree = "<group>"; };
 		8381DA50274212B50059B337 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		8381DA53274213A20059B337 /* VariationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationOptions.swift; sourceTree = "<group>"; };
@@ -114,13 +112,13 @@
 		8381DA6427435F070059B337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/VariationViewController.xib; sourceTree = "<group>"; };
 		8381DA6727435F090059B337 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/VariationViewController.strings; sourceTree = "<group>"; };
 		8381DA6927435F0B0059B337 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/VariationViewController.strings; sourceTree = "<group>"; };
-		8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
-		8388373E272658BA00291F38 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		8388373927264FB000291F38 /* StampCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		8388373A27264FB000291F38 /* StampCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		8388373E272658BA00291F38 /* StampCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategory.swift; sourceTree = "<group>"; };
 		8388374B2727F76D00291F38 /* StampViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampViewController.swift; sourceTree = "<group>"; };
 		8388374C2727F76D00291F38 /* StampViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampViewController.xib; sourceTree = "<group>"; };
-		838837502727F8DE00291F38 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		838837512727F8DE00291F38 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		838837502727F8DE00291F38 /* StampCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCategoryViewController.swift; sourceTree = "<group>"; };
+		838837512727F8DE00291F38 /* StampCategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampCategoryViewController.xib; sourceTree = "<group>"; };
 		83A4815C271C1607007872E5 /* PictureFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureFrame.swift; sourceTree = "<group>"; };
 		83A48161271C1C38007872E5 /* PictureFrame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureFrame.xib; sourceTree = "<group>"; };
 		83AC47DE270D2FE8001EDFE1 /* Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +147,7 @@
 		83D799652716EBFC003CA963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ConfirmViewController.xib; sourceTree = "<group>"; };
 		83D799692716EBFE003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/ConfirmViewController.strings; sourceTree = "<group>"; };
 		83D7996D27174292003CA963 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/PhotoSelectViewController.strings; sourceTree = "<group>"; };
+		83DBDEF1274B26670053B015 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		83EA8376271E72DF00F282AE /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		83EA8379271EA6B600F282AE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampCollectionViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +155,6 @@
 		83EA838C271FF42000F282AE /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		83EA838F271FF91800F282AE /* StampAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampAPI.swift; sourceTree = "<group>"; };
 		83EA83922720179C00F282AE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		83EA83982720210B00F282AE /* StampFromJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampFromJson.swift; sourceTree = "<group>"; };
 		83EA839D27207A9700F282AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StampCollectionViewController.xib; sourceTree = "<group>"; };
 		83EA83A127207A9C00F282AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/StampCollectionViewController.strings; sourceTree = "<group>"; };
 		83EA83A327207A9F00F282AE /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/StampCollectionViewController.strings; sourceTree = "<group>"; };
@@ -201,41 +199,40 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		830B8A812712DB980053B419 /* PhotoSelectScreen */ = {
+		830B8A812712DB980053B419 /* PhotoSelect */ = {
 			isa = PBXGroup;
 			children = (
-				835102D62718171F00CF1806 /* LibraryScreen */,
 				83AC4856270D8E64001EDFE1 /* PhotoSelectViewController.swift */,
 				83D7995A2716EBC3003CA963 /* PhotoSelectViewController.xib */,
 			);
-			path = PhotoSelectScreen;
+			path = PhotoSelect;
 			sourceTree = "<group>";
 		};
-		830B8A822712DBA80053B419 /* DesignScreen */ = {
+		830B8A822712DBA80053B419 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				83EA8381271FC0B200F282AE /* StampCollectionScreen */,
 				83AC485C270D95FD001EDFE1 /* DesignViewController.swift */,
 				83D7995F2716EBE5003CA963 /* DesignViewController.xib */,
 			);
-			path = DesignScreen;
+			path = Design;
 			sourceTree = "<group>";
 		};
-		830B8A832712DBC10053B419 /* ConfirmScreen */ = {
+		830B8A832712DBC10053B419 /* Confirm */ = {
 			isa = PBXGroup;
 			children = (
 				83AC4864270D9BA7001EDFE1 /* ConfirmViewController.swift */,
 				83D799662716EBFC003CA963 /* ConfirmViewController.xib */,
 			);
-			path = ConfirmScreen;
+			path = Confirm;
 			sourceTree = "<group>";
 		};
-		8331C87C2738B92D008234BE /* CardListScreen */ = {
+		8331C87C2738B92D008234BE /* CardList */ = {
 			isa = PBXGroup;
 			children = (
+				8381DA44273CE9920059B337 /* CardListViewModel.swift */,
 				8331C87D2738B94D008234BE /* CardListViewController.swift */,
 			);
-			path = CardListScreen;
+			path = CardList;
 			sourceTree = "<group>";
 		};
 		834FCE102745E75500C55D5B /* APIs */ = {
@@ -248,13 +245,14 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
-		835102D62718171F00CF1806 /* LibraryScreen */ = {
+		835102D62718171F00CF1806 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				830786E9272A3CC30089F876 /* LibraryViewModel.swift */,
 				835102D72718174000CF1806 /* LibraryViewController.swift */,
 				83C2BD58271A880A000BAE24 /* LibraryViewController.xib */,
 			);
-			path = LibraryScreen;
+			path = Library;
 			sourceTree = "<group>";
 		};
 		835102EA27181A0F00CF1806 /* ImageCell */ = {
@@ -275,24 +273,13 @@
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
-		836D8F0E2729454F0086E481 /* VariationScreen */ = {
+		836D8F0E2729454F0086E481 /* Variation */ = {
 			isa = PBXGroup;
 			children = (
 				8381DA5A274359D70059B337 /* VariationViewController.swift */,
 				8381DA6527435F070059B337 /* VariationViewController.xib */,
 			);
-			path = VariationScreen;
-			sourceTree = "<group>";
-		};
-		836D8F14272952BB0086E481 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				836D8F15272952ED0086E481 /* CategoryViewModel.swift */,
-				836D8F1827295A5D0086E481 /* StampViewModel.swift */,
-				830786E9272A3CC30089F876 /* PhotoViewModel.swift */,
-				8381DA44273CE9920059B337 /* CardListViewModel.swift */,
-			);
-			path = ViewModels;
+			path = Variation;
 			sourceTree = "<group>";
 		};
 		8374F8172733B26D002BF4DE /* Errors */ = {
@@ -302,17 +289,6 @@
 				8374F8142733B0AA002BF4DE /* InvalidRequestError.swift */,
 			);
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		8381DA4A274201720059B337 /* JsonModels */ = {
-			isa = PBXGroup;
-			children = (
-				830AAAE6272FF2BA0022CA42 /* BaseResponseModel.swift */,
-				8388373E272658BA00291F38 /* CategoryModel.swift */,
-				83EA83982720210B00F282AE /* StampFromJson.swift */,
-				8381DA472741FF550059B337 /* TemplateFromJson.swift */,
-			);
-			path = JsonModels;
 			sourceTree = "<group>";
 		};
 		8388373427251B1800291F38 /* Networks */ = {
@@ -329,8 +305,8 @@
 		8388373827264F6E00291F38 /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
-				8388373927264FB000291F38 /* CategoryCollectionViewCell.swift */,
-				8388373A27264FB000291F38 /* CategoryCollectionViewCell.xib */,
+				8388373927264FB000291F38 /* StampCategoryCollectionViewCell.swift */,
+				8388373A27264FB000291F38 /* StampCategoryCollectionViewCell.xib */,
 			);
 			path = CategoryCell;
 			sourceTree = "<group>";
@@ -338,19 +314,22 @@
 		83883755272807E400291F38 /* Stamp */ = {
 			isa = PBXGroup;
 			children = (
+				836D8F1827295A5D0086E481 /* StampViewModel.swift */,
 				8388374B2727F76D00291F38 /* StampViewController.swift */,
 				8388374C2727F76D00291F38 /* StampViewController.xib */,
 			);
 			path = Stamp;
 			sourceTree = "<group>";
 		};
-		83883756272807F200291F38 /* Category */ = {
+		83883756272807F200291F38 /* StampCategory */ = {
 			isa = PBXGroup;
 			children = (
-				838837502727F8DE00291F38 /* CategoryViewController.swift */,
-				838837512727F8DE00291F38 /* CategoryViewController.xib */,
+				8388373827264F6E00291F38 /* CategoryCell */,
+				836D8F15272952ED0086E481 /* StampCategoryViewModel.swift */,
+				838837502727F8DE00291F38 /* StampCategoryViewController.swift */,
+				838837512727F8DE00291F38 /* StampCategoryViewController.xib */,
 			);
-			path = Category;
+			path = StampCategory;
 			sourceTree = "<group>";
 		};
 		83A48158271C15DF007872E5 /* PictureFrame */ = {
@@ -388,10 +367,10 @@
 				8388373427251B1800291F38 /* Networks */,
 				83EA8387271FEF6100F282AE /* Models */,
 				83AC47F6270D311D001EDFE1 /* Views */,
-				836D8F14272952BB0086E481 /* ViewModels */,
 				83AC47F7270D3127001EDFE1 /* Controllers */,
 				83038D1E271E5A8E00080502 /* Extensions */,
 				830B8A862712DC0F0053B419 /* Constants.swift */,
+				83DBDEF1274B26670053B015 /* DataProvider.swift */,
 				83AC47EA270D2FE9001EDFE1 /* Assets.xcassets */,
 				83AC47EC270D2FE9001EDFE1 /* LaunchScreen.storyboard */,
 				83AC47EF270D2FE9001EDFE1 /* Info.plist */,
@@ -418,31 +397,33 @@
 			isa = PBXGroup;
 			children = (
 				83038D2A271E5DAF00080502 /* BaseViewController.swift */,
-				8331C87C2738B92D008234BE /* CardListScreen */,
-				830B8A832712DBC10053B419 /* ConfirmScreen */,
-				830B8A822712DBA80053B419 /* DesignScreen */,
-				836D8F0E2729454F0086E481 /* VariationScreen */,
-				830B8A812712DB980053B419 /* PhotoSelectScreen */,
+				8331C87C2738B92D008234BE /* CardList */,
+				830B8A832712DBC10053B419 /* Confirm */,
+				830B8A822712DBA80053B419 /* Design */,
+				835102D62718171F00CF1806 /* Library */,
+				83EA8381271FC0B200F282AE /* StampCollection */,
+				836D8F0E2729454F0086E481 /* Variation */,
+				830B8A812712DB980053B419 /* PhotoSelect */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		83EA8381271FC0B200F282AE /* StampCollectionScreen */ = {
+		83EA8381271FC0B200F282AE /* StampCollection */ = {
 			isa = PBXGroup;
 			children = (
-				8388373827264F6E00291F38 /* CategoryCell */,
-				83883756272807F200291F38 /* Category */,
+				83883756272807F200291F38 /* StampCategory */,
 				83883755272807E400291F38 /* Stamp */,
 				83EA8382271FC0D400F282AE /* StampCollectionViewController.swift */,
 				83EA839E27207A9700F282AE /* StampCollectionViewController.xib */,
 			);
-			path = StampCollectionScreen;
+			path = StampCollection;
 			sourceTree = "<group>";
 		};
 		83EA8387271FEF6100F282AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8381DA4A274201720059B337 /* JsonModels */,
+				830AAAE6272FF2BA0022CA42 /* BaseResponse.swift */,
+				8388373E272658BA00291F38 /* StampCategory.swift */,
 				8381DA41273B6F130059B337 /* FavoriteDesign.swift */,
 				836D8F1027294A7C0086E481 /* State.swift */,
 				8374F80A2733AC54002BF4DE /* Stamp.swift */,
@@ -537,8 +518,8 @@
 				835102EE27181A3000CF1806 /* ImageCollectionViewCell.xib in Resources */,
 				83AC47E9270D2FE8001EDFE1 /* Main.storyboard in Resources */,
 				83C2BD56271A880A000BAE24 /* LibraryViewController.xib in Resources */,
-				838837532727F8DE00291F38 /* CategoryViewController.xib in Resources */,
-				8388373C27264FB000291F38 /* CategoryCollectionViewCell.xib in Resources */,
+				838837532727F8DE00291F38 /* StampCategoryViewController.xib in Resources */,
+				8388373C27264FB000291F38 /* StampCategoryCollectionViewCell.xib in Resources */,
 				83D7994B2716E3A2003CA963 /* Localizable.strings in Resources */,
 				83A48162271C1C38007872E5 /* PictureFrame.xib in Resources */,
 				8388374E2727F76D00291F38 /* StampViewController.xib in Resources */,
@@ -598,9 +579,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				836D8F1927295A5D0086E481 /* StampViewModel.swift in Sources */,
-				830AAAE7272FF2BA0022CA42 /* BaseResponseModel.swift in Sources */,
-				830786EA272A3CC30089F876 /* PhotoViewModel.swift in Sources */,
-				8381DA482741FF550059B337 /* TemplateFromJson.swift in Sources */,
+				830AAAE7272FF2BA0022CA42 /* BaseResponse.swift in Sources */,
+				830786EA272A3CC30089F876 /* LibraryViewModel.swift in Sources */,
+				83DBDEF2274B26670053B015 /* DataProvider.swift in Sources */,
 				8331C87E2738B94D008234BE /* CardListViewController.swift in Sources */,
 				83EA83932720179C00F282AE /* APIManager.swift in Sources */,
 				8381DA4E27420C9E0059B337 /* TemplateAPI.swift in Sources */,
@@ -609,11 +590,11 @@
 				83EA837A271EA6B600F282AE /* UIImageViewExtensions.swift in Sources */,
 				83038D24271E5B2500080502 /* UIViewControllerExtensions.swift in Sources */,
 				83AC47E2270D2FE8001EDFE1 /* AppDelegate.swift in Sources */,
-				836D8F16272952ED0086E481 /* CategoryViewModel.swift in Sources */,
+				836D8F16272952ED0086E481 /* StampCategoryViewModel.swift in Sources */,
 				83EA8390271FF91800F282AE /* StampAPI.swift in Sources */,
 				83EA8377271E72DF00F282AE /* UICollectionViewCellExtensions.swift in Sources */,
 				8374F8122733B08F002BF4DE /* StatusResponse.swift in Sources */,
-				8388373B27264FB000291F38 /* CategoryCollectionViewCell.swift in Sources */,
+				8388373B27264FB000291F38 /* StampCategoryCollectionViewCell.swift in Sources */,
 				8388374D2727F76D00291F38 /* StampViewController.swift in Sources */,
 				8381DA42273B6F130059B337 /* FavoriteDesign.swift in Sources */,
 				835102ED27181A3000CF1806 /* ImageCollectionViewCell.swift in Sources */,
@@ -628,14 +609,13 @@
 				8381DA51274212B50059B337 /* Template.swift in Sources */,
 				8374F8152733B0AA002BF4DE /* InvalidRequestError.swift in Sources */,
 				8364420E27166DBA00FED975 /* NibView.swift in Sources */,
-				8388373F272658BA00291F38 /* CategoryModel.swift in Sources */,
+				8388373F272658BA00291F38 /* StampCategory.swift in Sources */,
 				83038D27271E5B4900080502 /* UIColorExtensions.swift in Sources */,
-				83EA83992720210B00F282AE /* StampFromJson.swift in Sources */,
 				83AC485E270D95FD001EDFE1 /* DesignViewController.swift in Sources */,
 				8364420B2715869600FED975 /* ProgressView.swift in Sources */,
 				83AC4858270D8E64001EDFE1 /* PhotoSelectViewController.swift in Sources */,
 				835102D92718174000CF1806 /* LibraryViewController.swift in Sources */,
-				838837522727F8DE00291F38 /* CategoryViewController.swift in Sources */,
+				838837522727F8DE00291F38 /* StampCategoryViewController.swift in Sources */,
 				8381DA5C274359D70059B337 /* VariationViewController.swift in Sources */,
 				83038D20271E5B0000080502 /* StringExtensions.swift in Sources */,
 				83A4815D271C1607007872E5 /* PictureFrame.swift in Sources */,

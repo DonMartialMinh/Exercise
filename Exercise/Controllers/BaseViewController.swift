@@ -8,7 +8,7 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    // MARK: - ViewDidLoad
+    // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()

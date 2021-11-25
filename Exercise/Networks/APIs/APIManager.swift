@@ -26,16 +26,17 @@ class APIManager {
                 case .success(_):
                     let decoder = JSONDecoder()
                     if let jsonData = data.data, let statusResponse = try? decoder.decode(StatusResponse.self, from: jsonData){
-                        if statusResponse.status == 200 {
+                        switch statusResponse.status {
+                        case 200:
                             let result = try! decoder.decode(T.self, from: jsonData)
                             completionHandler(.success(result))
-                        } else if statusResponse.status == 400 {
+                        case 400:
                             let error = try! decoder.decode(InvalidRequestError.self, from: jsonData)
-                            let errorMessage = error.errors[0].message
                             let responseError = ​ResponseError​()
+                            guard let errorMessage = error.errors.first?.message else { return }
                             responseError.errors = errorMessage
                             completionHandler(.failure(responseError))
-                        } else {
+                        default:
                             let error = try! decoder.decode(​ResponseError​.self, from: jsonData)
                             completionHandler(.failure(error))
                         }
